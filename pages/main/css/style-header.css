@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    background: #000000;
+    backdrop-filter: blur(2px);
+    height: 80px;
+}
+
+.header-title {
+    margin-top: 15px;
+    width: 82px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0145px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1.18841px solid #FFFFFF;
+}
+
+.menu-nav {
+    margin-left: 25px;
+    display: flex;
+    gap: 58px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 58px;
+    list-style-type: none;
+}
+
+.design {
+    margin-left: 436px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}

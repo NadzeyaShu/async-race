@@ -1,0 +1,88 @@
+.pets {
+    margin-top: 167px;
+}
+
+.pets .container {
+    display: block;
+}
+
+.wrapper-pets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+
+    padding-top: 10px;
+}
+
+.pet-block {
+    width: 366px;
+    height: 426px;
+    border: 1px solid #FA6F32;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+.description-pets {
+    position: relative;
+    padding-left: 16px;
+}
+
+.title-pets {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.habitat-pets {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    /* identical to box height, or 18px */
+    color: #000000;
+}
+
+.diet-pets {
+    position: absolute;
+}
+
+.herbivorous {
+    left: 321px;
+    bottom: -3px;
+}
+
+.predatory {
+    left: 310px;
+    bottom: -3px;
+}
+
+.btn-pets {
+    display: flex;
+    justify-content: center;
+}
+
+.button-choose-pets {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width: 298px;
+    height: 54px;
+    background: #FE9013;
+    border-radius: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+}
