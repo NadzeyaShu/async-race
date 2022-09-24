@@ -55,5 +55,17 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  transition: transform .2s;
+  
+}
+
+.button-block-watch_animal:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
+}
+
+.wath-online {
+  text-decoration: none;
+  color: #ffffff;
 }
 

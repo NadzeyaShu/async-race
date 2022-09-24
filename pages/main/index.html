@@ -14,10 +14,11 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="main-page">
       <div class="container">
         <div class="wrapper-header-title">
-          <h1 class="header-title">PetStory online</h1>
+          <a href="#main-page" class="logo-link">
+            <h1 class="header-title">PetStory online</h1>
           <div>
             <img
               src="/assets/icons/bamboo.svg"
@@ -25,18 +26,25 @@
               class="bamboo-header"
             />
           </div>
+          </a>
         </div>
 
         <nav class="menu-nav">
           <ul class="menu">
-            <li>About</li>
-            <li>Map</li>
-            <li>Zoos</li>
-            <li>Donate</li>
-            <li>Contact us</li>
+            <li class="zoom"><a href="#main-page" class="menu-item active">About</a></li>
+            <li class="zoom"><a href="#" class="menu-item">Map</a></li>
+            <li class="zoom"><a href="#" class="menu-item">Zoos</a></li>
+            <li class="zoom"><a href="#" class="menu-item">Donate</a></li>
+            <li class="zoom"><a href="#" class="menu-item">Contact us</a></li>
           </ul>
         </nav>
-        <div class="design">Designed by ©</div>
+        <div class="design zoom">
+          <a
+            href=" https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"
+            class="design-link"
+            >Designed by ©</a
+          >
+        </div>
       </div>
     </header>
     <main class="main-container">
@@ -45,7 +53,7 @@
           <div class="title-block-watch_animal">
             Watch your <span class="yellow-text">favorite</span> animal online
           </div>
-          <button class="button-block-watch_animal">wath online</button>
+          <button class="button-block-watch_animal"><a href="https://www.youtube.com/watch?v=OObOQ2GElhA" class="wath-online">wath-online</a></button>
         </div>
       </section>
       <section class="the-backstage">
@@ -73,14 +81,25 @@
         </div>
       </section>
       <section class="pets">
-        
         <div class="container">
-            <div class="wrapper-vector-left">
-                <img src="/assets/icons/vector-left.png" alt="vector-left" class="vector-left"/>
-              </div>
-              <div class="wrapper-vector-right">
-                <img src="/assets/icons/vector-right.png" alt="vector-right" class="vector-right"/>
-              </div>
+          <div class="wrapper-vector-left">
+            <a href="#">
+              <img
+              src="/assets/icons/vector-left.png"
+              alt="vector-left"
+              class="vector-left"
+            />
+            </a>
+          </div>
+          <div class="wrapper-vector-right">
+            <a href="#">
+              <img
+              src="/assets/icons/vector-right.png"
+              alt="vector-right"
+              class="vector-right"
+            />
+            </a>
+          </div>
           <div class="wrapper-pets">
             <div class="pet-block">
               <div>
@@ -369,7 +388,7 @@
             </div>
           </div>
           <div class="wrapper-slider">
-            <input type="range" min="1" max="100" value="1" class="slider"> 
+            <input type="range" min="1" max="100" value="1" class="slider" />
           </div>
           <div>
             <button class="btn-feedback">leave feedback</button>
@@ -401,7 +420,8 @@
       <div class="container">
         <div class="wrapper-footer-title">
           <div class="container-footer-title">
-            <h2 class="title-footer">PetStory online</h2>
+            <a href="#main-page" class="logo-link">
+              <h2 class="title-footer">PetStory online</h2>
             <div>
               <img
                 src="/assets/icons/bamboo.svg"
@@ -409,6 +429,7 @@
                 class="bamboo-footer"
               />
             </div>
+            </a>
           </div>
 
           <div class="subscribe-footer">
@@ -430,62 +451,71 @@
 
         <div class="wrapper-footer-contacts">
           <div class="container-social-network">
-            <div class="wrapper-social-network">
+            <div class="wrapper-social-network zoom">
               <div class="wrapper-logo-social-network">
-                <img
+                <a href="
+                https://www.facebook.com/" class="social-network-link">
+                  <img
                   src="/assets/icons/logo-facebook.svg"
                   alt="logo-facebook"
                   class="logo-social-network facebook"
                 />
               </div>
               <div class="name-social-network">Facebook</div>
+                </a>
             </div>
 
-            <div class="wrapper-social-network">
+            <div class="wrapper-social-network zoom">
               <div class="wrapper-logo-social-network">
-                <img
+                <a href="https://twitter.com/" class="social-network-link">
+                  <img
                   src="/assets/icons/logo-twitter.svg"
                   alt="logo-twitter"
                   class="logo-social-network twitter"
                 />
               </div>
               <div class="name-social-network">Twitter</div>
+                </a>
             </div>
 
-            <div class="wrapper-social-network">
+            <div class="wrapper-social-network zoom">
               <div class="wrapper-logo-social-network">
-                <img
+                <a href="https://www.instagram.com/
+                "  class="social-network-link">
+                  <img
                   src="/assets/icons/logo-instagram.svg"
                   alt="logo-instagram"
                   class="logo-social-network instagram"
                 />
               </div>
               <div class="name-social-network">Instagram</div>
+                </a>
             </div>
 
-            <div class="wrapper-social-network">
+            <div class="wrapper-social-network zoom">
               <div class="wrapper-logo-social-network">
-                <img
+                <a href="https://www.youtube.com/" class="social-network-link">
+                  <img
                   src="/assets/icons/logo-youtube.svg"
                   alt="logo-youtube"
                   class="logo-social-network youtube"
                 />
               </div>
               <div class="name-social-network">YouTube</div>
+                </a>
             </div>
           </div>
 
           <div class="wrapper-footer-menu-nav">
             <nav class="footer-menu-nav">
               <ul class="footer-menu">
-                <li>About</li>
-                <li>Map</li>
-                <li>Zoos</li>
-                <li>Contact us</li>
+                <li class="zoom"><a href="#main-page" class="menu-item active">About</a></li>
+                <li class="zoom"><a href="#" class="menu-item">Map</a></li>
+                <li class="zoom"><a href="#" class="menu-item">Zoos</a></li>
+                <li class="zoom"><a href="#" class="menu-item">Contact us</a></li>
               </ul>
             </nav>
           </div>
-
           <div class="wrapper-about-pages">
             <div>Designed by Alisa Samborskaya</div>
             <div>©RSSchool & ©Yem Digital 2021</div>

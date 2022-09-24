@@ -14,6 +14,7 @@
 
 .header-title {
   margin-top: 15px;
+  padding-top: 3px;
   width: 82px;
   height: 52px;
   font-family: "Roboto";
@@ -47,6 +48,7 @@
 }
 
 .design {
+  
   margin-left: 436px;
   display: flex;
   align-items: center;
@@ -56,4 +58,34 @@
   font-size: 16px;
   line-height: 140%;
   color: #ffffff;
+}
+
+.design-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu-item {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.active {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
 }

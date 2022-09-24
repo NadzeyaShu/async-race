@@ -83,7 +83,14 @@
   text-transform: uppercase;
   color: #ffffff;
   border: none;
+  transition: transform .2s
 }
+
+.button-choose-pets:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
+}
+
 
 .wrapper-vector-left {
   position: absolute;
@@ -93,6 +100,11 @@
   height: 62px;
   border-radius: 100%;
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  transition: transform .2s;
+}
+
+.wrapper-vector-left:hover {
+  transform: scale(1.1);
 }
 
 .wrapper-vector-right {
@@ -103,6 +115,11 @@
   height: 62px;
   border-radius: 100%;
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  transition: transform .2s;
+}
+
+.wrapper-vector-right:hover {
+  transform: scale(1.1);
 }
 
 .vector-left {

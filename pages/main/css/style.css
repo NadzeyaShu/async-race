@@ -11,6 +11,10 @@
   /* border: 1px solid red; */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -63,3 +67,4 @@
     left: 9px;
     z-index: 0;
 }
+

@@ -59,6 +59,12 @@
   font-size: 16px;
   line-height: 140%;
   color: #4b9200;
+  transition: transform .2s;
+}
+
+.btn-submit:hover {
+  transform: scale(1.1);
+  border: 2px solid #4b9200;
 }
 
 .footer-input {
@@ -97,6 +103,12 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  transition: transform .2s;
+}
+
+.btn-donate:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
 }
 
 .wrapper-footer-contacts {
@@ -149,6 +161,10 @@
 .facebook {
   top: 5px;
   left: 9px;
+}
+
+.social-network-link {
+  text-decoration: none;
 }
 
 .twitter {

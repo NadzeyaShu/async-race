@@ -141,7 +141,6 @@
 
 .btn-feedback {
   margin-top: 14px;
-
   width: 298px;
   height: 54px;
   border-radius: 5px;
@@ -155,4 +154,10 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  transition: transform .2s;
 }
+
+.btn-feedback:hover {
+  transform: scale(1.2);
+  
+} 
