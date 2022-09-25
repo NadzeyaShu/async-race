@@ -19,3 +19,17 @@
     margin: 0 auto;
     display: flex;
   }
+
+  .bamboo-header {
+    position: absolute;
+    top: 38px;
+    left: 9px;
+    z-index: 0;
+}
+
+.bamboo-footer {
+    position: absolute;
+    top: 62px;
+    left: 9px;
+    z-index: 0;
+}

@@ -28,7 +28,7 @@
   }
   
   .menu-nav {
-    margin-left: 25px;
+    margin-left: 24px;
     display: flex;
     gap: 58px;
     font-family: "Roboto";
@@ -49,7 +49,7 @@
   
   .design {
     
-    margin-left: 436px;
+    margin-left: 438px;
     display: flex;
     align-items: center;
     font-family: "Roboto";

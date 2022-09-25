@@ -25,10 +25,10 @@
 
             <nav class="menu-nav">
                 <ul class="menu">
-                    <li class="zoom"><a href="#main-page" class="menu-item active">About</a></li>
+                    <li class="zoom"><a href="#main-page" class="menu-item">About</a></li>
                     <li class="zoom"><a href="#" class="menu-item">Map</a></li>
                     <li class="zoom"><a href="#" class="menu-item">Zoos</a></li>
-                    <li class="zoom"><a href="#" class="menu-item">Donate</a></li>
+                    <li class="zoom"><a href="#" class="menu-item active">Donate</a></li>
                     <li class="zoom"><a href="#" class="menu-item">Contact us</a></li>
                 </ul>
             </nav>
@@ -75,6 +75,50 @@
                             <img src="/assets/icons/panda_widget1.svg" alt="panda">
                         </div>
                     </div>
+
+                    <label for="points" class="amound">Amount</label>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="8" value="3" class="slider" id="myRange" list="range_list">
+                        <datalist id="range_list" class="range_list">
+                            <option class="range_opt" value="1">$5000</option>
+                            <option class="range_opt" value="2">$2000</option>
+                            <option class="range_opt" value="3">$1000</option>
+                            <option class="range_opt" value="4">$500</option>
+                            <option class="range_opt" value="5">$250</option>
+                            <option class="range_opt" value="6">$100</option>
+                            <option class="range_opt" value="7">$50</option>
+                            <option class="range_opt" value="8">$25</option>
+                        </datalist>
+                    </div>
+
+                    <div class="wrapper-inpAnotherAmound">
+                        <input type="number" placeholder="Another amount" class="inpAnotherAmound" min="1" max="9999">
+                    </div>
+                    <form>
+                        <div class="wrapper-payment-type">
+                            <div class="wrapper-payment-type-mounthly">
+                                <input type="radio" id="monthly" class="payment-type" name="first">
+                                <label for="monthly" class="payment-type-label">Monthly</label>
+                            </div>
+
+                            <div class="wrapper-payment-type-once">
+                                <input type="radio" id="once" class="payment-type" name="first">
+                                <label for="once" class="payment-type-label">Once</label>
+                            </div>
+
+
+                        </div>
+                        <div class="wrapper-btn-pick-and-feed-a-friend">
+                            <button class="btn-pick-and-feed-a-friend">
+                                Feed a friend now
+                            </button>
+                        </div>
+                        <div class="wrapper-subtitre-block">
+                            <div class="subtitre-block">
+                                Share with your friends on social networks
+                            </div>
+                        </div>
+                    </form>
 
                 </div>
             </div>
@@ -159,7 +203,7 @@
                 <div class="wrapper-footer-menu-nav">
                     <nav class="footer-menu-nav">
                         <ul class="footer-menu">
-                            <li class="zoom"><a href="#main-page" class="menu-item active">About</a></li>
+                            <li class="zoom"><a href="#main-page" class="menu-item">About</a></li>
                             <li class="zoom"><a href="#" class="menu-item">Map</a></li>
                             <li class="zoom"><a href="#" class="menu-item">Zoos</a></li>
                             <li class="zoom"><a href="#" class="menu-item">Contact us</a></li>

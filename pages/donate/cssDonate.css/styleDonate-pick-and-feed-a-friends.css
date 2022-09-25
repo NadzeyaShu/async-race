@@ -115,7 +115,7 @@
 }
 
 .diet-animals {
-margin-top: 11px;
+  margin-top: 11px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -126,14 +126,166 @@ margin-top: 11px;
 }
 
 .wrapper-sum-days {
-    margin: 51px 56px 0px -14px;
+  margin: 51px 56px 0px -14px;
 }
 
 .wrapper-x-icon {
-
-    margin: 28px 0px 0px -87px;
+  margin: 28px 0px 0px -87px;
 }
 
 .icon-pets {
-    margin: 0px 0px 0px 19px;
+  margin: 0px 0px 0px 19px;
+}
+
+.slidecontainer {
+  width: 84.1%;
+  height: 27px;
+  margin: 17px 92px 0 92px;
+  background: #404950;
+  border-radius: 2px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  margin: 0 26px;
+  width: 94%;
+  height: 2px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  margin: 0px 0px 20px 0px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffee2e;
+  cursor: pointer;
+}
+
+.range_list {
+  margin: 22px 22px 0 -4px;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333b41;
+}
+
+.range-opt {
+}
+
+.amound {
+  margin: 43px 0px 0px 96px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.wrapper-inpAnotherAmound {
+  display: flex;
+  justify-content: center;
+}
+
+.inpAnotherAmound {
+  margin-top: 99px;
+  padding-left: 7px;
+  height: 54px;
+  width: 268px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #929699;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .payment-type {
+    color: 1px solid #FE9013;
+    
+} */
+
+.wrapper-payment-type {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* .wrapper-payment-type::after {
+    
+    border: 1px solid #FE9013;
+} */
+
+.payment-type-label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333b41;
+}
+
+.wrapper-btn-pick-and-feed-a-friend {
+  margin: 28px 0 0 3px;
+  padding-left: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-pick-and-feed-a-friend {
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.btn-pick-and-feed-a-friend:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
+}
+
+.wrapper-subtitre-block {
+  margin: 30px 0 0 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitre-block {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333b41;
 }
