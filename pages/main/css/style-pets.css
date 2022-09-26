@@ -81,7 +81,7 @@
   line-height: 140%;
   text-align: center;
   text-transform: uppercase;
-  /* color: #ffffff; */
+  color: #ffffff;
   border: none;
   transition: transform .2s
 }

@@ -68,3 +68,6 @@ html {
     z-index: 0;
 }
 
+h6 {
+display: none;
+}

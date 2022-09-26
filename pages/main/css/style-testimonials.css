@@ -136,7 +136,7 @@
   position: relative;
   -webkit-appearance: none;
   position: relative;
-  margin: 19px auto;
+  margin: 24px auto;
   width: 597px;
   height: 6px;
   border-radius: 4px;
@@ -175,7 +175,7 @@
 }
 
 .btn-feedback {
-  margin-top: 14px;
+  margin-top: 9px;
   width: 298px;
   height: 54px;
   border-radius: 5px;

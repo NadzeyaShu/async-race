@@ -34,3 +34,7 @@
     z-index: 0;
     position:;
 }
+
+h6 {
+  display: none;
+}
