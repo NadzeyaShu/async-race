@@ -29,8 +29,8 @@ html {
 .flower-backstage {
     position: absolute;
     top: 712px;
-    right: -97px;
-    z-index: 0;
+    right: -93px;
+    z-index: -1;
 }
 
 .strelitzia {

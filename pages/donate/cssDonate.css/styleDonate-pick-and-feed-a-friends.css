@@ -183,8 +183,6 @@
   color: #333b41;
 }
 
-.range-opt {
-}
 
 .amound {
   margin: 43px 0px 0px 96px;
@@ -199,6 +197,7 @@
 .wrapper-inpAnotherAmound {
   display: flex;
   justify-content: center;
+  /* padding-right: 20px; */
 }
 
 .inpAnotherAmound {
@@ -220,22 +219,40 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* .payment-type {
-    color: 1px solid #FE9013;
-    
-} */
+.payment-type {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #fe9013;
+}
+
+input:checked {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4b9200;
+  border: 6px solid #4b9200;
+}
 
 .wrapper-payment-type {
-  margin-top: 26px;
+  margin: 26px 14px 0 -1px;
   display: flex;
   justify-content: center;
   gap: 50px;
 }
 
-/* .wrapper-payment-type::after {
-    
-    border: 1px solid #FE9013;
-} */
+.wrapper-payment-type-mounthly {
+  display: flex;
+  gap: 10px;
+}
+
+.wrapper-payment-type-once {
+  display: flex;
+  gap: 10px;
+}
+
+
 
 .payment-type-label {
   font-family: "Roboto";

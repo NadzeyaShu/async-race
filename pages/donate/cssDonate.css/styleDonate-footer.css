@@ -223,3 +223,13 @@
   line-height: 130%;
   color: #ffffff;
 }
+
+.btn-donate-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-donate-link:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
+}

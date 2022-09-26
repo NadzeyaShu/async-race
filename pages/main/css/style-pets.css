@@ -11,8 +11,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px 30px;
-
   padding-top: 10px;
+  position: relative;
 }
 
 .pet-block {
@@ -81,21 +81,33 @@
   line-height: 140%;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  /* color: #ffffff; */
   border: none;
   transition: transform .2s
 }
 
 .button-choose-pets:hover {
   transform: scale(1.2);
+  
+}
+
+.btn-pets-link {
+text-decoration: none;
+color: #ffffff;
+}
+
+.btn-pets-link:hover {
+  transform: scale(1.2);
   color: #f3eb96;
 }
+  
+
 
 
 .wrapper-vector-left {
   position: absolute;
   top: 411px;
-  left: 138px;
+  left: -82px;
   width: 62px;
   height: 62px;
   border-radius: 100%;
@@ -110,7 +122,7 @@
 .wrapper-vector-right {
   position: absolute;
   top: 411px;
-  right: 140px;
+  right: -81px;
   width: 62px;
   height: 62px;
   border-radius: 100%;

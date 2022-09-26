@@ -166,7 +166,7 @@
 .wrapper-btn-pick-and-feed-a-friend {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin: 60px 0 0 3px;
 }
 
 .btn-pick-and-feed-a-friend {
