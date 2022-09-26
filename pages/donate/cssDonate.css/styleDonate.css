@@ -1,9 +1,7 @@
-@import url(/pages/donate/cssDonate.css/styleDonate-header.css);
-@import url(/pages/donate/cssDonate.css/styleDonate-block-watch_animal.css);
-@import url(/pages/donate/cssDonate.css/styleDonate-pick-and-feed-a-friends.css);
-@import url(/pages/donate/cssDonate.css/styleDonate-footer.css);
-
-
+@import url(styleDonate-header.css);
+@import url(styleDonate-block-watch_animal.css);
+@import url(styleDonate-pick-and-feed-a-friends.css);
+@import url(styleDonate-footer.css);
 
 * {
     box-sizing: border-box;
