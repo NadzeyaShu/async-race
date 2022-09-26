@@ -1,10 +1,10 @@
-@import url(/pages/main/css/style-header.css);
-@import url(/pages/main/css/style-block-watch_animal.css);
-@import url(/pages/main/css/style.backstage.css);
-@import url(/pages/main/css/style-pets.css);
-@import url(/pages/main/css/style-pick-and-feed-a-friend.css);
-@import url(/pages/main/css/style-testimonials.css);
-@import url(/pages/main/css/style-footer.css);
+@import url(style-header.css);
+@import url(style-block-watch_animal.css);
+@import url(style.backstage.css);
+@import url(style-pets.css);
+@import url(style-pick-and-feed-a-friend.css);
+@import url(style-testimonials.css);
+@import url(style-footer.css);
 
 * {
   box-sizing: border-box;
