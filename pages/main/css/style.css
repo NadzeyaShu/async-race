@@ -7,18 +7,18 @@
 @import url(style-footer.css);
 
 * {
-  box-sizing: border-box;
-  /* border: 1px solid red; */
+    box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 .container {
-  width: 1160px;
-  margin: 0 auto;
-  display: flex;
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .main-container {
@@ -35,14 +35,14 @@ html {
 
 .strelitzia {
     position: absolute;
-    top:2255px;
+    top: 2255px;
     right: 0px;
     z-index: -1;
 }
 
 .palm {
     position: absolute;
-    top:2070px;
+    top: 2070px;
     left: -588px;
     z-index: -2;
 }
@@ -69,5 +69,5 @@ html {
 }
 
 h6 {
-display: none;
+    display: none;
 }
