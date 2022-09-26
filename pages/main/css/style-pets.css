@@ -1,0 +1,147 @@
+.pets {
+  margin-top: 167px;
+  position: relative;
+}
+
+.pets .container {
+  display: block;
+}
+
+.wrapper-pets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.pet-block {
+  width: 366px;
+  height: 426px;
+  border: 1px solid #fa6f32;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.description-pets {
+  position: relative;
+  padding-left: 16px;
+}
+
+.title-pets {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.habitat-pets {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.diet-pets {
+  position: absolute;
+}
+
+.herbivorous {
+  left: 321px;
+  bottom: -3px;
+}
+
+.predatory {
+  left: 310px;
+  bottom: -3px;
+}
+
+.btn-pets {
+  display: flex;
+  justify-content: center;
+}
+
+.button-choose-pets {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  width: 298px;
+  height: 54px;
+  background: #fe9013;
+  border-radius: 25px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  transition: transform .2s
+}
+
+.button-choose-pets:hover {
+  transform: scale(1.2);
+  
+}
+
+.btn-pets-link {
+text-decoration: none;
+color: #ffffff;
+}
+
+.btn-pets-link:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
+}
+  
+
+
+
+.wrapper-vector-left {
+  position: absolute;
+  top: 411px;
+  left: -82px;
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  transition: transform .2s;
+}
+
+.wrapper-vector-left:hover {
+  transform: scale(1.1);
+}
+
+.wrapper-vector-right {
+  position: absolute;
+  top: 411px;
+  right: -81px;
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  transition: transform .2s;
+}
+
+.wrapper-vector-right:hover {
+  transform: scale(1.1);
+}
+
+.vector-left {
+    position: absolute;
+    top: 27px;
+    left: 23px;
+}
+
+.vector-right {
+    position: absolute;
+    top: 27px;
+    left: 23px;
+}

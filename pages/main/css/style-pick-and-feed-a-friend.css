@@ -1,0 +1,192 @@
+.pick-and-feed-a-friend {
+  height: 1004px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  opacity: 0.9;
+}
+
+.pick-and-feed-a-friend .container {
+  flex-direction: column;
+  position: relative;
+  /* align-items:flex-start; */
+  top: 69px;
+  height: 835px;
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+
+.title-pick-and-feed-a-friend {
+  margin-top: 40px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: #fe9013;
+}
+
+.small-title-pick-and-feed-a-friend {
+  align-items: baseline;
+  margin-top: -17px;
+  margin-left: 4.2em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333b41;
+}
+
+.pick-and-feed-a-friend-covid-description {
+  margin-left: 6.1em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #333b41;
+}
+
+.pick-and-feed-a-friend-description-donate {
+  margin-top: -6px;
+  margin-left: 6.2em;
+  margin-right: 12em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #333b41;
+}
+
+.pick-and-feed-a-friend-description {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  color: #333b41;
+}
+
+.pick-and-feed-a-friend-part {
+  padding: 20px;
+  align-items: center;
+  width: 168px;
+  height: 168px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #fe9013;
+}
+
+.pick-donate {
+  color:  #333b41;
+  /* text-decoration-color: #fe9013; */
+  text-decoration: none; 
+  border-bottom: 1px  solid #fe9013;
+}
+
+.pick-and-feed-a-friend-description {
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+}
+
+.pick-and-feed-a-friend-visual-block {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.pick-and-feed-a-friend-part {
+  display: flex;
+  height: 168px;
+}
+
+.firth {
+  padding-left: 30px;
+  margin-left: 5px;
+}
+
+.second {
+  padding-top: 25px;
+  padding-left: 39px;
+}
+
+.third {
+  margin-left: -3px;
+}
+
+.vector-firth {
+  margin-top: 60px;
+  margin-left: -2px;
+}
+
+.vector-second {
+  margin-top: 56px;
+  margin-left: -2px;
+}
+
+.discription-visual-block {
+  margin-top: 30px;
+  width: 171px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333b41;
+}
+
+
+.wrapper-btn-pick-and-feed-a-friend {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 0 3px;
+}
+
+.btn-pick-and-feed-a-friend {
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: transform .2s;
+}
+
+.btn-pick-and-feed-a-friend:hover {
+  transform: scale(1.2);
+  color: #f3eb96;
+}
