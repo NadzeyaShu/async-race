@@ -1,6 +1,6 @@
 .block-watch_animal {
     height: 386px;
-    background: url("/assets/images/bg-panda.jpg") 0 -188px/ 100% no-repeat;
+    background: url("../../assets/images/bg-panda.jpg") 0 -188px/ 100% no-repeat;
     position: relative;
   }
   
