@@ -56,7 +56,6 @@
   text-transform: uppercase;
   color: #ffffff;
   transition: transform .2s;
-  
 }
 
 .button-block-watch_animal:hover {
@@ -68,4 +67,5 @@
   text-decoration: none;
   color: #ffffff;
 }
+
 

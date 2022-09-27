@@ -195,3 +195,10 @@
 .btn-feedback:hover {
   transform: scale(1.2);
 }
+
+.leav {
+  position: absolute;
+  bottom: -132px;
+  right: -163px;
+  z-index: -2;
+}

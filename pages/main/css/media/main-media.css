@@ -1,0 +1,292 @@
+@media (min-width: 1600px) {
+  .container {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+@media (max-width: 1599px) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .flower-backstage {
+    display: none;
+  }
+
+  .strelitzia {
+    transform: scale(0.65);
+    top: 2020px;
+    right: -62px;
+  }
+
+  .palm {
+    transform: scale(0.45);
+    top: 1917px;
+    left: -442px;
+  }
+
+  .leav {
+    transform: scale(0.8);
+    bottom: -129px;
+    right: -171px;
+  }
+
+  /* header */
+
+  .design {
+    margin-left: 258px;
+  }
+
+  .menu-nav {
+    margin-left: 23px;
+    gap: 58px;
+  }
+
+  .menu {
+    gap: 48px;
+  }
+
+  /* block-watch_animal */
+
+  .block-watch_animal {
+    height: 503px;
+    background-image: url("../../../../assets/images/bg-panda.jpg") no-repeat;
+    background-size: 119.5%;
+    background-position: center 100%;
+  }
+
+  .title-block-watch_animal {
+    font-size: 85px;
+    top: 43px;
+    left: 434px;
+  }
+
+  .title-block-watch_animal::before {
+    width: 368px;
+    height: 368px;
+    top: -54px;
+    left: -8px;
+  }
+
+  .button-block-watch_animal {
+    top: 403px;
+    left: 35px;
+    padding-left: 8px;
+  }
+
+  /* backstage  */
+
+  .the-backstage .container {
+    gap: 31px;
+  }
+
+  .the-backstage {
+    margin-top: 110px;
+  }
+
+  .wrapper-bg-backstage {
+    width: 455px;
+    height: 408px;
+  }
+
+  .bg-backstage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wrapper-title-backstage {
+    width: 454px;
+    height: 427px;
+    margin-top: -9px;
+  }
+
+  /* pets  */
+
+  .pets {
+    margin-top: 133px;
+  }
+
+  .wrapper-pets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 92px 29px;
+    padding-top: 10px;
+    position: relative;
+  }
+
+  .pet-block {
+    width: 294px;
+    height: 354px;
+  }
+
+  .wrapper-img-pets {
+    width: 294px;
+    height: 294px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .img-pets {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wrapper-vector-left {
+    top: 378px;
+    left: 322px;
+  }
+
+  .wrapper-vector-right {
+    top: 378px;
+    right: 322px;
+  }
+
+  .description-pets {
+    padding-top: 7px;
+    padding-left: 16px;
+  }
+
+  .herbivorous {
+    left: 245px;
+    bottom: 0px;
+  }
+
+  .predatory {
+    left: 237px;
+    bottom: -3px;
+  }
+
+  .btn-pets {
+    margin-bottom: 40px;
+  }
+
+  /* pick-and-feed */
+
+  .pick-and-feed-a-friend {
+    height: 876px;
+  }
+
+  .pick-and-feed-a-friend .container {
+    top: 30px;
+    height: 796px;
+  }
+
+  .title-pick-and-feed-a-friend {
+    margin-top: 30px;
+  }
+
+  .small-title-pick-and-feed-a-friend {
+    margin-top: -27px;
+    margin-left: 2em;
+  }
+
+  .pick-and-feed-a-friend-covid-description {
+    margin: -2px 83px 0 49px;
+  }
+
+  .pick-and-feed-a-friend-description-donate {
+    margin: 10px 39px 0px 49px;
+  }
+
+  .pick-and-feed-a-friend-description {
+    margin-top: 40px;
+  }
+
+  .discription-visual-block {
+    margin-top: 29px;
+  }
+
+  .vector-second {
+    margin-top: 59px;
+    margin-left: -3px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 71px 0 0 2px;
+  }
+
+  /* testimonials */
+
+  .testimonials {
+    margin-top: 102px;
+  }
+
+  .testimonials .container {
+    height: 740px;
+  }
+
+  .wrapper-testimonials-all {
+    gap: 35px;
+  }
+
+  .wrapper-testimonials {
+    margin-top: 31px;
+    width: 289px;
+    height: 387px;
+  }
+
+  .wrapper-testimonials::before {
+    width: 293px;
+    height: 391px;
+  }
+
+  .hidden-user-testimonials {
+    display: none;
+  }
+
+  .review-content {
+    padding: 23px 14px 0 17px;
+  }
+
+  .slider {
+    width: 388px;
+  }
+
+  .slider::before {
+    width: 390px;
+  }
+
+  .wrapper-slider {
+    margin-left: -6px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 75px;
+  }
+
+  .btn-feedback {
+    margin-top: 26px;
+  }
+
+  /* footer */
+
+  .container-footer-title {
+    margin-left: 15px;
+  }
+
+  .subscribe-footer {
+    margin-right: 19px;
+  }
+
+  .btn-donate {
+    margin: 35px 0 0 15px;
+  }
+
+  .container-social-network {
+    margin-left: 15px;
+  }
+
+  .wrapper-footer-menu-nav {
+    left: 67px;
+  }
+
+  .footer-menu {
+    gap: 48px;
+  }
+}
