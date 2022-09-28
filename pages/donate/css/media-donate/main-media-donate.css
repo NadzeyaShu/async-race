@@ -1,0 +1,107 @@
+@media (min-width: 1600px) {
+  .container {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+@media (max-width: 1599px) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  /* header */
+
+  .design {
+    margin-left: 258px;
+  }
+
+  .menu-nav {
+    margin-left: 23px;
+    gap: 58px;
+  }
+
+  .menu {
+    gap: 48px;
+  }
+
+  /* block watch animal */
+
+  .block-watch_animal {
+    height: 390px;
+    background-image: url("../../../../assets/images/bg-panda.jpg") no-repeat;
+    background-size: 150%;
+    background-position: center 40%;
+  }
+
+  /* pick-and-feed */
+
+  .pick-and-feed-a-friend {
+    height: 1333px;
+  }
+
+  .pick-and-feed-a-friend .container {
+    padding-top: 30px;
+    height: 1333px;
+  }
+
+  .pick-and-feed-a-friend .container-donate-pick-and-feed-a-friend {
+    width: 940px;
+    margin: 0 auto;
+    top: 40px;
+    height: 918px;
+  }
+
+  .main-title-pick-and-feed-a-friend {
+    margin-top: 20px;
+    padding-right: 16px;
+  }
+
+  .discription-main-title-pick-and-feed-a-friend {
+    margin: -37px 0px 0px 47px;
+  }
+
+  .title-pick-and-feed-a-friend {
+    margin-top: 12px;
+    margin-right: 95px;
+  }
+
+  .discription-title-pick-and-feed-a-friend {
+    padding-top: 28px;
+  }
+
+  .slidecontainer {
+    width: 86.2%;
+    height: 27px;
+    margin: 17px 83px 0 66px;
+  }
+
+  .range_list {
+    margin: 21px -13px 0 -4px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 27px 0 0 2px;
+  }
+
+  /* footer */
+
+  .subscribe-footer {
+    margin-right: 32px;
+  }
+
+  .wrapper-footer-menu-nav {
+    left: 75px;
+  }
+
+  .footer-menu {
+    gap: 48px;
+  }
+
+  .bamboo-footer {
+    left: 11px;
+  }
+}
