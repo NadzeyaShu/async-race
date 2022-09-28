@@ -289,8 +289,277 @@
   .footer-menu {
     gap: 48px;
   }
+}
 
-  /* DONATE */
+/* @media (min-width: 1000px) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+  }
+} */
 
-  
+@media (max-width: 999px) {
+  .container {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .flower-backstage {
+    position: absolute;
+    top: 712px;
+    right: -93px;
+    z-index: -1;
+  }
+
+  .strelitzia {
+    display: none;
+    /* transform: scale(0.65);
+    top: 2020px;
+    right: -62px; */
+  }
+
+  .palm {
+    display: none;
+    /* transform: scale(0.45);
+    top: 1917px;
+    left: -442px; */
+  }
+
+  .leav {
+    display: none;
+    /* transform: scale(0.8);
+    bottom: -129px;
+    right: -171px; */
+  }
+
+  /* header */
+
+  .header {
+    height: 34px;
+  }
+
+  .header .container {
+    margin: 0;
+  }
+
+  .header-title {
+    margin: 3px 0px 0px 1px;
+    padding-top: 0px;
+    width: 46.93px;
+    height: 29.03px;
+    font-size: 12.2899px;
+    border: none;
+  }
+
+  .design {
+    display: none;
+  }
+
+  /* block-watch_animal */
+
+  .block-watch_animal {
+    height: 339px;
+    background-image: url("../../../../assets/images/bg-panda.jpg") no-repeat;
+    background-size: 124.5%;
+    background-position: center 78%;
+  }
+
+  .title-block-watch_animal {
+    font-size: 85px;
+    font-size: 54.2894px;
+    top: 48px;
+    left: 326px;
+  }
+
+  .title-block-watch_animal::before {
+    width: 237.6px;
+    height: 237.6px;
+    top: -37px;
+    left: -15px;
+  }
+
+  .button-block-watch_animal {
+    top: 244px;
+    left: -302px;
+    padding-left: 8px;
+  }
+
+  /* backstage */
+
+  .wrapper-bg-backstage {
+    display: none;
+  }
+
+  .the-backstage .container {
+    gap: 0;
+  }
+
+  .wrapper-title-backstage {
+    width: 495px;
+    height: 367px;
+    margin: -49px 0px 0px 4px;
+  }
+
+  .title_the-backstage-description {
+    margin-top: 21px;
+    margin-left: -4px;
+    margin-right: 4px;
+  }
+
+  .title_the-backstage-description-two {
+    margin-top: 30px;
+  }
+
+  .title_the-backstage-description-three {
+    margin: 19px 0 0 -3px;
+  }
+
+  /* pets */
+
+  .pets {
+    margin-top: 70px;
+  }
+
+  .pets-block-640 {
+    display: none;
+  }
+
+  .wrapper-pets {
+    gap: 90px 29.52px;
+    padding-top: 10px;
+  }
+
+  .pet-block {
+    width: 285px;
+    height: 332px;
+  }
+
+  .wrapper-img-pets {
+    width: 285px;
+    height: 286px;
+  }
+
+  .description-pets {
+    padding: 5px 0 0 11px;
+  }
+
+  .title-pets {
+    font-size: 12.4695px;
+  }
+
+  .habitat-pets {
+    margin-top: -1px;
+    font-size: 11.6901px;
+  }
+
+  .herbivorous {
+    transform: scale(0.8);
+    left: 245px;
+    bottom: -7px;
+  }
+
+  .predatory {
+    transform: scale(0.8);
+    left: 235px;
+    bottom: -6px;
+  }
+
+  .wrapper-vector-left {
+    top: 351px;
+    left: 223px;
+  }
+
+  .wrapper-vector-right {
+    top: 351px;
+    right: 222px;
+  }
+
+  .button-choose-pets {
+    margin-top: 60px;
+    margin-bottom: 62px;
+  }
+
+  /* pick-and-feed-a-friend */
+
+  .pick-and-feed-a-friend {
+    height: 781px;
+  }
+
+  .pick-and-feed-a-friend .container {
+    top: 20px;
+    height: 741px;
+    width: 100%;
+  }
+
+  .title-pick-and-feed-a-friend {
+    margin-top: 10px;
+    font-size: 42px;
+  }
+
+  .small-title-pick-and-feed-a-friend {
+    font-size: 22px;
+    margin-top: -23px;
+    margin-left: 20px;
+  }
+
+  .pick-and-feed-a-friend-covid-description {
+    margin: -2px 7px 0px 20px;
+  }
+
+  .pick-and-feed-a-friend-description-donate {
+    margin: 10px 0px 0px 20px;
+  }
+
+  .pick-and-feed-a-friend-description {
+    margin-top: 30px;
+  }
+
+  .vector-firth {
+    display: none;
+  }
+
+  .vector-second {
+    display: none;
+  }
+
+  .pick-and-feed-a-friend-visual-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: top;
+    margin: 20px 0 0 20px;
+    gap: 18px;
+  }
+
+  .visual-block1 {
+    margin-left: -5px;
+    margin-right: 6px;
+  }
+
+  .visual-block2 {
+    margin-right: 6px;
+  }
+
+  .visual-block3 {
+    margin-right: 2px;
+  }
+
+  .discription-visual-block1 { 
+    padding-left: 5px;
+  }
+
+  .discription-visual-block3 {
+    margin-left: -3px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 41px 0 0 1px;
+  }
+
+  /* testimonials */
+
+  .testimonials {
+    margin: 60px 5px 0 0;
+  }
 }
