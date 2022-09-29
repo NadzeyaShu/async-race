@@ -50,6 +50,13 @@
     color: #333b41;
   }
 
+  .flower-backstage {
+    position: absolute;
+    top: 712px;
+    right: -93px;
+    z-index: -1;
+}
+
   
   
   

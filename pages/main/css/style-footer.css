@@ -232,3 +232,10 @@
   transform: scale(1.2);
   color: #f3eb96;
 }
+
+.bamboo-footer {
+  position: absolute;
+  top: 62px;
+  left: 9px;
+  z-index: 0;
+}

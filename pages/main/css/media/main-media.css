@@ -50,6 +50,10 @@
     gap: 48px;
   }
 
+  .humburger {
+    display: none;
+  }
+
   /* block-watch_animal */
 
   .block-watch_animal {
@@ -291,14 +295,6 @@
   }
 }
 
-/* @media (min-width: 1000px) {
-  .container {
-    width: 940px;
-    margin: 0 auto;
-    display: flex;
-  }
-} */
-
 @media (max-width: 999px) {
   .container {
     width: 600px;
@@ -307,36 +303,37 @@
   }
 
   .flower-backstage {
-    position: absolute;
-    top: 712px;
-    right: -93px;
-    z-index: -1;
+    display: block;
+    transform: scale(0.78);
+    top: 269px;
+    right: -137px;
   }
 
   .strelitzia {
-    display: none;
-    /* transform: scale(0.65);
-    top: 2020px;
-    right: -62px; */
+    transform: scale(0.48);
+    top: 1616px;
+    right: -96px;
   }
 
   .palm {
-    display: none;
-    /* transform: scale(0.45);
-    top: 1917px;
-    left: -442px; */
+    transform: scale(0.45);
+    top: 1486px;
+    left: -502px;
   }
 
   .leav {
-    display: none;
-    /* transform: scale(0.8);
-    bottom: -129px;
-    right: -171px; */
+    transform: scale(0.5);
+    bottom: -170px;
+    right: -191px;
   }
 
   /* header */
 
   .header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+
     height: 34px;
   }
 
@@ -357,6 +354,33 @@
     display: none;
   }
 
+  .bamboo-header {
+    transform: scale(0.7);
+    top: 12px;
+    left: 2px;
+  }
+
+  .humburger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 18px;
+    height: 10px;
+  }
+
+  .humburger-line {
+    display: block;
+    margin-top: 2px;
+    height: 2px;
+    width: 18px;
+    background-color: #ffffff;
+  }
+
+  .menu-nav {
+    display: none;
+  }
+
   /* block-watch_animal */
 
   .block-watch_animal {
@@ -369,8 +393,8 @@
   .title-block-watch_animal {
     font-size: 85px;
     font-size: 54.2894px;
-    top: 48px;
-    left: 326px;
+    top: 49px;
+    left: 325px;
   }
 
   .title-block-watch_animal::before {
@@ -381,7 +405,7 @@
   }
 
   .button-block-watch_animal {
-    top: 244px;
+    top: 246px;
     left: -302px;
     padding-left: 8px;
   }
@@ -427,7 +451,7 @@
   }
 
   .wrapper-pets {
-    gap: 90px 29.52px;
+    gap: 91px 29.52px;
     padding-top: 10px;
   }
 
@@ -467,12 +491,12 @@
   }
 
   .wrapper-vector-left {
-    top: 351px;
+    top: 353px;
     left: 223px;
   }
 
   .wrapper-vector-right {
-    top: 351px;
+    top: 353px;
     right: 222px;
   }
 
@@ -545,7 +569,7 @@
     margin-right: 2px;
   }
 
-  .discription-visual-block1 { 
+  .discription-visual-block1 {
     padding-left: 5px;
   }
 
@@ -559,7 +583,108 @@
 
   /* testimonials */
 
+  .testimonials .container {
+    height: 608px;
+  }
+
   .testimonials {
     margin: 60px 5px 0 0;
+  }
+
+  .wrapper-testimonials-all {
+    margin: 30px 0 0 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 19px;
+  }
+
+  .wrapper-testimonials {
+    margin: 0px 0 0 0px;
+    width: 596px;
+    height: 105px;
+  }
+
+  .wrapper-testimonials::before {
+    width: 600px;
+    height: 109px;
+  }
+
+  .review-content {
+    height: 60px;
+    padding: 24px 11px 0 16px;
+  }
+
+  .user-photo {
+    left: 7px;
+  }
+
+  .user-name {
+    left: 58px;
+  }
+
+  .wrapper-user-info {
+    left: 58px;
+    gap: 5px;
+  }
+
+  .wrapper-btn-feedback {
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+  }
+
+  .btn-feedback {
+    margin: -11px 0 0 0px;
+    width: 240px;
+    height: 54px;
+  }
+
+  /* footer */
+
+  .footer .container {
+    height: 282px;
+  }
+
+  .subscribe-footer {
+    display: none;
+  }
+
+  .name-social-network {
+    display: none;
+  }
+
+  .title-footer {
+    margin: 11px 0 0 -14px;
+  }
+
+  .btn-donate {
+    margin: 33px 0 0 0px;
+  }
+
+  .wrapper-footer-contacts {
+    position: relative;
+    margin-top: 65px;
+  }
+
+  .container-social-network {
+    position: absolute;
+    left: 558px;
+    bottom: 95px;
+    gap: 20px;
+  }
+
+  .wrapper-footer-menu-nav {
+    top: -1px;
+    left: 1px;
+  }
+
+  .footer-menu {
+    gap: 37px;
+  }
+
+  .bamboo-footer {
+    top: 32px;
+    left: -4px;
   }
 }

@@ -89,3 +89,13 @@ background-clip: text;
 .zoom:hover {
   transform: scale(1.2);
 }
+
+.bamboo-header {
+  position: absolute;
+  top: 38px;
+  left: 9px;
+  z-index: 0;
+} 
+ .humburger {
+  display: none;
+}
