@@ -9,7 +9,7 @@
 }
 
 .wrapper-header-title {
-    position: relative;
+  position: relative;
 }
 
 .header-title {
@@ -48,7 +48,6 @@
 }
 
 .design {
-  
   margin-left: 436px;
   display: flex;
   align-items: center;
@@ -71,11 +70,10 @@
 }
 
 .active {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .logo-link {
@@ -83,7 +81,7 @@ background-clip: text;
 }
 
 .zoom {
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .zoom:hover {
@@ -95,7 +93,8 @@ background-clip: text;
   top: 38px;
   left: 9px;
   z-index: 0;
-} 
- .humburger {
+}
+
+.humburger {
   display: none;
 }

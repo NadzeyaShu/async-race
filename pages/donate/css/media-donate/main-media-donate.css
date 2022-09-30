@@ -36,7 +36,7 @@
 
   .block-watch_animal {
     height: 390px;
-    background-image: url("../../../../assets/images/bg-panda.jpg") no-repeat;
+    background-image: url("../../../../assets/images/bg-panda.jpg");
     background-size: 150%;
     background-position: center 40%;
   }
@@ -89,6 +89,10 @@
 
   .wrapper-btn-pick-and-feed-a-friend {
     margin: 27px 0 0 2px;
+  }
+
+  .slidecontainer320px {
+    display: none;
   }
 
   /* footer */
@@ -174,11 +178,7 @@
 
   .block-watch_animal {
     height: 335px;
-    /* background-image: url("../../../../assets/images/bg-panda.jpg") no-repeat;
-    background-size: 124.5%;
-    background-position: center 78%; */
-
-    background-image: url("../../../../assets/images/bg-panda.jpg") no-repeat;
+    background-image: url("../../../../assets/images/bg-panda.jpg");
     background-size: 194%;
     background-position: center 46%;
   }
@@ -247,9 +247,13 @@
 
   .wrapper-payment-type {
     margin: 33px 14px 0 -4px;
-
     gap: 50px;
   }
+
+  .slidecontainer320px {
+    display: none;
+  }
+
   /* footer */
 
   .footer .container {
@@ -301,4 +305,226 @@
     top: 32px;
     left: -4px;
   }
+}
+
+@media (max-width: 639px) {
+  .container {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  /* header */
+
+  .header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    height: 34px;
+  }
+
+  .header-title {
+    margin: 3px 0px 0px 0px;
+  }
+
+  .bamboo-header {
+    transform: scale(0.6);
+    top: 12px;
+    left: 1px;
+  }
+
+  .humburger {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* block-watch_animal */
+
+  .block-watch_animal {
+    height: 187px;
+    overflow: hidden;
+    background-image: url(../../../../assets/images/bg-panda.jpg);
+    background-size: 214%;
+    background-position: center 43%;
+  }
+
+  /* pick-and-feed-a-friend */
+
+  .pick-and-feed-a-friend {
+    height: 1147px;
+  }
+
+  .discription-title-pick-and-feed-a-friend {
+    line-height: 137%;
+  }
+
+  .pick-and-feed-a-friend .container-donate-pick-and-feed-a-friend {
+    width: 300px;
+    height: 591px;
+    top: 30px;
+  }
+
+  .donation-information {
+    padding-top: 31px;
+    font-size: 24px;
+}
+
+.main-title-pick-and-feed-a-friend {
+  font-size: 24px;
+  margin-top: 19px;
+}
+
+.discription-main-title-pick-and-feed-a-friend {
+
+  font-size: 16px;
+  line-height: 140%;
+  margin: -15px 0px 0px 0px;
+  
+}
+
+.visuai-block-pick-and-feed-a-friend {
+  transform: scale(0.55);
+  margin-top: -45px;
+  gap: 0;
+}
+
+.wrapper-sum-days {
+  margin: 51px 12px 0px 0px;
+}
+
+.diet-animals {
+  margin-top: 17px;
+  margin-left: -5px;
+  width: 160px;
+}
+
+.wrapper-x-icon {
+  margin: 29px 69px 0px -1px;
+}
+
+.icon-pets {
+  margin: 0px 0px 0px 0px;
+}
+
+.amound {
+  margin: -53px 0px 0px 0px;
+}
+
+.slidecontainer {
+  display: none;
+}
+
+.slidecontainer320px {
+  display: block;
+  width: 100.1%;
+  height: 14px;
+  margin: 7px 0px 0 0px;
+  background: #404950;
+  border-radius: 2px;
+}
+
+
+
+.slider {
+  position: relative;
+  bottom: 6px;
+  -webkit-appearance: none;
+  margin: 10px 17px;
+  width: 89%;
+  height: 2px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  margin: 0px 0px 20px 0px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffee2e;
+  cursor: pointer;
+}
+
+.range_list {
+  margin: -4px 10px 0 5px;
+  font-size: 13px;
+}
+
+.inpAnotherAmound {
+  margin-top: 49px;
+}
+
+.wrapper-payment-type {
+  margin: 27px 17px 0 -4px;
+}
+
+.wrapper-btn-pick-and-feed-a-friend {
+  margin: 25px 0 0 -3px;
+}
+
+.wrapper-subtitre-block {
+    margin: 30px 0 0 -1px;
+}
+
+/* footer */
+
+.footer .container {
+  height: 334px;
+}
+
+.wrapper-footer-title {
+  justify-content: center;
+}
+
+.container-footer-title {
+  margin: -1px 0px 0px 15px;
+}
+
+.title-footer {
+  margin-top: 22px;
+  border: none;
+  width: 128px;
+  height: 23px;
+}
+
+.bamboo-footer {
+  top: 18px;
+  left: 57px;
+}
+
+.container-social-network {
+  flex-direction: row;
+  left: 54px;
+  bottom: 171px;
+  gap: 30px;
+}
+
+.btn-donate {
+  margin: 85px 0 0 0px;
+}
+
+.wrapper-about-pages {
+  position: absolute;
+  bottom: 5px;
+  right: -1px;
+  display: flex;
+  font-size: 15px;
+}
+
+.wrapper-footer-menu-nav {
+  top: 44px;
+  left: 9px;
+}
+
+.footer-menu {
+gap: 31px;
+}
+
+
 }
