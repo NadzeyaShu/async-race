@@ -188,3 +188,11 @@
   transform: scale(1.2);
   color: #f3eb96;
 }
+
+.arrow-green-firth {
+  display: none;
+}
+
+.arrow-green-second {
+  display: none;
+}

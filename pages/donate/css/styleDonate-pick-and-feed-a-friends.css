@@ -309,3 +309,11 @@ input:checked {
 .slidecontainer320px {
   display: none;
 }
+
+.slidecontainer640px {
+  display: none;
+}
+
+.slidecontainer1000px {
+  display: none;
+}

@@ -78,6 +78,7 @@
   }
 
   .slidecontainer {
+    display: none;
     width: 86.2%;
     height: 27px;
     margin: 17px 83px 0 66px;
@@ -93,6 +94,24 @@
 
   .slidecontainer320px {
     display: none;
+  }
+
+  .slidecontainer640px {
+    display: none;
+  }
+
+  .slidecontainer1000px {
+    display: block;
+    width: 86.2%;
+    height: 27px;
+    margin: 17px 83px 0 66px;
+    background: #404950;
+    border-radius: 2px;
+  }
+
+  .slider {
+    margin: 0 10px;
+    width: 97%;
   }
 
   /* footer */
@@ -227,20 +246,47 @@
   }
 
   .slidecontainer {
-    width: 86.2%;
+    display: none;
+
+    /* width: 86.2%;
     height: 27px;
-    margin: 17px 83px 0 66px;
+    margin: 17px 83px 0 66px; */
   }
 
-  .slidecontainer {
+  /* .slidecontainer {
     width: 100%;
     height: 27px;
     margin: 7px 0px 0 0px;
+  } */
+
+  .slidecontainer1000px {
+    display: none;
+  }
+
+  .slidecontainer640px {
+    display: block;
+    width: 100%;
+    height: 27px;
+    margin: 6px 0px 0 0px;
+    background: #404950;
+    border-radius: 2px;
+  }
+
+  .slider {
+    margin: -7px 35px;
+    width: 88%;
+  }
+
+  .range_list {
+    margin: 22px 21px 0 12px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 27px 0 0 0px;
   }
 
   .inpAnotherAmound {
     margin-top: 97px;
-
     width: 180px;
     height: 42px;
   }
@@ -367,164 +413,166 @@
   .donation-information {
     padding-top: 31px;
     font-size: 24px;
-}
+  }
 
-.main-title-pick-and-feed-a-friend {
-  font-size: 24px;
-  margin-top: 19px;
-}
+  .main-title-pick-and-feed-a-friend {
+    font-size: 24px;
+    margin-top: 19px;
+  }
 
-.discription-main-title-pick-and-feed-a-friend {
+  .discription-main-title-pick-and-feed-a-friend {
+    font-size: 16px;
+    line-height: 140%;
+    margin: -15px 0px 0px 0px;
+  }
 
-  font-size: 16px;
-  line-height: 140%;
-  margin: -15px 0px 0px 0px;
-  
-}
+  .visuai-block-pick-and-feed-a-friend {
+    transform: scale(0.55);
+    margin-top: -45px;
+    gap: 0;
+  }
 
-.visuai-block-pick-and-feed-a-friend {
-  transform: scale(0.55);
-  margin-top: -45px;
-  gap: 0;
-}
+  .wrapper-sum-days {
+    margin: 51px 12px 0px 0px;
+  }
 
-.wrapper-sum-days {
-  margin: 51px 12px 0px 0px;
-}
+  .diet-animals {
+    margin-top: 17px;
+    margin-left: -5px;
+    width: 160px;
+  }
 
-.diet-animals {
-  margin-top: 17px;
-  margin-left: -5px;
-  width: 160px;
-}
+  .wrapper-x-icon {
+    margin: 29px 69px 0px -1px;
+  }
 
-.wrapper-x-icon {
-  margin: 29px 69px 0px -1px;
-}
+  .icon-pets {
+    margin: 0px 0px 0px 0px;
+  }
 
-.icon-pets {
-  margin: 0px 0px 0px 0px;
-}
+  .amound {
+    margin: -53px 0px 0px 0px;
+  }
 
-.amound {
-  margin: -53px 0px 0px 0px;
-}
+  .slidecontainer {
+    display: none;
+  }
 
-.slidecontainer {
-  display: none;
-}
+  .slidecontainer1000px {
+    display: none;
+  }
 
-.slidecontainer320px {
-  display: block;
-  width: 100.1%;
-  height: 14px;
-  margin: 7px 0px 0 0px;
-  background: #404950;
-  border-radius: 2px;
-}
+  .slidecontainer640px {
+    display: none;
+  }
 
+  .slidecontainer320px {
+    display: block;
+    width: 100.1%;
+    height: 14px;
+    margin: 7px 0px 0 0px;
+    background: #404950;
+    border-radius: 2px;
+  }
 
+  .slider {
+    position: relative;
+    bottom: 6px;
+    -webkit-appearance: none;
+    margin: 10px 17px;
+    width: 89%;
+    height: 2px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
 
-.slider {
-  position: relative;
-  bottom: 6px;
-  -webkit-appearance: none;
-  margin: 10px 17px;
-  width: 89%;
-  height: 2px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-}
+  .slider::-webkit-slider-thumb {
+    margin: 0px 0px 20px 0px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffee2e;
+    cursor: pointer;
+  }
 
-.slider::-webkit-slider-thumb {
-  margin: 0px 0px 20px 0px;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ffee2e;
-  cursor: pointer;
-}
+  .range_list {
+    margin: -4px 10px 0 5px;
+    font-size: 13px;
+  }
 
-.range_list {
-  margin: -4px 10px 0 5px;
-  font-size: 13px;
-}
+  .inpAnotherAmound {
+    margin-top: 49px;
+  }
 
-.inpAnotherAmound {
-  margin-top: 49px;
-}
+  .wrapper-payment-type {
+    margin: 27px 17px 0 -4px;
+  }
 
-.wrapper-payment-type {
-  margin: 27px 17px 0 -4px;
-}
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 25px 0 0 -3px;
+  }
 
-.wrapper-btn-pick-and-feed-a-friend {
-  margin: 25px 0 0 -3px;
-}
-
-.wrapper-subtitre-block {
+  .wrapper-subtitre-block {
     margin: 30px 0 0 -1px;
-}
+  }
 
-/* footer */
+  /* footer */
 
-.footer .container {
-  height: 334px;
-}
+  .footer .container {
+    height: 334px;
+  }
 
-.wrapper-footer-title {
-  justify-content: center;
-}
+  .wrapper-footer-title {
+    justify-content: center;
+  }
 
-.container-footer-title {
-  margin: -1px 0px 0px 15px;
-}
+  .container-footer-title {
+    margin: -1px 0px 0px 15px;
+  }
 
-.title-footer {
-  margin-top: 22px;
-  border: none;
-  width: 128px;
-  height: 23px;
-}
+  .title-footer {
+    margin-top: 22px;
+    border: none;
+    width: 128px;
+    height: 23px;
+  }
 
-.bamboo-footer {
-  top: 18px;
-  left: 57px;
-}
+  .bamboo-footer {
+    top: 18px;
+    left: 57px;
+  }
 
-.container-social-network {
-  flex-direction: row;
-  left: 54px;
-  bottom: 171px;
-  gap: 30px;
-}
+  .container-social-network {
+    flex-direction: row;
+    left: 54px;
+    bottom: 171px;
+    gap: 30px;
+  }
 
-.btn-donate {
-  margin: 85px 0 0 0px;
-}
+  .btn-donate {
+    margin: 85px 0 0 0px;
+  }
 
-.wrapper-about-pages {
-  position: absolute;
-  bottom: 5px;
-  right: -1px;
-  display: flex;
-  font-size: 15px;
-}
+  .wrapper-about-pages {
+    position: absolute;
+    bottom: 5px;
+    right: -1px;
+    display: flex;
+    font-size: 15px;
+  }
 
-.wrapper-footer-menu-nav {
-  top: 44px;
-  left: 9px;
-}
+  .wrapper-footer-menu-nav {
+    top: 44px;
+    left: 9px;
+  }
 
-.footer-menu {
-gap: 31px;
-}
-
-
+  .footer-menu {
+    gap: 31px;
+  }
 }
