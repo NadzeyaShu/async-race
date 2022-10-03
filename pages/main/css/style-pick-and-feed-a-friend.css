@@ -28,7 +28,6 @@
 .pick-and-feed-a-friend .container {
   flex-direction: column;
   position: relative;
-  /* align-items:flex-start; */
   top: 69px;
   height: 835px;
   background: rgba(253, 253, 255, 0.52);
@@ -38,7 +37,6 @@
 
 .title-pick-and-feed-a-friend {
   margin-top: 40px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -189,4 +187,12 @@
 .btn-pick-and-feed-a-friend:hover {
   transform: scale(1.2);
   color: #f3eb96;
+}
+
+.arrow-green-firth {
+  display: none;
+}
+
+.arrow-green-second {
+  display: none;
 }

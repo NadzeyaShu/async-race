@@ -34,7 +34,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  /* or 22px */
   text-transform: uppercase;
   color: #000000;
 }
@@ -83,26 +82,22 @@
   text-transform: uppercase;
   color: #ffffff;
   border: none;
-  transition: transform .2s
+  transition: transform 0.2s;
 }
 
 .button-choose-pets:hover {
   transform: scale(1.2);
-  
 }
 
 .btn-pets-link {
-text-decoration: none;
-color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .btn-pets-link:hover {
   transform: scale(1.2);
   color: #f3eb96;
 }
-  
-
-
 
 .wrapper-vector-left {
   position: absolute;
@@ -112,7 +107,7 @@ color: #ffffff;
   height: 62px;
   border-radius: 100%;
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .wrapper-vector-left:hover {
@@ -127,7 +122,7 @@ color: #ffffff;
   height: 62px;
   border-radius: 100%;
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .wrapper-vector-right:hover {
@@ -135,13 +130,27 @@ color: #ffffff;
 }
 
 .vector-left {
-    position: absolute;
-    top: 27px;
-    left: 23px;
+  position: absolute;
+  top: 27px;
+  left: 23px;
 }
 
 .vector-right {
-    position: absolute;
-    top: 27px;
-    left: 23px;
+  position: absolute;
+  top: 27px;
+  left: 23px;
+}
+
+.strelitzia {
+  position: absolute;
+  top: 2255px;
+  right: 0px;
+  z-index: -1;
+}
+
+.palm {
+  position: absolute;
+  top: 2070px;
+  left: -588px;
+  z-index: -2;
 }

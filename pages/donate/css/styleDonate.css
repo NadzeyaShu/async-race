@@ -2,34 +2,15 @@
 @import url(styleDonate-block-watch_animal.css);
 @import url(styleDonate-pick-and-feed-a-friends.css);
 @import url(styleDonate-footer.css);
+@import url(media-donate/main-media-donate.css);
 
 * {
-    box-sizing: border-box;
-    /* border: 1px solid red; */
-  }
-  
-  html {
-      scroll-behavior: smooth;
-    }
-  
-  .container {
-    width: 1160px;
-    margin: 0 auto;
-    display: flex;
-  }
-
-  .bamboo-header {
-    position: absolute;
-    top: 38px;
-    left: 9px;
-    z-index: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
-.bamboo-footer {
-    position: absolute;
-    top: 62px;
-    left: 9px;
-    z-index: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 h6 {

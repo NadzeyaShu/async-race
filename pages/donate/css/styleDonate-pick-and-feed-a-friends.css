@@ -173,7 +173,6 @@
   margin: 22px 22px 0 -4px;
   display: flex;
   justify-content: space-between;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -182,7 +181,6 @@
   text-transform: uppercase;
   color: #333b41;
 }
-
 
 .amound {
   margin: 43px 0px 0px 96px;
@@ -197,7 +195,6 @@
 .wrapper-inpAnotherAmound {
   display: flex;
   justify-content: center;
-  /* padding-right: 20px; */
 }
 
 .inpAnotherAmound {
@@ -252,8 +249,6 @@ input:checked {
   gap: 10px;
 }
 
-
-
 .payment-type-label {
   font-family: "Roboto";
   font-style: normal;
@@ -305,4 +300,16 @@ input:checked {
   font-size: 16px;
   line-height: 140%;
   color: #333b41;
+}
+
+.slidecontainer320px {
+  display: none;
+}
+
+.slidecontainer640px {
+  display: none;
+}
+
+.slidecontainer1000px {
+  display: none;
 }
