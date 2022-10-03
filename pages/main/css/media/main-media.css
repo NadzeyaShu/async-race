@@ -384,10 +384,10 @@
 
   .block-watch_animal {
     height: 339px;
-    background-image: url("../../../../assets/images/bg-panda.jpg");
-    background-size: 124.5%;
-    background-position: center 78%;
-  }
+    background-image: url(../../../../assets/images/bg-panda.jpg);
+    background-size: 118.5%;
+    background-position: center bottom -4%;
+}
 
   .title-block-watch_animal {
     font-size: 85px;

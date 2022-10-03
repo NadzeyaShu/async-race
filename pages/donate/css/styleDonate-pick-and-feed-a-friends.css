@@ -182,7 +182,6 @@
   color: #333b41;
 }
 
-
 .amound {
   margin: 43px 0px 0px 96px;
   font-family: "Roboto";
@@ -196,7 +195,6 @@
 .wrapper-inpAnotherAmound {
   display: flex;
   justify-content: center;
-  /* padding-right: 20px; */
 }
 
 .inpAnotherAmound {
@@ -250,8 +248,6 @@ input:checked {
   display: flex;
   gap: 10px;
 }
-
-
 
 .payment-type-label {
   font-family: "Roboto";
