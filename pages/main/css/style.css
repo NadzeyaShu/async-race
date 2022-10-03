@@ -5,6 +5,8 @@
 @import url(style-pick-and-feed-a-friend.css);
 @import url(style-testimonials.css);
 @import url(style-footer.css);
+@import url(media/main-media.css);
+
 
 * {
     box-sizing: border-box;
@@ -15,59 +17,30 @@ html {
     scroll-behavior: smooth;
 }
 
-.container {
-    width: 1160px;
-    margin: 0 auto;
-    display: flex;
-}
+/*.container {*/
+/*    width: 1160px;*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*}*/
 
 .main-container {
     position: relative;
     overflow: hidden;
 }
 
-.flower-backstage {
-    position: absolute;
-    top: 712px;
-    right: -93px;
-    z-index: -1;
-}
-
-.strelitzia {
-    position: absolute;
-    top: 2255px;
-    right: 0px;
-    z-index: -1;
-}
-
-.palm {
-    position: absolute;
-    top: 2070px;
-    left: -588px;
-    z-index: -2;
-}
-
-.leav {
-    position: absolute;
-    bottom: -132px;
-    right: -163px;
-    z-index: -2;
-}
-
-.bamboo-header {
-    position: absolute;
-    top: 38px;
-    left: 9px;
-    z-index: 0;
-}
-
-.bamboo-footer {
-    position: absolute;
-    top: 62px;
-    left: 9px;
-    z-index: 0;
-}
 
 h6 {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+

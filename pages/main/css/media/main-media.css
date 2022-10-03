@@ -1,0 +1,1032 @@
+@media (min-width: 1600px) {
+  .container {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+@media (max-width: 1599px) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .flower-backstage {
+    display: none;
+  }
+
+  .strelitzia {
+    transform: scale(0.65);
+    top: 2020px;
+    right: -62px;
+  }
+
+  .palm {
+    transform: scale(0.45);
+    top: 1917px;
+    left: -442px;
+  }
+
+  .leav {
+    transform: scale(0.8);
+    bottom: -129px;
+    right: -171px;
+  }
+
+  /* header */
+
+  .design {
+    margin-left: 258px;
+  }
+
+  .menu-nav {
+    margin-left: 23px;
+    gap: 58px;
+  }
+
+  .menu {
+    gap: 48px;
+  }
+
+  .humburger {
+    display: none;
+  }
+
+  /* block-watch_animal */
+
+  .block-watch_animal {
+    height: 503px;
+    background-image: url("../../../../assets/images/bg-panda.jpg");
+    background-size: 119.5%;
+    background-position: center 100%;
+  }
+
+  .title-block-watch_animal {
+    font-size: 85px;
+    top: 43px;
+    left: 434px;
+  }
+
+  .title-block-watch_animal::before {
+    width: 368px;
+    height: 368px;
+    top: -54px;
+    left: -8px;
+  }
+
+  .button-block-watch_animal {
+    top: 403px;
+    left: 35px;
+    padding-left: 8px;
+  }
+
+  /* backstage  */
+
+  .the-backstage .container {
+    gap: 31px;
+  }
+
+  .the-backstage {
+    margin-top: 110px;
+  }
+
+  .wrapper-bg-backstage {
+    width: 455px;
+    height: 408px;
+  }
+
+  .bg-backstage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wrapper-title-backstage {
+    width: 454px;
+    height: 427px;
+    margin-top: -9px;
+  }
+
+  /* pets  */
+
+  .pets {
+    margin-top: 133px;
+  }
+
+  .wrapper-pets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 92px 29px;
+    padding-top: 10px;
+    position: relative;
+  }
+
+  .pet-block {
+    width: 294px;
+    height: 354px;
+  }
+
+  .wrapper-img-pets {
+    width: 294px;
+    height: 294px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .img-pets {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wrapper-vector-left {
+    top: 378px;
+    left: 322px;
+  }
+
+  .wrapper-vector-right {
+    top: 378px;
+    right: 322px;
+  }
+
+  .description-pets {
+    padding-top: 7px;
+    padding-left: 16px;
+  }
+
+  .herbivorous {
+    left: 245px;
+    bottom: 0px;
+  }
+
+  .predatory {
+    left: 237px;
+    bottom: -3px;
+  }
+
+  .btn-pets {
+    margin-bottom: 40px;
+  }
+
+  /* pick-and-feed */
+
+  .pick-and-feed-a-friend {
+    height: 876px;
+  }
+
+  .pick-and-feed-a-friend .container {
+    top: 30px;
+    height: 796px;
+  }
+
+  .title-pick-and-feed-a-friend {
+    margin-top: 30px;
+  }
+
+  .small-title-pick-and-feed-a-friend {
+    margin-top: -27px;
+    margin-left: 2em;
+  }
+
+  .pick-and-feed-a-friend-covid-description {
+    margin: -2px 83px 0 49px;
+  }
+
+  .pick-and-feed-a-friend-description-donate {
+    margin: 10px 39px 0px 49px;
+  }
+
+  .pick-and-feed-a-friend-description {
+    margin-top: 40px;
+  }
+
+  .discription-visual-block {
+    margin-top: 29px;
+  }
+
+  .vector-second {
+    margin-top: 59px;
+    margin-left: -3px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 71px 0 0 2px;
+  }
+
+  /* testimonials */
+
+  .testimonials {
+    margin-top: 102px;
+  }
+
+  .testimonials .container {
+    height: 740px;
+  }
+
+  .wrapper-testimonials-all {
+    gap: 35px;
+  }
+
+  .wrapper-testimonials {
+    margin-top: 31px;
+    width: 289px;
+    height: 387px;
+  }
+
+  .wrapper-testimonials::before {
+    width: 293px;
+    height: 391px;
+  }
+
+  .hidden-user-testimonials {
+    display: none;
+  }
+
+  .review-content {
+    padding: 23px 14px 0 17px;
+  }
+
+  .slider {
+    width: 388px;
+  }
+
+  .slider::before {
+    width: 390px;
+  }
+
+  .wrapper-slider {
+    margin-left: -6px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 75px;
+  }
+
+  .btn-feedback {
+    margin-top: 26px;
+  }
+
+  /* footer */
+
+  .container-footer-title {
+    margin-left: 15px;
+  }
+
+  .subscribe-footer {
+    margin-right: 19px;
+  }
+
+  .btn-donate {
+    margin: 35px 0 0 15px;
+  }
+
+  .container-social-network {
+    margin-left: 15px;
+  }
+
+  .wrapper-footer-menu-nav {
+    left: 67px;
+  }
+
+  .footer-menu {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 999px) {
+  .container {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .flower-backstage {
+    display: block;
+    transform: scale(0.78);
+    top: 269px;
+    right: -137px;
+  }
+
+  .strelitzia {
+    transform: scale(0.48);
+    top: 1616px;
+    right: -96px;
+  }
+
+  .palm {
+    transform: scale(0.45);
+    top: 1486px;
+    left: -502px;
+  }
+
+  .leav {
+    transform: scale(0.5);
+    bottom: -170px;
+    right: -191px;
+  }
+
+  /* header */
+
+  .header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    height: 34px;
+  }
+
+  .header .container {
+    margin: 0;
+  }
+
+  .header-title {
+    margin: 3px 0px 0px 1px;
+    padding-top: 0px;
+    width: 46.93px;
+    height: 29.03px;
+    font-size: 12.2899px;
+    border: none;
+  }
+
+  .design {
+    display: none;
+  }
+
+  .bamboo-header {
+    transform: scale(0.7);
+    top: 12px;
+    left: 2px;
+  }
+
+  .humburger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 18px;
+    height: 10px;
+  }
+
+  .humburger-line {
+    display: block;
+    margin-top: 2px;
+    height: 2px;
+    width: 18px;
+    background-color: #ffffff;
+  }
+
+  .menu-nav {
+    display: none;
+  }
+
+  /* block-watch_animal */
+
+  .block-watch_animal {
+    height: 339px;
+    background-image: url(../../../../assets/images/bg-panda.jpg);
+    background-size: 118.5%;
+    background-position: center bottom -4%;
+}
+
+  .title-block-watch_animal {
+    font-size: 85px;
+    font-size: 54.2894px;
+    top: 49px;
+    left: 325px;
+  }
+
+  .title-block-watch_animal::before {
+    width: 237.6px;
+    height: 237.6px;
+    top: -37px;
+    left: -15px;
+  }
+
+  .button-block-watch_animal {
+    top: 246px;
+    left: -302px;
+    padding-left: 8px;
+  }
+
+  /* backstage */
+
+  .wrapper-bg-backstage {
+    display: none;
+  }
+
+  .the-backstage .container {
+    gap: 0;
+  }
+
+  .wrapper-title-backstage {
+    width: 495px;
+    height: 367px;
+    margin: -49px 0px 0px 4px;
+  }
+
+  .title_the-backstage-description {
+    margin-top: 21px;
+    margin-left: -4px;
+    margin-right: 4px;
+  }
+
+  .title_the-backstage-description-two {
+    margin-top: 30px;
+  }
+
+  .title_the-backstage-description-three {
+    margin: 19px 0 0 -3px;
+  }
+
+  /* pets */
+
+  .pets {
+    margin-top: 70px;
+  }
+
+  .pets-block-640 {
+    display: none;
+  }
+
+  .wrapper-pets {
+    gap: 91px 29.52px;
+    padding-top: 10px;
+  }
+
+  .pet-block {
+    width: 285px;
+    height: 332px;
+  }
+
+  .wrapper-img-pets {
+    width: 285px;
+    height: 286px;
+  }
+
+  .description-pets {
+    padding: 5px 0 0 11px;
+  }
+
+  .title-pets {
+    font-size: 12.4695px;
+  }
+
+  .habitat-pets {
+    margin-top: -1px;
+    font-size: 11.6901px;
+  }
+
+  .herbivorous {
+    transform: scale(0.8);
+    left: 245px;
+    bottom: -7px;
+  }
+
+  .predatory {
+    transform: scale(0.8);
+    left: 235px;
+    bottom: -6px;
+  }
+
+  .wrapper-vector-left {
+    top: 353px;
+    left: 223px;
+  }
+
+  .wrapper-vector-right {
+    top: 353px;
+    right: 222px;
+  }
+
+  .button-choose-pets {
+    margin-top: 60px;
+    margin-bottom: 62px;
+  }
+
+  /* pick-and-feed-a-friend */
+
+  .pick-and-feed-a-friend {
+    height: 781px;
+  }
+
+  .pick-and-feed-a-friend .container {
+    top: 20px;
+    height: 741px;
+    width: 100%;
+  }
+
+  .title-pick-and-feed-a-friend {
+    margin-top: 10px;
+    font-size: 42px;
+  }
+
+  .small-title-pick-and-feed-a-friend {
+    font-size: 22px;
+    margin-top: -23px;
+    margin-left: 20px;
+  }
+
+  .pick-and-feed-a-friend-covid-description {
+    margin: -2px 7px 0px 20px;
+  }
+
+  .pick-and-feed-a-friend-description-donate {
+    margin: 10px 0px 0px 20px;
+  }
+
+  .pick-and-feed-a-friend-description {
+    margin-top: 30px;
+  }
+
+  .vector-firth {
+    display: none;
+  }
+
+  .vector-second {
+    display: none;
+  }
+
+  .pick-and-feed-a-friend-visual-block {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    align-items: top;
+    margin: 20px 0 0 20px;
+    gap: 18px;
+  }
+
+  .visual-block1 {
+    margin-left: -5px;
+    margin-right: 6px;
+  }
+
+  .visual-block2 {
+    margin-right: 6px;
+  }
+
+  .visual-block3 {
+    margin-right: 2px;
+  }
+
+  .discription-visual-block1 {
+    padding-left: 5px;
+  }
+
+  .discription-visual-block3 {
+    margin-left: -3px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 41px 0 0 1px;
+  }
+
+  .arrow-green-firth {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 137px;
+  }
+
+  .arrow-green-second {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 345px;
+  }
+
+  /* testimonials */
+
+  .testimonials .container {
+    height: 608px;
+  }
+
+  .testimonials {
+    margin: 60px 5px 0 0;
+  }
+
+  .wrapper-testimonials-all {
+    margin: 30px 0 0 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 19px;
+  }
+
+  .wrapper-testimonials {
+    margin: 0px 0 0 0px;
+    width: 596px;
+    height: 105px;
+  }
+
+  .wrapper-testimonials::before {
+    width: 600px;
+    height: 109px;
+  }
+
+  .review-content {
+    height: 60px;
+    padding: 24px 11px 0 16px;
+  }
+
+  .user-photo {
+    left: 7px;
+  }
+
+  .user-name {
+    left: 58px;
+  }
+
+  .wrapper-user-info {
+    left: 58px;
+    gap: 5px;
+  }
+
+  .wrapper-btn-feedback {
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+  }
+
+  .btn-feedback {
+    margin: -11px 0 0 0px;
+    width: 240px;
+    height: 54px;
+  }
+
+  /* footer */
+
+  .footer .container {
+    height: 282px;
+  }
+
+  .subscribe-footer {
+    display: none;
+  }
+
+  .name-social-network {
+    display: none;
+  }
+
+  .title-footer {
+    margin: 11px 0 0 -14px;
+  }
+
+  .btn-donate {
+    margin: 33px 0 0 0px;
+  }
+
+  .wrapper-footer-contacts {
+    position: relative;
+    margin-top: 65px;
+  }
+
+  .container-social-network {
+    position: absolute;
+    left: 558px;
+    bottom: 95px;
+    gap: 20px;
+  }
+
+  .wrapper-footer-menu-nav {
+    top: -1px;
+    left: 1px;
+  }
+
+  .footer-menu {
+    gap: 37px;
+  }
+
+  .bamboo-footer {
+    top: 32px;
+    left: -4px;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  /* header */
+
+  .header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    height: 34px;
+  }
+
+  .header-title {
+    margin: 3px 0px 0px 0px;
+  }
+
+  .bamboo-header {
+    transform: scale(0.6);
+    top: 12px;
+    left: 1px;
+  }
+
+  .humburger {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* block-watch_animal */
+
+  .block-watch_animal {
+    height: 261px;
+    background-image: url(../../../../assets/images/bg-panda.jpg);
+    background-size: 121.5%;
+    background-position: center 0%;
+  }
+
+  .title-block-watch_animal {
+    font-size: 28px;
+    top: 41px;
+    left: 172px;
+  }
+
+  .title-block-watch_animal::before {
+    width: 119.09px;
+    height: 119.09px;
+    top: -18px;
+    left: -20px;
+  }
+
+  .button-block-watch_animal {
+    position: relative;
+    top: 207px;
+    left: -126px;
+    width: 298px;
+    height: 54px;
+  }
+
+  /* backstage */
+
+  .the-backstage {
+    margin-top: 80px;
+  }
+
+  .title_the-backstage {
+    margin-left: -3px;
+    font-size: 24px;
+  }
+  .title_the-backstage-description {
+    margin-top: 10px;
+    margin-left: -3px;
+  }
+
+  .wrapper-title-backstage {
+    width: 300px;
+    height: 391px;
+  }
+
+  .title_the-backstage-description-two {
+    margin: 20px 0 0 -2px;
+  }
+
+  .title_the-backstage-description-three {
+    margin: 9px 0 0 -4px;
+  }
+
+  .flower-backstage {
+    display: block;
+    transform: scale(0.35);
+    top: 28px;
+    right: -171px;
+  }
+
+  /* pets */
+
+  .pets {
+    margin-top: 27px;
+  }
+
+  .wrapper-pets {
+    gap: 19px 29.52px;
+  }
+
+  .wrapper-vector-left {
+    display: none;
+  }
+
+  .wrapper-vector-right {
+    display: none;
+  }
+
+  .button-choose-pets {
+    margin-top: 22px;
+    margin-bottom: 60px;
+  }
+
+  .btn-pets {
+    margin-bottom: 0px;
+  }
+
+  .strelitzia {
+    transform: scale(0.25);
+    top: 2071px;
+    right: -158px;
+  }
+
+  .palm {
+    transform: scale(0.16);
+    top: 1975px;
+    left: -452px;
+  }
+
+  /* pick-and-feed-a-friend */
+
+  .pick-and-feed-a-friend {
+    height: 1082px;
+  }
+
+  .pick-and-feed-a-friend .container {
+    height: 1042px;
+    width: 300px;
+  }
+
+  .title-pick-and-feed-a-friend {
+    margin-top: 21px;
+    font-size: 24px;
+  }
+
+  .small-title-pick-and-feed-a-friend {
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -14px;
+    margin-left: -2px;
+  }
+
+  .pick-and-feed-a-friend-covid-description {
+    display: none;
+  }
+
+  .pick-and-feed-a-friend-description-donate {
+    display: none;
+  }
+
+  .pick-and-feed-a-friend-description {
+    font-size: 24px;
+    margin-top: 1px;
+  }
+
+  .pick-and-feed-a-friend-visual-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 7px;
+    gap: 18px;
+  }
+
+  .discription-visual-block1 {
+    margin-top: 9px;
+    padding-left: 5px;
+  }
+
+  .visual-block2 {
+    margin-top: 6px;
+    margin-right: 6px;
+  }
+
+  .discription-visual-block {
+    margin-top: 9px;
+  }
+
+  .visual-block3 {
+    margin-top: -6px;
+    margin-right: 2px;
+  }
+
+  .wrapper-btn-pick-and-feed-a-friend {
+    margin: 37px 0 0 0px;
+  }
+
+  .arrow-green-firth {
+    display: block;
+    position: absolute;
+    top: 191px;
+    left: 199px;
+    transform: rotate(84.06deg);
+  }
+
+  .arrow-green-second {
+    display: block;
+    position: absolute;
+    top: 440px;
+    left: 199px;
+    transform: rotate(84.06deg);
+  }
+
+  /* testimonials */
+
+  .testimonials {
+    margin: 29px 2px 0 0;
+  }
+
+  .testimonials .container {
+    height: 550px;
+  }
+
+  .title-testimonials {
+    font-size: 24px;
+  }
+
+  .wrapper-testimonials-all {
+    margin: 20px 0 0 4px;
+  }
+
+  .wrapper-testimonials {
+    width: 296px;
+  }
+
+  .wrapper-testimonials::before {
+    width: 300px;
+  }
+
+  .user-photo {
+    top: 9px;
+  }
+
+  .user-name {
+    top: 10px;
+    left: 54px;
+  }
+
+  .wrapper-user-info {
+    top: 11px;
+    left: 54px;
+  }
+
+  .review-content {
+    padding: 22px 11px 0 16px;
+  }
+
+  .wrapper-slider {
+    display: none;
+  }
+
+  .btn-feedback {
+    margin: 33px 0 0 0px;
+  }
+
+  .leav {
+    transform: scale(0.25) rotate(-16deg);
+    bottom: -187px;
+    right: -201px;
+  }
+
+  /* footer */
+
+  .footer .container {
+    height: 334px;
+  }
+
+  .wrapper-footer-title {
+    justify-content: center;
+  }
+
+  .title-footer {
+    margin-top: 22px;
+    border: none;
+    width: 128px;
+    height: 23px;
+  }
+
+  .bamboo-footer {
+    top: 18px;
+    left: 57px;
+  }
+
+  .container-social-network {
+    flex-direction: row;
+    left: 38px;
+    bottom: 171px;
+    gap: 30px;
+  }
+
+  .btn-donate {
+    margin: 85px 0 0 0px;
+  }
+
+  .wrapper-about-pages {
+    position: absolute;
+    bottom: 5px;
+    right: -1px;
+    display: flex;
+    font-size: 15px;
+  }
+
+  .wrapper-footer-menu-nav {
+    top: 44px;
+    left: 9px;
+  }
+
+  .footer-menu {
+    gap: 31px;
+  }
+}
