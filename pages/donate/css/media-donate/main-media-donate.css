@@ -37,9 +37,9 @@
   .block-watch_animal {
     height: 390px;
     background-image: url(../../../../assets/images/bg-panda.jpg);
-    background-size: 164%;
+    background-size: 160%;
     background-position: center right 71%;
-}
+  }
 
   /* pick-and-feed */
 
@@ -87,6 +87,14 @@
   .range_list {
     margin: 21px -13px 0 -4px;
   }
+
+  .amound {
+    margin: 44px 0px 0px 64px;
+  }
+
+  .inpAnotherAmound {
+    margin-top: 98px;
+}
 
   .wrapper-btn-pick-and-feed-a-friend {
     margin: 27px 0 0 2px;
@@ -200,7 +208,7 @@
     background-image: url(../../../../assets/images/bg-panda.jpg);
     background-size: 213%;
     background-position: center right 63%;
-}
+  }
 
   /* pick-and-feed-a-friend */
 
@@ -382,7 +390,7 @@
     background-image: url(../../../../assets/images/bg-panda.jpg);
     background-size: 236%;
     background-position: center right 67%;
-}
+  }
 
   /* pick-and-feed-a-friend */
 
