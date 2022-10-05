@@ -28,7 +28,7 @@
 }
 
 .menu-nav {
-  margin-left: 25px;
+  margin-left: 23px;
   display: flex;
   gap: 58px;
   font-family: "Roboto";
@@ -48,7 +48,7 @@
 }
 
 .design {
-  margin-left: 436px;
+  margin-left: 380px;
   display: flex;
   align-items: center;
   font-family: "Roboto";
@@ -95,6 +95,9 @@
   z-index: 0;
 }
 
-.humburger {
+.humburger,
+.wrapper-header-title-nav,
+.design-link-nav,
+.menu-nav-burger {
   display: none;
 }

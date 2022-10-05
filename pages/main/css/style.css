@@ -23,6 +23,10 @@ html {
 /*    display: flex;*/
 /*}*/
 
+body {
+    overflow-x: hidden; 
+}
+
 .main-container {
     position: relative;
     overflow: hidden;
