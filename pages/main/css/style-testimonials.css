@@ -201,3 +201,11 @@
   right: -163px;
   z-index: -2;
 }
+  
+
+
+/* remove after  */
+
+.hidden-user-testimonials {
+  display: none;
+}

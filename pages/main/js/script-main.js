@@ -1,4 +1,5 @@
 import animals from '../js/animals.js';
+import testimonials from '../js/testomonial.js';
 
 const PET_BLOCKS_SIZE = 6;
 const openHumburgerElement = document.querySelector(".humburger");
@@ -6,6 +7,9 @@ const closeShadowElement = document.querySelector(".wrapper-menu-nav-burger");
 const petsWrapper = document.querySelector(".wrapper-pets");
 const wrapperVectorLeft = document.querySelector('.wrapper-vector-left');
 const wrapperVectorRight = document.querySelector('.wrapper-vector-right');
+const wrapperTestimonialsAll = document.querySelector('.wrapper-testimonials-all');
+
+
 
 openHumburgerElement.addEventListener("click", () => {
     openNavigationMenu();
@@ -20,6 +24,7 @@ closeShadowElement.addEventListener("click", (e) => {
 
 
 createPetsBocks();
+createWrapperTestimonials()
 
 wrapperVectorLeft.addEventListener("click", (array) => {
     createRandomAnimalsArray();
@@ -134,4 +139,97 @@ function shuffleArray(array) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+}
+
+function createRandomTestimonialsArray() {
+    let testimonialsClone = [...testimonials]
+    shuffleArray(testimonialsClone);
+    const newTestiminials = testimonialsClone.slice(0, 8);
+     newTestiminials.sort((a1, a2) => {
+        if (a1.date === a2.date) {
+            return 0;
+        } else if (a1.date === 'Today') {
+            return 1;
+        } else {
+            return -1;
+        }
+     })
+    return newTestiminials;
+}
+
+
+function createWrapperTestimonials() {
+    const testimonialsArray = createRandomTestimonialsArray();
+
+
+    for (let index = 0; index < testimonialsArray.length; index++) {
+        let testimonial = testimonialsArray[index];
+        const wrapperTestimonials = document.createElement("div");
+        wrapperTestimonials.classList.add('wrapper-testimonials');
+        if (index > 3) {
+            wrapperTestimonials.classList.add('hidden-user-testimonials');
+        }
+
+        const wrapperTestimonialsUser = createWrapperTestimonialsUser(testimonial);
+        wrapperTestimonials.append(wrapperTestimonialsUser);
+
+        const reviewContent = createReviewContent(testimonial);
+        wrapperTestimonials.append(reviewContent);
+
+        wrapperTestimonialsAll.append(wrapperTestimonials);
+    
+    }
+}
+
+function createWrapperTestimonialsUser(testimonial) {
+    let wrapperTestimonialsUser = document.createElement("div");
+    wrapperTestimonialsUser.classList.add('wrapper-testimonials-user');
+
+    let imgUser = document.createElement("img");
+    imgUser.classList.add('user-photo');
+    imgUser.src = testimonial.image;
+    imgUser.alt = testimonial.name;
+    wrapperTestimonialsUser.append(imgUser);
+
+    let userName = document.createElement("div");
+    userName.classList.add('user-name');
+    userName.textContent = testimonial.name;
+    wrapperTestimonialsUser.append(userName);
+
+
+    const wrapperUserInfo = createWrapperUserInfo(testimonial);
+    wrapperTestimonialsUser.append(wrapperUserInfo);
+
+    return wrapperTestimonialsUser;
+}
+
+function createWrapperUserInfo(testimonial) {
+    let wrapperUserInfo = document.createElement("div");
+    wrapperUserInfo.classList.add('wrapper-user-info');
+
+    let userLocation = document.createElement("div");
+    userLocation.classList.add('user-location');
+    userLocation.textContent = testimonial.location;
+
+    wrapperUserInfo.append(userLocation);
+
+    let dotTestimonials = document.createElement("div");
+    dotTestimonials.classList.add('dot-testimonials');
+    dotTestimonials.textContent = '•';
+
+    wrapperUserInfo.append(dotTestimonials);
+
+    let dayOfTestimonials = document.createElement("div");
+    dayOfTestimonials.classList.add('day-of-testimonials');
+    dayOfTestimonials.textContent = testimonial.date;
+
+    wrapperUserInfo.append(dayOfTestimonials);
+    return wrapperUserInfo;
+}
+
+function createReviewContent(testimonial) {
+    let reviewContent = document.createElement("div");
+    reviewContent.classList.add('review-content');
+    reviewContent.textContent = testimonial.text;
+    return reviewContent;
 }
