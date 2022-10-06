@@ -1,7 +1,36 @@
+import animals from '../js/animals.js';
+
+const PET_BLOCKS_SIZE = 6;
 const openHumburgerElement = document.querySelector(".humburger");
+const closeShadowElement = document.querySelector(".wrapper-menu-nav-burger");
+const petsWrapper = document.querySelector(".wrapper-pets");
+const wrapperVectorLeft = document.querySelector('.wrapper-vector-left');
+const wrapperVectorRight = document.querySelector('.wrapper-vector-right');
+
 openHumburgerElement.addEventListener("click", () => {
     openNavigationMenu();
 });
+
+closeShadowElement.addEventListener("click", (e) => {
+    const menuNavBurger = document.querySelector(".menu-nav-burger");
+    if (e.target !== menuNavBurger) {
+        closeNavigationMenu();
+    }
+});
+
+
+createPetsBocks();
+
+wrapperVectorLeft.addEventListener("click", (array) => {
+    createRandomAnimalsArray();
+    createPetsBocks();
+})
+
+wrapperVectorRight.addEventListener("click", (array) => {
+    createRandomAnimalsArray();
+    createPetsBocks();
+})
+
 
 
 const openNavigationMenu = () => {
@@ -19,14 +48,6 @@ const openNavigationMenu = () => {
     humburgerLineElement.forEach(element => element.classList.toggle("humburger-line-active"));
 }
 
-const closeShadowElement = document.querySelector(".wrapper-menu-nav-burger");
-closeShadowElement.addEventListener("click", (e) => {
-    const menuNavBurger = document.querySelector(".menu-nav-burger");
-    if (e.target !== menuNavBurger) {
-        closeNavigationMenu();
-    }
-});
-
 const closeNavigationMenu = () => {
     const wrapperMenuNavBurger = document.querySelector(".wrapper-menu-nav-burger-active");
     wrapperMenuNavBurger.classList.remove("wrapper-menu-nav-burger-active");
@@ -41,12 +62,76 @@ const closeNavigationMenu = () => {
     humburgerLineElement.forEach(element => element.classList.remove("humburger-line-active"));
 }
 
+function createPetsBocks() {
+    const animalsArray = createRandomAnimalsArray();
+    for (let index = 0; index < animalsArray.length; index++) {
+        let animal = animalsArray[index];
+        const petBlock = document.createElement("div");
+        petBlock.classList.add('pet-block');
+        if (index > 3) {
+            petBlock.classList.add('pets-block-640');
+        }
+        const imgPetsWrapper = createImgPetsWrapper(animal);
+        petBlock.append(imgPetsWrapper);
+        const petDescription = createPetDescription(animal);
+        petBlock.append(petDescription);
+        petsWrapper.append(petBlock);
+    }
+}
 
-// const scrollVectorLeft = document.querySelector(".wrapper-vector-left");
-// scrollVectorLeft.addEventListener("click", () => {
-//     //  getRandomImg();
-// });
+function createRandomAnimalsArray() {
+    let animalsClone = [...animals]
+    shuffleArray(animalsClone);
+    return animalsClone.slice(0, PET_BLOCKS_SIZE);
+}
 
-// function getRandomImg() {
+function createImgPetsWrapper(animal) {
+    let imgPetsWrapper = document.createElement("div");
+    imgPetsWrapper.classList.add('wrapper-img-pets');
 
-// }
+    let imgPet = document.createElement("img");
+    imgPet.classList.add('img-pets');
+    imgPet.src = animal.image;
+    imgPet.alt = animal.name;
+
+    imgPetsWrapper.append(imgPet);
+    return imgPetsWrapper;
+}
+
+function createPetDescription(animal) {
+    let petDescription = document.createElement("div");
+    petDescription.classList.add('description-pets');
+
+    let titlePets = document.createElement('div');
+    titlePets.classList.add('title-pets');
+    titlePets.textContent = animal.name;
+    petDescription.append(titlePets);
+
+    let petHabitat = document.createElement('div');
+    petHabitat.classList.add('habitat-pet');
+    petHabitat.textContent = animal.location;
+    petDescription.append(petHabitat);
+
+    let dietPets = document.createElement('div');
+    dietPets.classList.add('diet-pets');
+    if (animal.diet === 'herbivorous') {
+        dietPets.classList.add('herbivorous');
+    } else {
+        dietPets.classList.add('predatory');
+    }
+    petDescription.append(dietPets);
+
+    let imgDietPet = document.createElement('img');
+    imgDietPet.src = animal.meal;
+    imgDietPet.alt = animal.diet;
+    dietPets.append(imgDietPet);
+
+    return petDescription;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
