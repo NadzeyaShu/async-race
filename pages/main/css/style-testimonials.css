@@ -6,6 +6,7 @@
   height: 778px;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
 .title-testimonials {
@@ -24,16 +25,21 @@
 .wrapper-testimonials-all {
   display: flex;
   justify-content: baseline;
-  gap: 34px;
+  position: relative;
+  gap: 33px;
+  transform: translateX(0.1%);
+  transition: transform 0.7s;
 }
 
 .wrapper-testimonials {
+  flex-shrink: 0;
   margin-top: 48px;
   width: 264px;
   height: 387px;
   background: #f1f3f2;
   border-radius: 20px;
   position: relative;
+ 
 }
 
 .wrapper-testimonials::before {
@@ -202,10 +208,3 @@
   z-index: -2;
 }
   
-
-
-/* remove after  */
-
-.hidden-user-testimonials {
-  display: none;
-}

@@ -9,7 +9,12 @@ const wrapperVectorLeft = document.querySelector('.wrapper-vector-left');
 const wrapperVectorRight = document.querySelector('.wrapper-vector-right');
 const wrapperTestimonialsAll = document.querySelector('.wrapper-testimonials-all');
 
+const testimonialsRange = document.querySelector('input[type="range"]');
 
+
+testimonialsRange.addEventListener("input", unused => {
+    scrollTestimonials(testimonialsRange.value);
+});
 
 openHumburgerElement.addEventListener("click", () => {
     openNavigationMenu();
@@ -143,9 +148,7 @@ function shuffleArray(array) {
 
 function createRandomTestimonialsArray() {
     let testimonialsClone = [...testimonials]
-    shuffleArray(testimonialsClone);
-    const newTestiminials = testimonialsClone.slice(0, 8);
-     newTestiminials.sort((a1, a2) => {
+    testimonialsClone.sort((a1, a2) => {
         if (a1.date === a2.date) {
             return 0;
         } else if (a1.date === 'Today') {
@@ -153,8 +156,8 @@ function createRandomTestimonialsArray() {
         } else {
             return -1;
         }
-     })
-    return newTestiminials;
+    })
+    return testimonialsClone;
 }
 
 
@@ -166,9 +169,6 @@ function createWrapperTestimonials() {
         let testimonial = testimonialsArray[index];
         const wrapperTestimonials = document.createElement("div");
         wrapperTestimonials.classList.add('wrapper-testimonials');
-        if (index > 3) {
-            wrapperTestimonials.classList.add('hidden-user-testimonials');
-        }
 
         const wrapperTestimonialsUser = createWrapperTestimonialsUser(testimonial);
         wrapperTestimonials.append(wrapperTestimonialsUser);
@@ -177,7 +177,6 @@ function createWrapperTestimonials() {
         wrapperTestimonials.append(reviewContent);
 
         wrapperTestimonialsAll.append(wrapperTestimonials);
-    
     }
 }
 
@@ -232,4 +231,16 @@ function createReviewContent(testimonial) {
     reviewContent.classList.add('review-content');
     reviewContent.textContent = testimonial.text;
     return reviewContent;
+}
+
+function scrollTestimonials(rangeValue) {
+   
+    if (document.documentElement.clientWidth > 1599) {
+        let translateX = rangeValue * -25.6 + 0.1;
+        wrapperTestimonialsAll.style.transform = 'translateX(' + translateX + '%)';
+    } else if (document.documentElement.clientWidth > 999) {
+        let translateX = rangeValue * -34.3;
+        wrapperTestimonialsAll.style.transform = 'translateX(' + translateX + '%)';
+    }
+
 }
