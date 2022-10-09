@@ -29,7 +29,7 @@ closeShadowElement.addEventListener("click", (e) => {
 
 
 createPetsBocks();
-createWrapperTestimonials()
+createWrapperTestimonials();
 
 wrapperVectorLeft.addEventListener("click", (array) => {
     createRandomAnimalsArray();
@@ -176,6 +176,12 @@ function createWrapperTestimonials() {
         const reviewContent = createReviewContent(testimonial);
         wrapperTestimonials.append(reviewContent);
 
+        wrapperTestimonials.addEventListener("click", () => {
+            if (document.documentElement.clientWidth < 999) {
+                openPopUpTestimonial(testimonial);
+            }
+        });
+
         wrapperTestimonialsAll.append(wrapperTestimonials);
     }
 }
@@ -234,7 +240,7 @@ function createReviewContent(testimonial) {
 }
 
 function scrollTestimonials(rangeValue) {
-   
+
     if (document.documentElement.clientWidth > 1599) {
         let translateX = rangeValue * -25.6 + 0.1;
         wrapperTestimonialsAll.style.transform = 'translateX(' + translateX + '%)';
@@ -243,4 +249,102 @@ function scrollTestimonials(rangeValue) {
         wrapperTestimonialsAll.style.transform = 'translateX(' + translateX + '%)';
     }
 
+}
+
+function openPopUpTestimonial(testimonial) {
+    const wrapperTestimonialsShadow = document.createElement("div");
+    wrapperTestimonialsShadow.classList.add('wrapper-testimonials-shadow');
+
+    const wrapperTestimonialsPopup = document.createElement("div");
+    wrapperTestimonialsPopup.classList.add('wrapper-testimonials-popup');
+    wrapperTestimonialsShadow.append(wrapperTestimonialsPopup);
+
+    const wrapperPopupCross = document.createElement('div');
+    wrapperPopupCross.classList.add('wrapper-popup-cross');
+    wrapperTestimonialsPopup.append(wrapperPopupCross);
+
+    wrapperPopupCross.addEventListener("click", () => {
+        closeTestimonialPopup();
+    })
+
+    const popUpLine1 = document.createElement('span');
+    popUpLine1.classList.add('pop-up-line');
+    wrapperPopupCross.append(popUpLine1);
+
+    const popUpLine2 = document.createElement('span');
+    popUpLine2.classList.add('pop-up-line');
+    wrapperPopupCross.append(popUpLine2);
+
+    const wrapperTestimonialsUser = createWrapperTestimonialsUserPopup(testimonial);
+    wrapperTestimonialsPopup.append(wrapperTestimonialsUser);
+
+    const reviewContent = createReviewContentPopUp(testimonial);
+    wrapperTestimonialsPopup.append(reviewContent);
+
+    wrapperTestimonialsShadow.addEventListener("click", (e) => {
+        if (e.target !== wrapperTestimonialsPopup &&
+           !wrapperTestimonialsPopup.contains(e.target)) {
+            closeTestimonialPopup();
+        }
+    });
+
+    document.querySelector('.testimonials').append(wrapperTestimonialsShadow);
+}
+
+function closeTestimonialPopup() {
+    document.querySelector(".wrapper-testimonials-shadow").remove();
+}
+
+
+
+function createWrapperTestimonialsUserPopup(popUpWrapper) {
+    let wrapperTestimonialsUserPopup = document.createElement("div");
+    wrapperTestimonialsUserPopup.classList.add('wrapper-testimonials-user-popup');
+
+    let imgUser = document.createElement("img");
+    imgUser.classList.add('user-photo-popup');
+    imgUser.src = popUpWrapper.image;
+    imgUser.alt = popUpWrapper.name;
+    wrapperTestimonialsUserPopup.append(imgUser);
+
+    let userName = document.createElement("div");
+    userName.classList.add('user-name-popup');
+    userName.textContent = popUpWrapper.name;
+    wrapperTestimonialsUserPopup.append(userName);
+
+    const wrapperUserInfo = createWrapperUserInfoPopUp(popUpWrapper);
+    wrapperTestimonialsUserPopup.append(wrapperUserInfo);
+
+    return wrapperTestimonialsUserPopup;
+}
+
+function createWrapperUserInfoPopUp(popUpWrapper) {
+    let wrapperUserInfo = document.createElement("div");
+    wrapperUserInfo.classList.add('wrapper-user-info-popup');
+
+    let userLocation = document.createElement("div");
+    userLocation.classList.add('user-location-popup');
+    userLocation.textContent = popUpWrapper.location;
+
+    wrapperUserInfo.append(userLocation);
+
+    let dotTestimonials = document.createElement("div");
+    dotTestimonials.classList.add('dot-testimonials-popup');
+    dotTestimonials.textContent = '•';
+
+    wrapperUserInfo.append(dotTestimonials);
+
+    let dayOfTestimonials = document.createElement("div");
+    dayOfTestimonials.classList.add('day-of-testimonials-popup');
+    dayOfTestimonials.textContent = popUpWrapper.date;
+
+    wrapperUserInfo.append(dayOfTestimonials);
+    return wrapperUserInfo;
+}
+
+function createReviewContentPopUp(popUpWrapper) {
+    let reviewContent = document.createElement("div");
+    reviewContent.classList.add('review-content-popup');
+    reviewContent.textContent = popUpWrapper.text;
+    return reviewContent;
 }
