@@ -159,6 +159,7 @@
 
   .header .container {
     margin: 0;
+    overflow: hidden;
   }
 
   .header-title {
@@ -187,6 +188,17 @@
     right: 20px;
     width: 18px;
     height: 10px;
+    cursor: pointer;
+    transition: all 1s;
+  }
+
+  .humburger-active {
+    z-index: 2;
+    position: absolute;
+    /* position: relative; */
+    top: 10px;
+    /* right: -362px; */
+    right: 20px;
   }
 
   .humburger-line {
@@ -196,9 +208,119 @@
     width: 18px;
     background-color: #ffffff;
   }
+  .humburger-line-active:nth-child(1) {
+    background-color: #333b41;
+    transform: rotate(45deg) translateX(32%);
+  }
+
+  .humburger-line-active:nth-child(2) {
+    background: #ffffff;
+  }
+
+  .humburger-line-active:nth-child(3) {
+    background-color: #333b41;
+    transform: rotate(-45deg) translateX(32%);
+  }
 
   .menu-nav {
     display: none;
+  }
+  .wrapper-menu-nav-burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 1s all; 
+  }
+
+  .wrapper-menu-nav-burger-active {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-nav-burger {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 329px;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    transition: 1s all;
+    z-index: 1;
+    display: flex;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+
+  .menu-nav-burger-active {
+    transform: translateX(0);
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: -4px 0px 0px 10px;
+    padding: 0;
+    gap: 14.2px;
+  }
+
+  .menu-item-burger {
+    text-decoration: none;
+    color: #333b41;
+  }
+
+  .active-burger {
+    background: #333b41;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .design-link-nav {
+    display: block;
+    text-decoration: none;
+    color: #333b41;
+  }
+
+  .wrapper-header-title-nav {
+    width: 65.6px;
+    height: 41.6px;
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 72px;
+  }
+
+  .header-title-nav {
+    position: relative;
+    top: 1px;
+    right: 1px;
+    display: block;
+    width: 65.6px;
+    height: 41.6px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.2116px;
+    line-height: 120%;
+    text-align: center;
+    color: #fe9013;
+    border: 0.8px solid #fe9013;
+    border-radius: 2px;
+  }
+
+  .bamboo-header-nav {
+    position: absolute;
+    top: 30px;
+    left: 17px;
+    z-index: 0;
   }
 
   /* block-watch_animal */

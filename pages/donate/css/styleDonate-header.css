@@ -90,6 +90,9 @@
     transform: scale(1.2);
   }
 
-  .humburger {
-    display: none;
-  }
+  .humburger,
+.wrapper-header-title-nav,
+.design-link-nav,
+.menu-nav-burger {
+  display: none;
+}
