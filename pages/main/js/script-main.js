@@ -31,15 +31,15 @@ closeShadowElement.addEventListener("click", (e) => {
 createPetsBocks();
 createWrapperTestimonials();
 
-wrapperVectorLeft.addEventListener("click", (array) => {
-    createRandomAnimalsArray();
-    createPetsBocks();
-})
+// wrapperVectorLeft.addEventListener("click", (array) => {
+//     createRandomAnimalsArray();
+//     createPetsBocks();
+// })
 
-wrapperVectorRight.addEventListener("click", (array) => {
-    createRandomAnimalsArray();
-    createPetsBocks();
-})
+// wrapperVectorRight.addEventListener("click", (array) => {
+//     createRandomAnimalsArray();
+//     createPetsBocks();
+// })
 
 
 

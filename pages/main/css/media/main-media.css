@@ -794,8 +794,8 @@
   .wrapper-popup-cross {
     display: block;
     position: absolute;
-    top: -8px;
-    left: 273px;
+    top: 11px;
+    left: 229px;
     height: 14px;
     width: 14px;
     z-index: 5;
@@ -1263,8 +1263,8 @@
   }
 
   .wrapper-popup-cross {
-    top: -5px;
-    left: 267px;
+    top: 11px;
+    left: 229px;
 }
 
   /* footer */
