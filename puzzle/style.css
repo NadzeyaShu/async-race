@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bottom-container {
+  display: flex;
+  gap: 7px;
+}
+
+.btn {
+  background: rgb(144, 202, 202);
+  font-size: 20px;
+  color: azure;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-stop {
+  background: rgb(163, 160, 160);
+  font-size: 20px;
+  color: azure;
+  border: none;
+  cursor: pointer;
+}
+
+.time-area-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.time-area-item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 18px;
+}
+
+.field-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  width: 246px;
+  border: 3px solid black;
+}
+
+.item-field {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(195, 161, 226);
+  font-size: 25px;
+  font-weight: 600;
+  border: 1px solid black;
+}
+
+.flame-size-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.other-sizes-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.size-game {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.choose-sizes-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
