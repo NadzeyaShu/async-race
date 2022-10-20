@@ -8,7 +8,9 @@ let tiles = [];
 let blankTileId;
 let counter = 0;
 let gameOver = false;
-let timer = {elapsedTime: 0, isStarted: false}
+let timer = {elapsedTime: 0, isStarted: false};
+
+let bestResults = [];
 
 window.addEventListener('load', initGame);
 
@@ -73,10 +75,12 @@ function createBottomContainer() {
     let bottomSave = document.createElement('bottom');
     bottomSave.classList.add('btn');
     bottomSave.textContent = 'Save';
+    // bottomSave.addEventListener('click', () => saveActualGame() );
 
     let bottomResults = document.createElement('bottom');
     bottomResults.classList.add('btn');
     bottomResults.textContent = 'Results';
+    bottomResults.addEventListener('click', () => showBestResult());
 
     bottomContainer.append(bottomShuffleAndStart);
     bottomContainer.append(bottomStartStop);
@@ -157,14 +161,18 @@ function moveTiles(event) {
     let clickedElement = event.target;
     let clickedTileId = +clickedElement.id;
     let allowedIndexes = getAllowedIndexes(blankTileId);
-    if (allowedIndexes.includes(clickedTileId)) {
+    if (!gameOver && allowedIndexes.includes(clickedTileId)) {
         changeArrayTiles(clickedElement, clickedTileId);
         changeElementsTails(clickedElement, clickedTileId);
         increaseCounter();
+        checkSolved();
+        processGameOver();
+
         if (!timer.isStarted) {
             startTimer();
         }
     }
+
 }
 
 function getAllowedIndexes(blankPos) {
@@ -176,7 +184,7 @@ function getAllowedIndexes(blankPos) {
     }
 
     let right = blankPos + 1;
-    if (right < tiles.length - 1 && right % size !== 0) {
+    if (right < tiles.length && right % size !== 0) {
         arrFindId.push(right);
     }
 
@@ -260,7 +268,6 @@ function createChooseSizesContainer() {
     chooseSizesContainer.append(chooseSizeGame7x7);
     chooseSizesContainer.append(chooseSizeGame8x8);
 
-
     return chooseSizesContainer;
 }
 
@@ -309,24 +316,28 @@ function isSolvable() {
 
     for (let i = 0; i < notBlankTiles; i++) {
         for (let j = 0; j < i; j++) {
-            if (tiles[j] > tiles[i])
+            if (tiles[j] > tiles[i]) {
                 countInversions++;
+            }
         }
     }
-
+    countInversions = countInversions + size;
     return countInversions % 2 === 0;
 }
 
-function isSolved() {
-    if (tiles[tiles.length - 1] !== null) // if blank tile is not in the solved position ==> not solved
-        return false;
+function checkSolved() {
+    if (tiles[tiles.length - 1] !== null) {
+        gameOver = false;
+        return;
+    }
 
     for (let i = notBlankTiles - 1; i >= 0; i--) {
         if (tiles[i] !== i + 1) {
-            return false;
+            gameOver = false;
+            return;
         }
     }
-    return true;
+    gameOver = true;
 }
 
 function increaseCounter() {
@@ -351,24 +362,66 @@ function stopTimer() {
 }
 
 function startWatch() {
-    //resetTilesArray start time
     timer.startTime = Date.now();
-    //run `setInterval()` and save id
     timer.intervalId = setInterval(() => {
-        //calculate elapsed time
-        const elapsedTime = Date.now() - timer.startTime + timer.elapsedTime
-        //calculate different time measurements based on elapsed time
-        const milliseconds = parseInt((elapsedTime % 1000) / 10)
-        const seconds = parseInt((elapsedTime / 1000) % 60)
-        const minutes = parseInt((elapsedTime / (1000 * 60)) % 60)
-        const hour = parseInt((elapsedTime / (1000 * 60 * 60)) % 24);
-        //display time
-        displayTime(hour, minutes, seconds, milliseconds)
+        displayTime()
     }, 100);
 }
 
-function displayTime(hour, minutes, seconds, milliseconds) {
-    const leadZeroTime = [hour, minutes, seconds, milliseconds].map(time => time < 10 ? `0${time}` : time)
+function displayTime() {
     let timer = document.querySelector('.timer-view');
-    timer.textContent = leadZeroTime.join(':');
+    timer.textContent = getTimerTime();
+}
+
+function getTimerTime() {
+    const elapsedTime = Date.now() - timer.startTime + timer.elapsedTime;
+    const seconds = parseInt((elapsedTime / 1000) % 60)
+    const minutes = parseInt((elapsedTime / (1000 * 60)) % 60);
+    const leadZeroTime = [minutes, seconds].map(time => time < 10 ? `0${time}` : time)
+    return leadZeroTime.join(':');
+}
+
+function processGameOver() {
+    if (gameOver) {
+        let time = getTimerTime();
+        saveBestResults(time);
+        alert(`Hooray! You solved the puzzle in ${time} and ${counter} moves!`);
+    }
+}
+
+function showBestResult() {
+    let bestResultString = '';
+
+    bestResults.forEach((element, index) => {
+        bestResultString += index + 1 + '. steps: ' + element.move + ' time: ' + element.time + ';' + '\n';
+    });
+
+    alert(`Best results:\n${bestResultString}`);
+
+}
+
+function saveBestResults(time) {
+    let result = {};
+    result.move = counter;
+    result.time = time;
+    bestResults.push(result);
+    bestResults.sort((a, b) => {
+        if (a.time > b.time) {
+            return 1;
+        } else if (a.time < b.time) {
+            return -1;
+        } else {
+            if (a.move > b.move) {
+                return 1;
+            } else if (a.move < b.move) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+    })
+
+    if (bestResults.length > 10) {
+        bestResults.slice(0, 11);
+    }
 }
