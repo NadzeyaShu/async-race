@@ -11,6 +11,10 @@ let gameOver = false;
 let timer = {elapsedTime: 0, isStarted: false};
 let bestResults = [];
 
+
+let isPlaySound = true;
+const audio = new Audio();
+
 window.addEventListener('load', initGame);
 
 function initGame() {
@@ -55,6 +59,10 @@ function createContainerElements() {
 
     const chooseSizesContainer = createChooseSizesContainer();
     container.append(chooseSizesContainer);
+
+    const soundContainer = createSoundContainer();
+    container.append(soundContainer);
+
 }
 
 function shuffleAndRestart() {
@@ -153,8 +161,8 @@ function createFieldContainer() {
         const itemField = document.createElement('div');
         itemField.classList.add('item-field');
         itemField.id = i.toString();
-        itemField.addEventListener('click', event => moveTiles(event))
-        itemField.addEventListener('click', event => setTimeout(processGameOver, 200))
+        itemField.addEventListener('click', event => moveTiles(event));
+        itemField.addEventListener('click', event => setTimeout(processGameOver, 200));
         if (tile) {
             itemField.textContent = tile;
         }
@@ -164,14 +172,35 @@ function createFieldContainer() {
     return fieldContainer;
 }
 
+function createSoundContainer() {
+    const soundContainer = document.createElement('div');
+    soundContainer.classList.add('sound-container');
+
+    const buttonSound = document.createElement('button');
+    buttonSound.classList.add('button-sound');
+    buttonSound.textContent = 'Sound off';
+    buttonSound.addEventListener('click', switchSound);
+
+
+    soundContainer.append(buttonSound);
+
+    return soundContainer;
+}
+
 function getContainerSizeClass() {
     switch (size) {
-        case 3: return 'field-container3x3';
-        case 4: return 'field-container4x4';
-        case 5: return 'field-container5x5';
-        case 6: return 'field-container6x6';
-        case 7: return 'field-container7x7';
-        case 8: return 'field-container8x8';
+        case 3:
+            return 'field-container3x3';
+        case 4:
+            return 'field-container4x4';
+        case 5:
+            return 'field-container5x5';
+        case 6:
+            return 'field-container6x6';
+        case 7:
+            return 'field-container7x7';
+        case 8:
+            return 'field-container8x8';
     }
 }
 
@@ -193,6 +222,7 @@ function moveTiles(event) {
     let clickedTileId = +clickedElement.id;
     let allowedIndexes = getAllowedIndexes(blankTileId);
     if (!gameOver && allowedIndexes.includes(clickedTileId)) {
+        playSound();
         changeArrayTiles(clickedElement, clickedTileId);
         changeElementsTails(clickedElement, clickedTileId);
         increaseCounter();
@@ -523,4 +553,33 @@ function loadGame() {
         timer = JSON.parse(localStorage.getItem('timer'));
         console.log(timer);
     }
+}
+
+function playSound() {
+    if (isPlaySound) {
+        audio.src = './sound/zvuk11.mp3';
+        audio.currentTime = 0;
+        audio.play();
+    }
+}
+
+function switchSound() {
+    if (isPlaySound) {
+        disableSound();
+    } else {
+        enableSound();
+    }
+}
+
+function enableSound() {
+    isPlaySound = true;
+    const buttonSound = document.querySelector('.button-sound')
+    buttonSound.textContent = 'Sound off';
+
+}
+
+function disableSound() {
+    isPlaySound = false;
+    const buttonSound = document.querySelector('.button-sound')
+    buttonSound.textContent = 'Sound on';
 }
