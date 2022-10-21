@@ -52,12 +52,72 @@ html {
 
 .field-container {
   position: relative;
+  padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*justify-content: center;*/
+  width: 246px; // delete
+  border: 3px solid black;
+}
+
+.field-container4x4 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 246px;
   border: 3px solid black;
+}
+
+.field-container3x3 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  width: 186px;
+}
+
+.field-container5x5 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  width: 306px;
+}
+
+.field-container6x6 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  width: 366px;
+}
+
+.field-container7x7 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  width: 426px;
+}
+
+.field-container8x8 {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  width: 486px;
 }
 
 .item-field {

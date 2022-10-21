@@ -9,15 +9,31 @@ let blankTileId;
 let counter = 0;
 let gameOver = false;
 let timer = {elapsedTime: 0, isStarted: false};
-
 let bestResults = [];
 
 window.addEventListener('load', initGame);
 
 function initGame() {
-    //check est' li dannye v localstorage, esli est' ustanovit' ih, inache new game
-    newGame();
+    if (isHasSavedGame()) {
+        loadGame();
+        if (timer.isStarted) {
+            stopTimer();
+        }
+    } else {
+        newGame();
+    }
+    loadBestResults();
     createContainerElements();
+}
+
+function loadBestResults() {
+    let storedBestResults = localStorage.getItem('bestResults');
+    if (storedBestResults !== 'undefined' && storedBestResults) {
+        bestResults = JSON.parse(storedBestResults);
+        console.log(bestResults);
+    } else {
+        bestResults = [];
+    }
 }
 
 function createContainerElements() {
@@ -46,7 +62,8 @@ function shuffleAndRestart() {
         stopTimer();
     }
     body.innerHTML = '';
-    initGame();
+    newGame();
+    createContainerElements();
 }
 
 function createBottomContainer() {
@@ -75,7 +92,7 @@ function createBottomContainer() {
     let bottomSave = document.createElement('bottom');
     bottomSave.classList.add('btn');
     bottomSave.textContent = 'Save';
-    // bottomSave.addEventListener('click', () => saveActualGame() );
+    bottomSave.addEventListener('click', () => saveActualGame());
 
     let bottomResults = document.createElement('bottom');
     bottomResults.classList.add('btn');
@@ -128,6 +145,8 @@ function createTimeAreaContainer() {
 function createFieldContainer() {
     const fieldContainer = document.createElement('div');
     fieldContainer.classList.add('field-container');
+    let containerSizeClass = getContainerSizeClass();
+    fieldContainer.classList.add(containerSizeClass);
 
     for (let i = 0; i < tiles.length; i++) {
         let tile = tiles[i];
@@ -135,6 +154,7 @@ function createFieldContainer() {
         itemField.classList.add('item-field');
         itemField.id = i.toString();
         itemField.addEventListener('click', event => moveTiles(event))
+        itemField.addEventListener('click', event => setTimeout(processGameOver, 200))
         if (tile) {
             itemField.textContent = tile;
         }
@@ -142,6 +162,17 @@ function createFieldContainer() {
     }
 
     return fieldContainer;
+}
+
+function getContainerSizeClass() {
+    switch (size) {
+        case 3: return 'field-container3x3';
+        case 4: return 'field-container4x4';
+        case 5: return 'field-container5x5';
+        case 6: return 'field-container6x6';
+        case 7: return 'field-container7x7';
+        case 8: return 'field-container8x8';
+    }
 }
 
 function changeElementsTails(clickedElement, tileId) {
@@ -153,7 +184,7 @@ function changeElementsTails(clickedElement, tileId) {
 
 function changeArrayTiles(clickedElement, clickedTileId) {
     let clickedElementValue = clickedElement.textContent;
-    tiles.splice(blankTileId, 1, clickedElementValue);
+    tiles.splice(blankTileId, 1, +clickedElementValue);
     tiles.splice(clickedTileId, 1, null);
 }
 
@@ -166,8 +197,6 @@ function moveTiles(event) {
         changeElementsTails(clickedElement, clickedTileId);
         increaseCounter();
         checkSolved();
-        processGameOver();
-
         if (!timer.isStarted) {
             startTimer();
         }
@@ -321,7 +350,9 @@ function isSolvable() {
             }
         }
     }
-    countInversions = countInversions + size;
+    if (tiles.length % 2 === 0) {
+        countInversions = countInversions + size;
+    }
     return countInversions % 2 === 0;
 }
 
@@ -358,7 +389,9 @@ function stopTimer() {
     timer.isStarted = false;
     timer.elapsedTime += Date.now() - timer.startTime
     clearInterval(timer.intervalId)
-    bottomStartStop.innerHTML = 'Start'
+    if (bottomStartStop) {
+        bottomStartStop.innerHTML = 'Start'
+    }
 }
 
 function startWatch() {
@@ -384,6 +417,7 @@ function getTimerTime() {
 function processGameOver() {
     if (gameOver) {
         let time = getTimerTime();
+        stopTimer();
         saveBestResults(time);
         alert(`Hooray! You solved the puzzle in ${time} and ${counter} moves!`);
     }
@@ -423,5 +457,70 @@ function saveBestResults(time) {
 
     if (bestResults.length > 10) {
         bestResults.slice(0, 11);
+    }
+    localStorage.setItem('bestResults', JSON.stringify(bestResults));
+}
+
+function saveActualGame() {
+    localStorage.setItem('size', size);
+    localStorage.setItem('sizeText', sizeText);
+    localStorage.setItem('notBlankTiles', notBlankTiles);
+    localStorage.setItem('tiles', JSON.stringify(tiles));
+    localStorage.setItem('blankTileId', blankTileId);
+    localStorage.setItem('counter', counter);
+    localStorage.setItem('gameOver', gameOver);
+    localStorage.setItem('timer', JSON.stringify(timer));
+}
+
+function isHasSavedGame() {
+    return localStorage.getItem('size') !== 'undefined'
+        && localStorage.getItem('sizeText') !== 'undefined'
+        && localStorage.getItem('notBlankTiles') !== 'undefined'
+        && localStorage.getItem('tiles') !== 'undefined'
+        && localStorage.getItem('blankTileId') !== 'undefined'
+        && localStorage.getItem('counter') !== 'undefined'
+        && localStorage.getItem('gameOver') !== 'undefined'
+        && localStorage.getItem('timer') !== 'undefined';
+}
+
+function loadGame() {
+    if (localStorage.getItem('size') !== 'undefined') {
+        size = +localStorage.getItem('size');
+        console.log(size);
+    }
+
+    if (localStorage.getItem('sizeText') !== 'undefined') {
+        sizeText = localStorage.getItem('sizeText');
+        console.log(sizeText);
+    }
+
+    if (localStorage.getItem('notBlankTiles') !== 'undefined') {
+        notBlankTiles = +localStorage.getItem('notBlankTiles');
+        console.log(notBlankTiles);
+    }
+
+    if (localStorage.getItem('tiles') !== 'undefined') {
+        tiles = JSON.parse(localStorage.getItem('tiles'));
+        console.log(tiles);
+    }
+
+    if (localStorage.getItem('blankTileId') !== 'undefined') {
+        blankTileId = +localStorage.getItem('blankTileId');
+        console.log(blankTileId);
+    }
+
+    if (localStorage.getItem('counter') !== 'undefined') {
+        counter = +localStorage.getItem('counter');
+        console.log(counter);
+    }
+
+    if (localStorage.getItem('gameOver') !== 'undefined') {
+        gameOver = localStorage.getItem('gameOver') === 'true';
+        console.log(gameOver);
+    }
+
+    if (localStorage.getItem('timer') !== 'undefined') {
+        timer = JSON.parse(localStorage.getItem('timer'));
+        console.log(timer);
     }
 }
