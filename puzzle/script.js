@@ -504,52 +504,61 @@ function saveActualGame() {
 
 function isHasSavedGame() {
     return localStorage.getItem('size') !== 'undefined'
+        && localStorage.getItem('size')
         && localStorage.getItem('sizeText') !== 'undefined'
+        && localStorage.getItem('sizeText')
         && localStorage.getItem('notBlankTiles') !== 'undefined'
+        && localStorage.getItem('notBlankTiles')
         && localStorage.getItem('tiles') !== 'undefined'
+        && localStorage.getItem('tiles')
         && localStorage.getItem('blankTileId') !== 'undefined'
+        && localStorage.getItem('blankTileId')
         && localStorage.getItem('counter') !== 'undefined'
+        && localStorage.getItem('counter')
         && localStorage.getItem('gameOver') !== 'undefined'
-        && localStorage.getItem('timer') !== 'undefined';
+        && localStorage.getItem('gameOver')
+        && localStorage.getItem('timer') !== 'undefined'
+        && localStorage.getItem('timer');
+
 }
 
 function loadGame() {
-    if (localStorage.getItem('size') !== 'undefined') {
+    if (localStorage.getItem('size') !== 'undefined' && localStorage.getItem('size')) {
         size = +localStorage.getItem('size');
         console.log(size);
     }
 
-    if (localStorage.getItem('sizeText') !== 'undefined') {
+    if (localStorage.getItem('sizeText') !== 'undefined' && localStorage.getItem('sizeText')) {
         sizeText = localStorage.getItem('sizeText');
         console.log(sizeText);
     }
 
-    if (localStorage.getItem('notBlankTiles') !== 'undefined') {
+    if (localStorage.getItem('notBlankTiles') !== 'undefined' && localStorage.getItem('notBlankTiles')) {
         notBlankTiles = +localStorage.getItem('notBlankTiles');
         console.log(notBlankTiles);
     }
 
-    if (localStorage.getItem('tiles') !== 'undefined') {
+    if (localStorage.getItem('tiles') !== 'undefined' && localStorage.getItem('tiles')) {
         tiles = JSON.parse(localStorage.getItem('tiles'));
         console.log(tiles);
     }
 
-    if (localStorage.getItem('blankTileId') !== 'undefined') {
+    if (localStorage.getItem('blankTileId') !== 'undefined' && localStorage.getItem('blankTileId')) {
         blankTileId = +localStorage.getItem('blankTileId');
         console.log(blankTileId);
     }
 
-    if (localStorage.getItem('counter') !== 'undefined') {
+    if (localStorage.getItem('counter') !== 'undefined' && localStorage.getItem('counter')) {
         counter = +localStorage.getItem('counter');
         console.log(counter);
     }
 
-    if (localStorage.getItem('gameOver') !== 'undefined') {
+    if (localStorage.getItem('gameOver') !== 'undefined' && localStorage.getItem('gameOver')) {
         gameOver = localStorage.getItem('gameOver') === 'true';
         console.log(gameOver);
     }
 
-    if (localStorage.getItem('timer') !== 'undefined') {
+    if (localStorage.getItem('timer') !== 'undefined' && localStorage.getItem('timer')) {
         timer = JSON.parse(localStorage.getItem('timer'));
         console.log(timer);
     }
