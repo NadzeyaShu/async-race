@@ -297,6 +297,10 @@ html {
     color: #b7c6c6;
 }
 
+general-description__inactive {
+    display: none;
+}
+
 .btn__next-question-inactive {
     display: block;
     margin: 0 auto;
