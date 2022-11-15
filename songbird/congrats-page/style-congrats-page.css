@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+/*header*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+.header-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #acc4c3;
+    margin: 0 0 10px 10px;
+}
+
+.header-logo-color {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #83c6c3;
+}
+
+.wrapper-header-title {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #acc4c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header__menu {
+    display: flex;
+    gap: 30px;
+}
+
+.header__menu-item {
+    list-style-type: none;
+    font-family: 'Lobster', cursive;
+    font-size: 27px;
+    color: aliceblue;
+}
+
+.header__menu-item-btn {
+    background-color: #acc4c3;
+    border: none;
+    border-radius: 5px;
+    color: #ddecec;
+    width: 335px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/*main*/
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 715px;
+}
+
+.main-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+/*footer*/
+
+.footer {
+    height: 100px;
+    background-color: #acc4c3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.footer-container__menu {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.footer-container__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-container__menu-item {
+    list-style-type: none;
+}
+
+.github-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.rs-logo {
+    width: 133px;
+    height: 53px;
+}

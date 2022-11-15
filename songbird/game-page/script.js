@@ -1,5 +1,7 @@
 import birdsData from '../birds.js';
 
+const MAX_LEVEL = 5;
+
 let level = 0;
 let levelData = [];
 let isLevelComplete = false;
@@ -31,7 +33,7 @@ function loadLevel() {
 }
 
 function selectNextLevel() {
-    if (isLevelComplete) {
+    if (isLevelComplete && level < MAX_LEVEL) {
         level += 1;
         isLevelComplete = false;
         incorrectAnswerCounter = 0;
@@ -83,22 +85,27 @@ function processWrongAnswer(answerElement) {
 function processRightAnswer(answerElement) {
     if (!isLevelComplete) {
         isLevelComplete = true;
-
-        let spanDot = answerElement.querySelector('.li-dot');
-        spanDot.classList.add('success');
-
-        let btnNextQuestion = document.querySelector(".btn__next-question-inactive");
-        btnNextQuestion.classList.add("btn__next-question-active");
-
-        let questionsImg = document.querySelector('.questions__img');
-        questionsImg.src = correctAnswer.image;
-
-        let hideName = document.querySelector(".hide-name");
-        hideName.textContent = correctAnswer.name;
-
-        playSuccessSound();
         scoreCounter();
-        scoreBlock.textContent = score;
+
+        if (level === MAX_LEVEL) {
+            window.location.replace('../congrats-page/congrats-page.html')
+        } else {
+            let spanDot = answerElement.querySelector('.li-dot');
+            spanDot.classList.add('success');
+
+            let btnNextQuestion = document.querySelector(".btn__next-question-inactive");
+            btnNextQuestion.classList.add("btn__next-question-active");
+
+            let questionsImg = document.querySelector('.questions__img');
+            questionsImg.src = correctAnswer.image;
+
+            let hideName = document.querySelector(".hide-name");
+            hideName.textContent = correctAnswer.name;
+
+            playSuccessSound();
+
+            scoreBlock.textContent = score;
+        }
     }
 }
 
@@ -321,14 +328,3 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//+ счетчик баллов
-//+  замена стилей в блоках птиц (текущий вопрос)
-//+  найти и добавить звуковое сопровождений нажатий
-//  адаптировать аудио под размер
-//  финальная страница с поздравлениями + адаптиция (страница с результатами содержит количество набранных баллов и кнопку с предложением сыграть ещё раз (или уведомление об окончании игры, если набрано максимальное количество баллов) +10)
-//  галерея
-
-
-//  локализация приложения на два языка, выбранный язык хранится в local storage и сохраняется при перезагрузке +10
-//  создание галереи всех птиц приложения c информацией о них (фото, аудио, название, описание) +10
-//  переделать на кастомный плеер
