@@ -2,6 +2,8 @@ import birdsData from '../birds.js';
 
 let level = 0;
 let levelData = [];
+let isLevelComplete = false;
+let score = 0;
 
 let correctAnswer = {};
 let incorrectAnswerCounter = 0;
@@ -12,6 +14,10 @@ const listAnswerOptions = document.querySelector(".list__answer-options");
 const wrapperQuestions = document.querySelector(".wrapper-questions");
 const blockAboutListItem = document.querySelector(".block__about-list-item");
 
+let sectionQuestionsItem = document.querySelectorAll(".wrapper__section-questions__item");
+
+let scoreBlock = document.querySelector(".score");
+
 loadLevel();
 
 function loadLevel() {
@@ -21,7 +27,17 @@ function loadLevel() {
     recreateAnswerOptionsBlock();
     recreateQuestionBlock();
     recreateDefaultAnswerDetailsBlock();
-    recreateNextLevelButton()
+    recreateNextLevelButton();
+}
+
+function selectNextLevel() {
+    if (isLevelComplete) {
+        level += 1;
+        isLevelComplete = false;
+        incorrectAnswerCounter = 0;
+        loadLevel();
+        showCurrentQuestion();
+    }
 }
 
 function clickOnAnswer(answerElement) {
@@ -32,33 +48,80 @@ function clickOnAnswer(answerElement) {
 
     if (answerId !== correctAnswer.id) {
         processWrongAnswer(answerElement);
+
     } else {
         processRightAnswer(answerElement);
     }
 }
 
-function processWrongAnswer(answerElement) {
-    let spanDot = answerElement.querySelector('.li-dot');
-    spanDot.classList.add('error');
+function scoreCounter() {
+    if (incorrectAnswerCounter === 0) {
+        score = score + 5;
+    } else if (incorrectAnswerCounter === 1) {
+        score = score + 4;
+    } else if (incorrectAnswerCounter === 2) {
+        score = score + 3;
+    } else if (incorrectAnswerCounter === 3) {
+        score = score + 2;
+    } else if (incorrectAnswerCounter === 4) {
+        score = score + 1;
+    } else {
+        score = score + 0;
+    }
+}
 
-    incorrectAnswerCounter += 1;
-    //todo add sound for error
+function processWrongAnswer(answerElement) {
+    if (!isLevelComplete) {
+        let spanDot = answerElement.querySelector('.li-dot');
+        spanDot.classList.add('error');
+        incorrectAnswerCounter += 1;
+
+        playErrorSound();
+    }
 }
 
 function processRightAnswer(answerElement) {
-    let spanDot = answerElement.querySelector('.li-dot');
-    spanDot.classList.add('success');
+    if (!isLevelComplete) {
+        isLevelComplete = true;
 
-    let btnNextQuestion = document.querySelector(".btn__next-question-inactive");
-    btnNextQuestion.classList.add("btn__next-question-active");
+        let spanDot = answerElement.querySelector('.li-dot');
+        spanDot.classList.add('success');
 
-    let questionsImg = document.querySelector('.questions__img');
-    questionsImg.src = correctAnswer.image;
+        let btnNextQuestion = document.querySelector(".btn__next-question-inactive");
+        btnNextQuestion.classList.add("btn__next-question-active");
 
-    let hideName = document.querySelector(".hide-name");
-    hideName.textContent = correctAnswer.name;
-    // todo add class for section questions
-    //todo add sound for success
+        let questionsImg = document.querySelector('.questions__img');
+        questionsImg.src = correctAnswer.image;
+
+        let hideName = document.querySelector(".hide-name");
+        hideName.textContent = correctAnswer.name;
+
+        playSuccessSound();
+        scoreCounter();
+        scoreBlock.textContent = score;
+    }
+}
+
+function playSuccessSound() {
+    const audioSignal = new Audio();
+    audioSignal.src = '../assets/sound/success.mp3';
+    audioSignal.play();
+}
+
+function playErrorSound() {
+    const audioSignal = new Audio();
+    audioSignal.src = '../assets/sound/error.mp3';
+    audioSignal.play();
+}
+
+function showCurrentQuestion() {
+    let sectionQuestionsItemArray = Array.from(sectionQuestionsItem);
+
+    let currentLevelElement = sectionQuestionsItemArray.find(element => +element.getAttribute('data-level') === level);
+    currentLevelElement.classList.add("wrapper__section-questions__item__active");
+
+    let previousLevelElement = sectionQuestionsItemArray.find(element => +element.getAttribute('data-level') === level - 1);
+    previousLevelElement.classList.remove("wrapper__section-questions__item__active");
 }
 
 function recreateNextLevelButton() {
@@ -239,7 +302,6 @@ function createAnswerOptionsBlock() {
         listAnswerOptions.append(answerElement);
 
         answerElement.addEventListener('click', (event) => clickOnAnswer(answerElement));
-
     }
 }
 
@@ -259,8 +321,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function selectNextLevel() {
-    //todo проверка на конец уровня(btn__next-question-active) и изменить полоса видов птиц
-    level += 1;
-    loadLevel();
-}
+//+ счетчик баллов
+//+  замена стилей в блоках птиц (текущий вопрос)
+//+  найти и добавить звуковое сопровождений нажатий
+//  адаптировать аудио под размер
+//  финальная страница с поздравлениями + адаптиция (страница с результатами содержит количество набранных баллов и кнопку с предложением сыграть ещё раз (или уведомление об окончании игры, если набрано максимальное количество баллов) +10)
+//  галерея
+
+
+//  локализация приложения на два языка, выбранный язык хранится в local storage и сохраняется при перезагрузке +10
+//  создание галереи всех птиц приложения c информацией о них (фото, аудио, название, описание) +10
+//  переделать на кастомный плеер

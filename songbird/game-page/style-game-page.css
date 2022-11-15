@@ -97,6 +97,7 @@ html {
 .wrapper__section-questions__item {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 170px;
     height: 30px;
     text-align: center;
@@ -107,16 +108,8 @@ html {
 }
 
 .wrapper__section-questions__item__active {
-    display: flex;
-    flex-wrap: wrap;
-    width: 170px;
-    height: 30px;
-    text-align: center;
     background-color: #acc4c3;
     color: aliceblue;
-
-    font-family: 'Lobster', cursive;
-    font-size: 22px;
 }
 
 .player-controls {
