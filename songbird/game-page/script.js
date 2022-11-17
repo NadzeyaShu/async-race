@@ -88,7 +88,8 @@ function processRightAnswer(answerElement) {
         scoreCounter();
 
         if (level === MAX_LEVEL) {
-            window.location.replace('../congrats-page/congrats-page.html')
+            saveFinalScore();
+            window.location.replace('../congrats-page/congrats-page.html');
         } else {
             let spanDot = answerElement.querySelector('.li-dot');
             spanDot.classList.add('success');
@@ -328,3 +329,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function saveFinalScore() {
+    localStorage.setItem("score", score);
+}

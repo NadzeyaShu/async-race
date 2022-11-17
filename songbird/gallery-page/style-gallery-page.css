@@ -39,15 +39,6 @@ html {
     color: #83c6c3;
 }
 
-.wrapper-header-title {
-    font-family: 'Lobster', cursive;
-    font-size: 25px;
-    color: #acc4c3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .header__menu-nav {
     display: flex;
     justify-content: center;
@@ -66,9 +57,9 @@ html {
 }
 
 .header__menu-item-btn {
+    background-color: #acc4c3;
     font-family: 'Lobster', cursive;
     font-size: 27px;
-    background-color: #acc4c3;
     border: none;
     border-radius: 5px;
     color: #ddecec;
@@ -86,41 +77,94 @@ html {
 }
 
 .main-container {
-    width: 1160px;
-    margin: 60px auto 0;
-    display: flex;
-    flex-direction: column;
+    width: 800px;
+    margin: 50px auto 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.wrapper-congrats {
+.block__about-list-item {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 40px;
-    color: #acc4c3;
+    flex-direction: row;
+    /*overflow: hidden;*/
+    gap: 50px;
+    transform: translateX(0.1%);
+    transition: transform 1.5s;
 }
 
-.wrapper-congrats__btn {
-    margin-top: 60px;
-    width: 300px;
-    height: 40px;
+.block-about-img {
+    display: block;
+    margin: 0 auto;
+    height: 87%;
+}
+
+.wrapper__general-block-bird {
+    width: 750px;
+    /*transform: translateX(0.1%);*/
+    /*transition: transform 0.7s;*/
+}
+
+.wrapper__about-bird {
+    width: 1100px;
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.prev,
+.next {
+    background-color: #acc4c3;
     font-family: 'Lobster', cursive;
-    font-size: 27px;
-    background-color:#83c6c3;
-    color: #ddecec;
+    font-size: 22px;
     border: none;
     border-radius: 5px;
+    color: #ddecec;
+    width: 150px;
+    height: 40px;
     cursor: pointer;
 }
 
-.wrapper-congrats-max-score {
+.wrapper__about-bird-img {
+    background-color: #6d7272;
+    border-radius: 15px;
+    width: 362px;
+    height: 270px;
+    margin: 15px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 40px;
-    color: #acc4c3;
+    align-items: center;
+}
+.description-bird {
+    margin: 35px;
+}
+
+.bird-name {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    color: #b7c6c6;
+}
+
+.bird-latin-name {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #b7c6c6;
+}
+
+.general-description {
+    margin: 0 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #b7c6c6;
+}
+
+.player-controls {
+    display: flex;
+    margin: 20px auto;
 }
 
 /*footer*/

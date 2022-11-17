@@ -247,6 +247,7 @@ html {
 .wrapper__about-bird-hidden {
     display: none;
 }
+
 .wrapper__about-bird {
     display: flex;
 }

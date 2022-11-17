@@ -112,6 +112,19 @@ html {
     color: #83c6c3;
 }
 
+.main-container__use-gallery {
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #83c6c3;
+}
+
+.gallery-link {
+    color: white;
+}
+
 /*footer*/
 
 .footer {
