@@ -139,6 +139,7 @@ html {
     display: flex;
     align-items: center;
 }
+
 .description-bird {
     margin: 35px;
 }
@@ -158,7 +159,7 @@ html {
 .general-description {
     margin: 0 10px;
     font-family: 'Nunito', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     color: #b7c6c6;
 }
 
@@ -210,4 +211,190 @@ html {
 .rs-logo {
     width: 133px;
     height: 53px;
+}
+
+@media (max-width: 1160px) {
+    .header-container {
+        width: 800px;
+    }
+
+    .main-container {
+        width: 800px;
+    }
+
+    .footer-container {
+        width: 800px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .header-container {
+        width: 700px;
+    }
+
+    .main-container {
+        width: 700px;
+    }
+
+    .footer-container {
+        width: 700px;
+    }
+
+    .description-bird {
+        margin: 25px;
+    }
+
+    .player-controls {
+        max-width: 266px;
+        /*transform: scale(0.9);*/
+    }
+
+    .description-bird {
+        margin: 15px;
+    }
+
+    .general-description {
+        width: 700px;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-container {
+        width: 550px;
+    }
+
+    .main-container {
+        width: 550px;
+    }
+
+    .footer-container {
+        width: 550px;
+    }
+
+
+    element.style {
+    }
+
+    .main {
+        height: 784px;
+    }
+
+    .buttons {
+        margin-top: 35px;
+    }
+
+    .player-controls {
+        margin: 10px 0;
+        max-width: 266px;
+    }
+
+    .description-bird {
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .general-description {
+        width: 550px;
+    }
+
+    .header__menu-item-btn {
+        width: 250px;
+    }
+
+    .wrapper__general-block-bird {
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper__about-bird {
+        width: 550px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper-bird-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        width: 450px;
+    }
+
+    .main-container {
+        width: 450px;
+    }
+
+    .footer-container {
+        width: 450px;
+    }
+
+    .main {
+        height: 806px;
+    }
+
+    .general-description {
+        width: 400px;
+    }
+
+    .header__menu-item-btn {
+        width: 188px;
+    }
+
+    .wrapper__general-block-bird {
+        width: 450px;
+    }
+
+    .wrapper__about-bird {
+        width: 450px;
+    }
+
+    .buttons {
+        margin-top: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-container {
+        width: 350px;
+    }
+
+    .main-container {
+        width: 350px;
+    }
+
+    .footer-container {
+        width: 350px;
+    }
+
+    .main {
+        height: 853px;
+    }
+
+    .general-description {
+        width: 300px;
+    }
+
+    .header__menu-item-btn {
+        width: 150px;
+    }
+
+    .wrapper__general-block-bird {
+        width: 350px;
+    }
+
+    .wrapper__about-bird {
+        width: 350px;
+    }
+
+    .buttons {
+        margin-top: 13px;
+    }
 }

@@ -242,7 +242,7 @@ function getBirdDescriptionElement(answerData) {
 
 function getBirdDescriptionAudioElement(answerData) {
     let playerControls = document.createElement("div");
-    playerControls.classList.add("player-controls");
+    playerControls.classList.add("player-controls-mini");
 
     let audio = document.createElement("audio");
     audio.controls = true;

@@ -122,7 +122,13 @@ html {
 }
 
 .gallery-link {
-    color: white;
+    color: #dde7e7;
+    /*transition: transform 0.2s;*/
+}
+
+.gallery-link:hover {
+    color: #64f3e4;
+    /*transform: scale(1.5);*/
 }
 
 /*footer*/
@@ -190,7 +196,7 @@ html {
     }
 
     .main {
-        height: 740px;
+        height: 812px;
     }
 
     .header__menu-item-btn {
@@ -198,7 +204,7 @@ html {
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 610px) {
     .header-container,
     .main-container,
     .footer-container {
@@ -206,7 +212,7 @@ html {
     }
 
     .main {
-        height: 730px;
+        height: 840px;
     }
 
     .main-container {
@@ -257,8 +263,12 @@ html {
         font-size: 17px;
     }
 
+    .main-container__use-gallery {
+        font-size: 17px;
+    }
+
     .main {
-        height: 600px;
+        height: 655px;
     }
 
     .header__menu-item-btn {

@@ -113,6 +113,13 @@ html {
 }
 
 .player-controls {
+    margin-top: 15px;
+    display: flex;
+}
+
+.player-controls-mini {
+    margin-top: 15px;
+    max-width: 270px;
     display: flex;
 }
 
@@ -205,7 +212,7 @@ html {
     list-style-type: none;
     border: 1px solid #444;
     width: 100%;
-    height: 45px;
+    height: 50px;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     color: #b7c6c6;
@@ -376,11 +383,35 @@ general-description__inactive {
     }
 
     .wrapper__section-questions__item {
-
         width: 181px;
         height: 55px;
-
     }
+
+    .player-controls-mini {
+        max-width: 228px;
+        transform: scale(0.9);
+    }
+
+    .list__answer-options {
+        width: 250px;
+    }
+
+    .block__about-list-item {
+       width: 90%;
+    }
+
+    .list-item {
+        height: 50px;
+    }
+
+    .wrapper__section-questions {
+        align-items: center;
+    }
+
+    .wrapper__section-questions__item {
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 850px) {
@@ -402,7 +433,7 @@ general-description__inactive {
         flex-wrap: wrap;
         width: 177px;
         height: 29px;
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .wrapper-questions {
@@ -426,8 +457,31 @@ general-description__inactive {
         width: 100%;
     }
 
+    .block__about-list-item {
+        height: 300px;
+    }
+
     .main {
         height: 1000px;
+    }
+
+    .list__answer-options {
+        width: 100%;
+    }
+
+    .player-controls-mini {
+        margin-left: -24px;
+        max-width: 266px;
+        transform: scale(0.8);
+    }
+
+    .wrapper__section-questions__item {
+      align-items: center;
+
+    }
+
+    .wrapper__section-questions {
+        align-items: center;
     }
 }
 
@@ -444,7 +498,7 @@ general-description__inactive {
     }
 
     .main {
-        height: 1025px;
+        height: 1347px;
     }
 
     .wrapper-questions {
@@ -458,7 +512,30 @@ general-description__inactive {
 
     .wrapper__section-questions__item {
         width: 124px;
-        height: 29px;
+        height: 52px;
+    }
+
+    .wrapper-questions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn__next-question-inactive {
+        width: 66%;
+    }
+
+    .block__about-list-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper__about-bird {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block__about-list-item {
+        height: 476px;
     }
 
 }
@@ -483,13 +560,17 @@ general-description__inactive {
         height: 32px;
     }
 
+    .header__menu-item {
+        font-size: 24px;
+    }
+
     .wrapper-header-title {
         justify-content: center;
         gap: 15px;
     }
 
     .main {
-        height: 1300px;
+        height: 1420px;
     }
 
     .wrapper-questions {
@@ -498,8 +579,6 @@ general-description__inactive {
     }
 
     .wrapper-questions__img {
-        /*display: flex;*/
-        /*justify-content: center;*/
         display: block;
         margin: 15px auto 0;
     }
@@ -516,6 +595,31 @@ general-description__inactive {
     .btn__next-question {
         width: 46%;
         height: 68px;
+    }
+
+    .player-controls {
+       max-width: 300px;
+        transform: scale(0.8);
+    }
+
+    .hide-name {
+        padding: 0 57px;
+    }
+
+    .block__about-list-item {
+        height: 505px;
+    }
+
+    .description-bird {
+        margin: 0 10px;
+    }
+
+    .bird-name {
+        font-size: 26px;
+    }
+
+    .player-controls-mini {
+        margin-top: -3px;
     }
 
     .footer-container__menu {
