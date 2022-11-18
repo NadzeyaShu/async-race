@@ -67,6 +67,10 @@ html {
     cursor: pointer;
 }
 
+.header__menu-item-btn:hover {
+    background-color: #83c6c3;
+}
+
 /*main*/
 
 .main {

@@ -114,18 +114,88 @@ function createGeneralBlockBird(birdsElement) {
     blockAboutListItem.append(wrapperGeneralBlockBird);
 }
 
+// function pushNextBtn() {
+//     if (sliderStep < birdsArr.length - 1) {
+//         sliderStep += 1;
+//         let translateX = -100 * sliderStep;
+//         blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+//     }
+// }
+
+// function pushPrevBtn() {
+//     if (sliderStep > 0) {
+//         sliderStep -= 1;
+//         let translateX = -100 * sliderStep;
+//         blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+//     }
+// }
+
+
 function pushNextBtn() {
-    if (sliderStep < birdsArr.length - 1) {
-        sliderStep += 1;
-        let translateX = -100 * sliderStep;
-        blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+    if (document.documentElement.clientWidth > 1160) {
+        if (sliderStep < birdsArr.length - 1) {
+            sliderStep += 1;
+            let translateX = -100 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth > 750) {
+        if (sliderStep < birdsArr.length - 1) {
+            sliderStep += 1;
+            let translateX = -114.2 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth > 600) {
+        if (sliderStep < birdsArr.length - 1) {
+            sliderStep += 1;
+            let translateX = -109.1 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth > 420) {
+        if (sliderStep < birdsArr.length - 1) {
+            sliderStep += 1;
+            let translateX = -111 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth < 420) {
+        if (sliderStep < birdsArr.length - 1) {
+            sliderStep += 1;
+            let translateX = -114.3 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
     }
+
 }
 
 function pushPrevBtn() {
-    if (sliderStep > 0) {
-        sliderStep -= 1;
-        let translateX = -100 * sliderStep;
-        blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+    if (document.documentElement.clientWidth > 1160) {
+        if (sliderStep > 0) {
+            sliderStep -= 1;
+            let translateX = -100 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth > 750) {
+        if (sliderStep > 0) {
+            sliderStep -= 1;
+            let translateX = -114.2 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth > 600) {
+        if (sliderStep > 0) {
+            sliderStep -= 1;
+            let translateX = -109.1 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth > 420) {
+        if (sliderStep > 0) {
+            sliderStep -= 1;
+            let translateX = -111 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
+    } else if (document.documentElement.clientWidth < 420) {
+        if (sliderStep > 0) {
+            sliderStep -= 1;
+            let translateX = -114.3 * sliderStep;
+            blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
+        }
     }
 }

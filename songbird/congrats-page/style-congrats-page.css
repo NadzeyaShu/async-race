@@ -77,6 +77,10 @@ html {
     cursor: pointer;
 }
 
+.header__menu-item-btn:hover {
+    background-color: #83c6c3;
+}
+
 /*main*/
 
 .main {
@@ -107,11 +111,15 @@ html {
     height: 40px;
     font-family: 'Lobster', cursive;
     font-size: 27px;
-    background-color:#83c6c3;
+    background-color: #acc4c3;
     color: #ddecec;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.wrapper-congrats__btn:hover {
+    background-color:#83c6c3;
 }
 
 .wrapper-congrats-max-score {

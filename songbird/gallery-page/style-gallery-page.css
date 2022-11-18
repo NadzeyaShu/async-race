@@ -68,6 +68,10 @@ html {
     cursor: pointer;
 }
 
+.header__menu-item-btn:hover {
+    background-color: #83c6c3;
+}
+
 /*main*/
 
 .main {
@@ -127,6 +131,11 @@ html {
     width: 150px;
     height: 40px;
     cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #83c6c3;
 }
 
 .wrapper__about-bird-img {
@@ -214,21 +223,7 @@ html {
 }
 
 @media (max-width: 1160px) {
-    .header-container {
-        width: 800px;
-    }
 
-    .main-container {
-        width: 800px;
-    }
-
-    .footer-container {
-        width: 800px;
-    }
-}
-
-
-@media (max-width: 900px) {
     .header-container {
         width: 700px;
     }
@@ -247,7 +242,6 @@ html {
 
     .player-controls {
         max-width: 266px;
-        /*transform: scale(0.9);*/
     }
 
     .description-bird {
@@ -255,7 +249,7 @@ html {
     }
 
     .general-description {
-        width: 700px;
+        width: 660px;
     }
 }
 
@@ -270,10 +264,6 @@ html {
 
     .footer-container {
         width: 550px;
-    }
-
-
-    element.style {
     }
 
     .main {
@@ -297,7 +287,7 @@ html {
     }
 
     .general-description {
-        width: 550px;
+        width: 530px;
     }
 
     .header__menu-item-btn {
@@ -337,11 +327,12 @@ html {
     }
 
     .main {
-        height: 806px;
+        height: 833px;
     }
 
     .general-description {
-        width: 400px;
+        margin: 0 auto;
+        width: 350px;
     }
 
     .header__menu-item-btn {
@@ -375,11 +366,16 @@ html {
     }
 
     .main {
-        height: 853px;
+        height: 884px;
+    }
+
+    .wrapper__about-bird-img {
+        width: 322px;
+        height: 243px;
     }
 
     .general-description {
-        width: 300px;
+        width: 285px;
     }
 
     .header__menu-item-btn {
