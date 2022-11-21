@@ -15,19 +15,25 @@
 <body class="body">
 <header class="header">
     <div class="header-container">
-        <h1 class="header__logo">
-            Song<span class="header-logo-color">bird</span>
-        </h1>
+        <div class="wrapper-header-title">
+            <h1 class="header__logo">
+                Song<span class="header-logo-color">bird</span>
+            </h1>
+            <select name="select" class="langSelect">
+                <option value="ru" selected class="select-ru">Ru</option>
+                <option value="en" class="select-eng">Eng</option>
+            </select>
+        </div>
         <nav class="header__menu-nav">
             <ul class="header__menu">
                 <li class="header__menu-item">
                     <form action="../start-page/start-page.html">
-                        <button class="header__menu-item-btn">Главная</button>
+                        <button class="header__menu-item-btn js_game_page_header_menu_nav_start_page">Главная</button>
                     </form>
                 </li>
                 <li class="header__menu-item">
                     <form action="../game-page/game-page.html">
-                        <button class="header__menu-item-btn">Викторина</button>
+                        <button class="header__menu-item-btn js_game_page_header_menu_nav_game_page">Викторина</button>
                     </form>
                 </li>
             </ul>
@@ -36,19 +42,19 @@
 </header>
 <main class="main">
     <div class="main-container">
-        <h2 class="main-container__title">Добро пожаловать на нашу викторину!</h2>
-        <p class="main-container__description">Хорошо ли ты различаешь птиц по их пению? Проверь себя!</p>
+        <h2 class="main-container__title js_main-container__title">Добро пожаловать на нашу викторину!</h2>
+        <p class="main-container__description js_main-container__description">Хорошо ли ты различаешь птиц по их пению? Проверь себя!</p>
         <div class="main-container-logo">
             <img src="../assets/start-page-bg.jpg" class="main-container__photo" alt="#">
         </div>
-        <div class="main-container__specification">
+        <div class="main-container__specification js_main-container__specification">
             Отвечай на вопросы и набирай баллы!<br>За каждый правильный ответ с первой попытки игрок получает
             5 баллов, каждая следующая попытка даёт на один балл меньше, если правильный ответ дан
             только с последней, шестой попытки, игрок получает за него 0 баллов.<br>Поехали?
         </div>
         <div class="main-container__use-gallery">
-            Ознакомиться с представленными в Викторине птицами можно в нашей
-            <a href="../gallery-page/gallery-page.html" class="gallery-link">Галерее</a>
+            <span class="js_main-container__use-gallery">Ознакомиться с представленными в Викторине птицами можно в нашей</span>
+            <a href="../gallery-page/gallery-page.html" class="gallery-link js_gallery-link">Галерее</a>
         </div>
 
     </div>
@@ -71,5 +77,6 @@
         </nav>
     </div>
 </footer>
+<script type="module" src="script-start-page.js"></script>
 </body>
 </html>

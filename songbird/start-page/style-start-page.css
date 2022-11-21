@@ -40,6 +40,23 @@ html {
     color: #83c6c3;
 }
 
+.wrapper-header-title {
+    margin-right: 25px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #acc4c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.langSelect {
+    background-color: #acc4c3;
+    color: #ddecec;
+    border: none;
+    border-radius: 5px;
+}
+
 .header__menu-nav {
     display: flex;
     justify-content: center;
@@ -246,13 +263,16 @@ html {
 
     .header__logo {
         font-size: 30px;
-
     }
 
     .header-logo-color {
         font-family: 'Lobster', cursive;
         font-size: 30px;
         color: #83c6c3;
+    }
+
+    .langSelect {
+        transform: scale(0.8);
     }
 
     .main-container__title {

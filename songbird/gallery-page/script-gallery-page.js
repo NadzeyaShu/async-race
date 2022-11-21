@@ -113,23 +113,6 @@ function createGeneralBlockBird(birdsElement) {
     blockAboutListItem.append(wrapperGeneralBlockBird);
 }
 
-// function pushNextBtn() {
-//     if (sliderStep < birdsArr.length - 1) {
-//         sliderStep += 1;
-//         let translateX = -100 * sliderStep;
-//         blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
-//     }
-// }
-
-// function pushPrevBtn() {
-//     if (sliderStep > 0) {
-//         sliderStep -= 1;
-//         let translateX = -100 * sliderStep;
-//         blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
-//     }
-// }
-
-
 function pushNextBtn() {
     if (document.documentElement.clientWidth > 1160) {
         if (sliderStep < birdsArr.length - 1) {
@@ -152,7 +135,7 @@ function pushNextBtn() {
     } else if (document.documentElement.clientWidth > 420) {
         if (sliderStep < birdsArr.length - 1) {
             sliderStep += 1;
-            let translateX = -111 * sliderStep;
+            let translateX = -113.5 * sliderStep;
             blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
         }
     } else if (document.documentElement.clientWidth < 420) {
@@ -187,7 +170,7 @@ function pushPrevBtn() {
     } else if (document.documentElement.clientWidth > 420) {
         if (sliderStep > 0) {
             sliderStep -= 1;
-            let translateX = -111 * sliderStep;
+            let translateX = -113.5 * sliderStep;
             blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
         }
     } else if (document.documentElement.clientWidth < 420) {
