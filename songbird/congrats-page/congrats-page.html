@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="style-congrats-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <title>Song bird game</title>
+</head>
+<body class="body">
+<header class="header">
+    <div class="header-container">
+        <div class="wrapper-header-title">
+            <h1 class="header__logo">
+                Song<span class="header-logo-color">bird</span>
+            </h1>
+            <div class="wrapper-score"></div>
+            <select name="select" class="langSelect">
+                <option value="ru" selected class="select-ru">Ru</option>
+                <option value="en" class="select-eng">Eng</option>
+            </select>
+        </div>
+        <nav class="header__menu-nav">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <form action="../start-page/start-page.html">
+                        <button class="header__menu-item-btn js_game_page_header_menu_nav_start_page">Главная</button>
+                    </form>
+                </li>
+                <li class="header__menu-item">
+                    <form action="../game-page/game-page.html">
+                        <button class="header__menu-item-btn js_game_page_header_menu_nav_game_page">Викторина</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main">
+    <div class="main-container">
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <nav class="footer-container__nav">
+            <ul class="footer-container__menu">
+                <li class="footer-container__menu-item">
+                    <a href="https://github.com/nadzeyashu"><img src="../assets/github-logo.png" alt="github-logo"
+                                                                 class="github-logo"></a>
+                </li>
+                <li class="footer-container__menu-item">2022</li>
+                <li class="footer-container__menu-item">
+                    <a href=https://rs.school/js><img src="../assets/rs_school_js.svg" alt="rs-logo"
+                                                      class="rs-logo"></a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</footer>
+<script type="module" src="script-congrats-page.js"></script>
+</body>
+</html>

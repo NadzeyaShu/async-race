@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+/*header*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+.header-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.wrapper-header-title {
+    margin-right: 25px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #acc4c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #acc4c3;
+    margin: 0 0 10px 10px;
+}
+
+.header-logo-color {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #83c6c3;
+}
+
+.header__menu-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header__menu {
+    display: flex;
+    gap: 30px;
+}
+
+.header__menu-item {
+    list-style-type: none;
+    font-family: 'Lobster', cursive;
+    font-size: 27px;
+    color: aliceblue;
+}
+
+.header__menu-item-btn {
+    background-color: #acc4c3;
+    font-family: 'Lobster', cursive;
+    font-size: 27px;
+    border: none;
+    border-radius: 5px;
+    color: #ddecec;
+    width: 335px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.header__menu-item-btn:hover {
+    background-color: #83c6c3;
+}
+
+.langSelect {
+    background-color: #acc4c3;
+    margin-right: 25px;
+    font-family: 'Lobster', cursive;
+    color: #ddecec;
+    border: none;
+    border-radius: 5px;
+    transform: scale(1.8);
+}
+
+
+/*main*/
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 715px;
+}
+
+.main-container {
+    width: 800px;
+    margin: 50px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.block__about-list-item {
+    display: flex;
+    flex-direction: row;
+    /*overflow: hidden;*/
+    gap: 50px;
+    transform: translateX(0.1%);
+    transition: transform 1.5s;
+}
+
+.block-about-img {
+    display: block;
+    margin: 0 auto;
+    height: 87%;
+}
+
+.wrapper__general-block-bird {
+    width: 750px;
+    /*transform: translateX(0.1%);*/
+    /*transition: transform 0.7s;*/
+}
+
+.wrapper__about-bird {
+    width: 1100px;
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.prev,
+.next {
+    background-color: #acc4c3;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    color: #ddecec;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #83c6c3;
+}
+
+.wrapper__about-bird-img {
+    background-color: #6d7272;
+    border-radius: 15px;
+    width: 362px;
+    height: 270px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.description-bird {
+    margin: 35px;
+}
+
+.bird-name {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    color: #b7c6c6;
+}
+
+.bird-latin-name {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #b7c6c6;
+}
+
+.general-description {
+    margin: 0 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: #b7c6c6;
+}
+
+.player-controls {
+    display: flex;
+    margin: 20px auto;
+}
+
+/*footer*/
+
+.footer {
+    height: 100px;
+    background-color: #acc4c3;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.footer-container__menu {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.footer-container__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-container__menu-item {
+    list-style-type: none;
+}
+
+.github-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.rs-logo {
+    width: 133px;
+    height: 53px;
+}
+
+@media (max-width: 1160px) {
+
+    .header-container {
+        width: 700px;
+    }
+
+    .main-container {
+        width: 700px;
+    }
+
+    .footer-container {
+        width: 700px;
+    }
+
+    .description-bird {
+        margin: 25px;
+    }
+
+    .player-controls {
+        max-width: 266px;
+    }
+
+    .description-bird {
+        margin: 15px;
+    }
+
+    .general-description {
+        width: 660px;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-container {
+        width: 550px;
+    }
+
+    .main-container {
+        width: 550px;
+    }
+
+    .footer-container {
+        width: 550px;
+    }
+
+    .main {
+        height: 784px;
+    }
+
+    .buttons {
+        margin-top: 35px;
+    }
+
+    .player-controls {
+        margin: 10px 0;
+        max-width: 266px;
+    }
+
+    .description-bird {
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .general-description {
+        width: 530px;
+    }
+
+    .header__menu-item-btn {
+        width: 250px;
+    }
+
+    .wrapper__general-block-bird {
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper__about-bird {
+        width: 550px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper-bird-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        width: 450px;
+    }
+
+    .main-container {
+        width: 450px;
+    }
+
+    .footer-container {
+        width: 450px;
+    }
+
+    .main {
+        height: 833px;
+    }
+
+    .general-description {
+        margin: 0 auto;
+        width: 350px;
+    }
+
+    .header__menu-item-btn {
+        width: 188px;
+    }
+
+    .wrapper__general-block-bird {
+        width: 450px;
+    }
+
+    .wrapper__about-bird {
+        width: 450px;
+    }
+
+    .buttons {
+        margin-top: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-container {
+        width: 350px;
+    }
+
+    .main-container {
+        width: 350px;
+    }
+
+    .footer-container {
+        width: 350px;
+    }
+
+    .main {
+        height: 884px;
+    }
+
+    .wrapper__about-bird-img {
+        width: 322px;
+        height: 243px;
+    }
+
+    .general-description {
+        width: 285px;
+    }
+
+    .header__menu-item-btn {
+        width: 150px;
+    }
+
+    .wrapper__general-block-bird {
+        width: 350px;
+    }
+
+    .wrapper__about-bird {
+        width: 350px;
+    }
+
+    .buttons {
+        margin-top: 13px;
+    }
+}
