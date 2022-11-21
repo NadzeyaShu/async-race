@@ -1,4 +1,6 @@
 import birdsData from '../birds.js';
+import i18n_EN from "../i18n/En.js";
+import i18n_RU from "../i18n/Ru.js";
 
 const MAX_LEVEL = 5;
 
@@ -19,10 +21,14 @@ const blockAboutListItem = document.querySelector(".block__about-list-item");
 let sectionQuestionsItem = document.querySelectorAll(".wrapper__section-questions__item");
 
 let scoreBlock = document.querySelector(".score");
+let langSelect = document.querySelector(".langSelect");
 
 loadLevel();
 
+langSelect.addEventListener("change", evt => onChangeLang(evt.target.value));
+
 function loadLevel() {
+    onChangeLang(getCurrentLang());
     levelData = birdsData[level];
     console.log(levelData);
     selectCorrectAnswer();
@@ -140,7 +146,8 @@ function recreateNextLevelButton() {
 function createNextLevelButton() {
     let nextLevelButton = document.createElement('button');
     nextLevelButton.classList.add('btn__next-question-inactive');
-    nextLevelButton.textContent = 'Следующий вопрос';
+    nextLevelButton.classList.add('js_btn_next_question');
+    nextLevelButton.textContent =  getMessage('btn_next_question');
     nextQuestionBtnWrapper.append(nextLevelButton);
 
     nextLevelButton.addEventListener("click", ev => selectNextLevel())
@@ -196,7 +203,8 @@ function recreateDefaultAnswerDetailsBlock() {
 function createDefaultAnswerDetailsBlock() {
     let titleStartGame = document.createElement("div");
     titleStartGame.classList.add("title-start-game");
-    titleStartGame.textContent = "Послушайте плеер. Выберите птицу из списка";
+    titleStartGame.classList.add("js_title_start_game");
+    titleStartGame.textContent = getMessage('title_start_game');
     blockAboutListItem.append(titleStartGame);
 }
 
@@ -331,4 +339,70 @@ function getRandomInt(min, max) {
 
 function saveFinalScore() {
     localStorage.setItem("score", score);
+}
+
+//todo выбор языка
+//copy to all js files
+
+function onChangeLang(lang) {
+    localStorage.setItem('lang', lang);
+    let i18n = getI18n(lang);
+    if (lang === 'en') {
+        langSelect.getElementsByTagName('option')[1].selected = true;
+    } else {
+        langSelect.getElementsByTagName('option')[0].selected = true;
+    }
+    translateToEnglish(i18n)
+}
+
+function getCurrentLang() {
+    let lang = localStorage.getItem("lang");
+    if (!lang) {
+        lang = 'ru';
+    }
+    return lang;
+}
+
+function translateToEnglish(i18n) {
+    let headerMenuItemBtnStartPage = document.querySelector(".js_game_page_header_menu_nav_start_page");
+    let headerMenuItemBtnGamePage = document.querySelector(".js_game_page_header_menu_nav_game_page");
+    let sectionQuestionsItemOne = document.querySelector(".js-sectionQuestions__item_one");
+    let sectionQuestionsItemTwo = document.querySelector(".js-sectionQuestions__item_two");
+    let sectionQuestionsItemThree = document.querySelector(".js-sectionQuestions__item_three");
+    let sectionQuestionsItemFour = document.querySelector(".js-sectionQuestions__item_four");
+    let sectionQuestionsItemFive = document.querySelector(".js-sectionQuestions__item_five");
+    let sectionQuestionsItemSix = document.querySelector(".js-sectionQuestions__item_six");
+    let textScore = document.querySelector(".js_score_text");
+    let btnNextQuestion = document.querySelector(".js_btn_next_question");
+    let titleStartGame = document.querySelector(".js_title_start_game");
+
+    headerMenuItemBtnStartPage.textContent = i18n.game_page_header_menu_nav_start_page;
+    headerMenuItemBtnGamePage.textContent = i18n.game_page_header_menu_nav_game_page;
+    sectionQuestionsItemOne.textContent = i18n.sectionQuestions__item_one;
+    sectionQuestionsItemTwo.textContent = i18n.sectionQuestions__item_two;
+    sectionQuestionsItemThree.textContent = i18n.sectionQuestions__item_three;
+    sectionQuestionsItemFour.textContent = i18n.sectionQuestions__item_four;
+    sectionQuestionsItemFive.textContent = i18n.sectionQuestions__item_five;
+    sectionQuestionsItemSix.textContent = i18n.sectionQuestions__item_six;
+    textScore.textContent = i18n.score_text;
+    btnNextQuestion.textContent = i18n.btn_next_question;
+    if (titleStartGame) {
+        titleStartGame.textContent = i18n.title_start_game;
+    }
+}
+
+function getMessage(key) {
+    let currentLang = getCurrentLang();
+    let i18n = getI18n(currentLang);
+    return i18n[key];
+}
+
+function getI18n(lang) {
+    let i18n;
+    if (lang === 'en') {
+        i18n = i18n_EN;
+    } else {
+        i18n = i18n_RU;
+    }
+    return i18n;
 }

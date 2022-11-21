@@ -19,7 +19,6 @@ function createBirdsArr() {
     return birdsData.flatMap(x => x);
 }
 
-
 function getBirdsElement() {
     for (let i = 0; i < birdsArr.length; i++) {
         let birdsElement = birdsArr[i];

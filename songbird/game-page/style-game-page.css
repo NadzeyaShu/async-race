@@ -40,12 +40,20 @@ html {
 }
 
 .wrapper-header-title {
+    margin-right: 25px;
     font-family: 'Lobster', cursive;
     font-size: 25px;
     color: #acc4c3;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.langSelect {
+    background-color: #acc4c3;
+    color: #ddecec;
+    border: none;
+    border-radius: 5px;
 }
 
 .header__menu-nav {
@@ -556,7 +564,19 @@ general-description__inactive {
     }
 
     .header__menu {
-        gap: 14px;
+        gap: 11px;
+    }
+
+    .header__logo {
+        font-size: 35px;
+    }
+
+    .header-logo-color {
+        font-size: 35px;
+    }
+
+    .wrapper-header-title {
+        gap: 11px;
     }
 
     .header__menu-item-btn {
@@ -568,9 +588,12 @@ general-description__inactive {
         font-size: 24px;
     }
 
-    .wrapper-header-title {
-        justify-content: center;
-        gap: 15px;
+    .wrapper-score {
+        font-size: 18px;
+    }
+
+    .langSelect {
+      transform: scale(0.7);
     }
 
     .main {
