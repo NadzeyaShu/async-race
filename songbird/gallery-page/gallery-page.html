@@ -19,19 +19,22 @@
             <h1 class="header__logo">
                 Song<span class="header-logo-color">bird</span>
             </h1>
-            <div class="wrapper-score">
-            </div>
+            <div class="wrapper-score"></div>
+            <select name="select" class="langSelect">
+                <option value="ru" selected class="select-ru">Ru</option>
+                <option value="en" class="select-eng">Eng</option>
+            </select>
         </div>
         <nav class="header__menu-nav">
             <ul class="header__menu">
                 <li class="header__menu-item">
                     <form action="../start-page/start-page.html">
-                        <button class="header__menu-item-btn">Главная</button>
+                        <button class="header__menu-item-btn js_game_page_header_menu_nav_start_page">Главная</button>
                     </form>
                 </li>
                 <li class="header__menu-item">
                     <form action="../game-page/game-page.html">
-                        <button class="header__menu-item-btn">Викторина</button>
+                        <button class="header__menu-item-btn js_game_page_header_menu_nav_game_page">Викторина</button>
                     </form>
                 </li>
             </ul>

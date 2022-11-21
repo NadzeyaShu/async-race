@@ -26,6 +26,16 @@ html {
     margin: 0 auto;
 }
 
+.wrapper-header-title {
+    margin-right: 25px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    color: #acc4c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header__logo {
     font-family: 'Lobster', cursive;
     font-size: 50px;
@@ -71,6 +81,17 @@ html {
 .header__menu-item-btn:hover {
     background-color: #83c6c3;
 }
+
+.langSelect {
+    background-color: #acc4c3;
+    margin-right: 25px;
+    font-family: 'Lobster', cursive;
+    color: #ddecec;
+    border: none;
+    border-radius: 5px;
+    transform: scale(1.8);
+}
+
 
 /*main*/
 

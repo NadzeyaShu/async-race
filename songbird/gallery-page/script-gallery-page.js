@@ -1,11 +1,18 @@
 import birdsData from '../birds.js';
+import i18n_EN from "../i18n/En.js";
+import i18n_RU from "../i18n/Ru.js";
 
 const blockAboutListItem = document.querySelector(".block__about-list-item");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+let prevBtn = document.querySelector(".prev");
+let nextBtn = document.querySelector(".next");
+
+let langSelect = document.querySelector(".langSelect");
+let headerMenuItemBtnStartPage = document.querySelector(".js_game_page_header_menu_nav_start_page");
+let headerMenuItemBtnGamePage = document.querySelector(".js_game_page_header_menu_nav_game_page");
+
+langSelect.addEventListener("change", evt => onChangeLang(evt.target.value));
 
 let birdsArr = createBirdsArr();
-console.log(birdsArr);
 
 let sliderStep = 0;
 
@@ -14,6 +21,8 @@ prevBtn.addEventListener("click", pushPrevBtn);
 getBirdsElement();
 pushNextBtn();
 pushPrevBtn();
+
+onChangeLang(getCurrentLang());
 
 function createBirdsArr() {
     return birdsData.flatMap(x => x);
@@ -145,7 +154,6 @@ function pushNextBtn() {
             blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
         }
     }
-
 }
 
 function pushPrevBtn() {
@@ -180,4 +188,48 @@ function pushPrevBtn() {
             blockAboutListItem.style.transform = 'translateX(' + translateX + '%)';
         }
     }
+}
+
+function onChangeLang(lang) {
+    localStorage.setItem('lang', lang);
+    let i18n = getI18n(lang);
+    if (lang === 'en') {
+        langSelect.getElementsByTagName('option')[1].selected = true;
+    } else {
+        langSelect.getElementsByTagName('option')[0].selected = true;
+    }
+    translateToEnglish(i18n)
+}
+
+function getCurrentLang() {
+    let lang = localStorage.getItem("lang");
+    if (!lang) {
+        lang = 'ru';
+    }
+    return lang;
+}
+
+function translateToEnglish(i18n) {
+
+    headerMenuItemBtnStartPage.textContent = i18n.game_page_header_menu_nav_start_page;
+    headerMenuItemBtnGamePage.textContent = i18n.game_page_header_menu_nav_game_page;
+
+    nextBtn.value = i18n.next_btn;
+    prevBtn.value = i18n.prev_btn;
+}
+
+function getMessage(key) {
+    let currentLang = getCurrentLang();
+    let i18n = getI18n(currentLang);
+    return i18n[key];
+}
+
+function getI18n(lang) {
+    let i18n;
+    if (lang === 'en') {
+        i18n = i18n_EN;
+    } else {
+        i18n = i18n_RU;
+    }
+    return i18n;
 }

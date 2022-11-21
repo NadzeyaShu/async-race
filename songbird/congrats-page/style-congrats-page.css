@@ -77,6 +77,13 @@ html {
     cursor: pointer;
 }
 
+.langSelect {
+    background-color: #acc4c3;
+    color: #ddecec;
+    border: none;
+    border-radius: 5px;
+}
+
 .header__menu-item-btn:hover {
     background-color: #83c6c3;
 }

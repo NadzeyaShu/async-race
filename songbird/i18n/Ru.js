@@ -18,6 +18,13 @@ const i18n_RU =
         main_container_useGallery: "Ознакомиться с представленными в Викторине птицами можно в нашей",
         gallery_link: "Галерее",
 
+        firstPartCongrats: "Поздравляем! Вы прошли викторину и набрали ",
+        thirdPartCongrats: " из 30 возможных баллов!",
+        wrapper_congrats_btn: "попробовать еще раз!",
+        wrapper_congrats_max_score: "Игра окончена!",
+
+        next_btn: "Вперед",
+        prev_btn: "Назад",
     }
 
 export default i18n_RU;
