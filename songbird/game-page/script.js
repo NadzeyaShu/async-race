@@ -93,6 +93,7 @@ function processRightAnswer(answerElement) {
         isLevelComplete = true;
         scoreCounter();
 
+        document.querySelector('.audio-question-track').pause();
         if (level === MAX_LEVEL) {
             saveFinalScore();
             window.location.replace('../congrats-page/congrats-page.html');
