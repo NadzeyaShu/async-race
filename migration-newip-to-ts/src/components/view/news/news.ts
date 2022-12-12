@@ -1,7 +1,7 @@
 import './news.css';
 import { Article } from '../../model/data';
 
-class News {
+export class News {
     draw(data: Article[]) {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
@@ -47,5 +47,3 @@ class News {
         }
     }
 }
-
-export default News;

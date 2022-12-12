@@ -1,6 +1,6 @@
-import Data from '../model/data';
+import { Data } from '../model/data';
 
-class Loader {
+export class Loader {
     baseLink: string;
     options: { apiKey: string };
 
@@ -51,5 +51,3 @@ class Loader {
             .catch((err) => console.error(err));
     }
 }
-
-export default Loader;

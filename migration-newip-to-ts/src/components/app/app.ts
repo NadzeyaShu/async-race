@@ -1,10 +1,10 @@
-import AppController from '../controller/controller';
+import { AppController } from '../controller/controller';
 import { AppView } from '../view/appView';
-import Data from '../model/data';
+import { Data } from '../model/data';
 
-class App {
+export class App {
     controller: AppController;
-    view: AppView;
+    view: AppView<Data>;
 
     constructor() {
         this.controller = new AppController();
@@ -18,5 +18,3 @@ class App {
         this.controller.getSources((data: Data) => this.view.drawSources(data));
     }
 }
-
-export default App;

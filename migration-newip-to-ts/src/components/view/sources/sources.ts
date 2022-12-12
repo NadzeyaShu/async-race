@@ -1,7 +1,7 @@
 import './sources.css';
 import { Source } from '../../model/data';
 
-class Sources {
+export class Sources {
     draw(data: Source[]) {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = <HTMLTemplateElement>document.querySelector('#sourceItemTemp');
@@ -28,5 +28,3 @@ class Sources {
         }
     }
 }
-
-export default Sources;

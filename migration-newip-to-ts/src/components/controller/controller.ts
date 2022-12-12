@@ -1,7 +1,7 @@
-import AppLoader from './appLoader';
-import Data from '../model/data';
+import { AppLoader } from './appLoader';
+import { Data } from '../model/data';
 
-class AppController extends AppLoader {
+export class AppController extends AppLoader {
     getSources(callback: (data: Data) => void): void {
         super.getResp(
             {
@@ -39,5 +39,3 @@ class AppController extends AppLoader {
         }
     }
 }
-
-export default AppController;

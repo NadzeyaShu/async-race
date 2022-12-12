@@ -18,6 +18,6 @@ type Source = {
     id: string;
 };
 
-export default Data;
+export { Data };
 export { Article };
 export { Source };
