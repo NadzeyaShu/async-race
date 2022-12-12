@@ -14,9 +14,7 @@ export class Loader {
             endpoint: string;
             options: object;
         },
-        callback: (data: Data) => void = () => {
-            console.error('No callback for GET response');
-        }
+        callback: (data: Data) => void = defaultCallback
     ): void {
         this.load('GET', request.endpoint, callback, request.options);
     }
@@ -50,4 +48,8 @@ export class Loader {
             .then((data) => callback(data))
             .catch((err) => console.error(err));
     }
+}
+
+function defaultCallback() {
+    console.error('No callback for GET response');
 }
