@@ -1,8 +1,9 @@
 import './sources.css';
-import { Source } from '../../model/data';
+import { Source } from '../../model/newsData';
+import { IVew } from '../appView';
 
-export class Sources {
-    draw(data: Source[]) {
+export class Sources implements IVew<Source> {
+    public draw(data: Source[]): void {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = <HTMLTemplateElement>document.querySelector('#sourceItemTemp');
 

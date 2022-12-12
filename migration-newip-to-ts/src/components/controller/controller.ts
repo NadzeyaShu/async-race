@@ -1,8 +1,8 @@
 import { AppLoader } from './appLoader';
-import { Data } from '../model/data';
+import { NewsData } from '../model/newsData';
 
-export class AppController extends AppLoader {
-    getSources(callback: (data: Data) => void): void {
+export class AppController extends AppLoader implements IController<NewsData> {
+    public getSources(callback: (data: NewsData) => void): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -12,7 +12,7 @@ export class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: (data: Data) => void): void {
+    public getNews(e: Event, callback: (data: NewsData) => void): void {
         let target = <Element>e.target;
         const newsContainer = <Element>e.currentTarget;
 
@@ -38,4 +38,10 @@ export class AppController extends AppLoader {
             target = <Element>target.parentNode;
         }
     }
+}
+
+export interface IController<T> {
+    getSources(callback: (data: T) => void): void;
+
+    getNews(e: Event, callback: (data: T) => void): void;
 }

@@ -1,8 +1,9 @@
 import './news.css';
-import { Article } from '../../model/data';
+import { Article } from '../../model/newsData';
+import { IVew } from '../appView';
 
-export class News {
-    draw(data: Article[]) {
+export class News implements IVew<Article> {
+    public draw(data: Article[]): void {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();

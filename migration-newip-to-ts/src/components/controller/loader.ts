@@ -1,25 +1,25 @@
-import { Data } from '../model/data';
+import { NewsData } from '../model/newsData';
 
 export class Loader {
-    baseLink: string;
-    options: { apiKey: string };
+    private readonly baseLink: string;
+    private readonly options: { apiKey: string };
 
     constructor(baseLink: string, options: { apiKey: string }) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
-    getResp(
+    protected getResp(
         request: {
             endpoint: string;
             options: object;
         },
-        callback: (data: Data) => void = defaultCallback
+        callback: (data: NewsData) => void = defaultCallback
     ): void {
         this.load('GET', request.endpoint, callback, request.options);
     }
 
-    errorHandler(res: Response): Response {
+    private errorHandler(res: Response): Response {
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -29,7 +29,7 @@ export class Loader {
         return res;
     }
 
-    makeUrl(options: object, endpoint: string): string {
+    private makeUrl(options: object, endpoint: string): string {
         const urlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
@@ -41,7 +41,7 @@ export class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: (data: Data) => void, options = {}): void {
+    private load(method: string, endpoint: string, callback: (data: NewsData) => void, options = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

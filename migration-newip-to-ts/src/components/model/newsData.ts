@@ -1,4 +1,4 @@
-type Data = {
+type NewsData = {
     articles: Article[];
     sources: Source[];
 };
@@ -18,6 +18,6 @@ type Source = {
     id: string;
 };
 
-export { Data };
+export { NewsData };
 export { Article };
 export { Source };
