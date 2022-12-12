@@ -2,17 +2,21 @@ import Data from '../model/data';
 
 class Loader {
     baseLink: string;
-    options: {};
+    options: { apiKey: string };
 
     constructor(baseLink: string, options: { apiKey: string }) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
-    getResp(request: { endpoint: string, options: {} },
-            callback: (data: Data) => void = () => {
-                console.error('No callback for GET response');
-            },
+    getResp(
+        request: {
+            endpoint: string;
+            options: object;
+        },
+        callback: (data: Data) => void = () => {
+            console.error('No callback for GET response');
+        }
     ): void {
         this.load('GET', request.endpoint, callback, request.options);
     }
@@ -27,12 +31,12 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: {}, endpoint: string): string {
+    makeUrl(options: object, endpoint: string): string {
         const urlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
-            let value = urlOptions[key as keyof typeof urlOptions];
+            const value = urlOptions[key as keyof typeof urlOptions];
             url += `${key}=${value}&`;
         });
 
