@@ -23,14 +23,14 @@ const baseConfig = {
         ],
     },
     resolve: {
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
+        extensions: [".ts", ".js"],
     },
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, '../dist'),
     },
     // Enable sourcemaps for debugging webpack's output.
-    devtool: "source-map",
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
