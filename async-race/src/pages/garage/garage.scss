@@ -1,0 +1,50 @@
+.garage {
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1260px;
+    position: relative;
+  }
+
+  &__visual-car {
+    width: 20px;
+    height: 20px;
+    //background-color: red;
+    border-radius: 50%;
+  }
+
+  &__cars-control-block,
+  &__wrapper-race {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__wrapper-create-cars,
+  &__wrapper-update-cars {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__wrapper-control-cars {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__wrapper-action {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__wrapper-race-title {
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+  }
+
+  &__wrapper-race-page {
+    display: flex;
+    align-items: center;
+  }
+
+}
