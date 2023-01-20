@@ -4,6 +4,7 @@ import { GarageController } from './garageController';
 export class GarageView {
     garageController: GarageController | null;
 
+
     constructor(garageController: GarageController | null) {
         this.garageController = garageController;
     }
@@ -46,11 +47,11 @@ export class GarageView {
         const createCarsWrapper = document.createElement('div');
         createCarsWrapper.className = 'garage__wrapper-create-cars';
 
-        const createCar = document.createElement('input'); //todo
+        const createCar = document.createElement('input');
         createCar.type = 'text';
         createCar.className = 'garage__create-car-name';
 
-        const createColor = document.createElement('input'); //todo
+        const createColor = document.createElement('input');
         createColor.className = 'garage__create-car-color';
         createColor.type = 'color';
 
@@ -58,8 +59,8 @@ export class GarageView {
         btnCreateCar.className = 'garage__btn-create-car';
         btnCreateCar.textContent = 'create';
         btnCreateCar.addEventListener('click', (evt) => {
-            const nameInput = document.querySelector('.garage__create-car-name') as  HTMLInputElement;
-            const colorInput = document.querySelector('.garage__create-car-color') as  HTMLInputElement;
+            const nameInput = document.querySelector('.garage__create-car-name') as HTMLInputElement;
+            const colorInput = document.querySelector('.garage__create-car-color') as HTMLInputElement;
             this.garageController?.addCar(nameInput.value, colorInput.value);
         });
 
@@ -74,15 +75,22 @@ export class GarageView {
         const updateCarsWrapper = document.createElement('div');
         updateCarsWrapper.className = 'garage__wrapper-update-cars';
 
-        const updateCar = document.createElement('input'); //todo
+        const updateCar = document.createElement('input');
+        updateCar.type = 'text';
+        updateCar.className = 'garage__update-car-name';
 
-        const updateColor = document.createElement('input'); //todo
+        const updateColor = document.createElement('input');
         updateColor.className = 'garage__update-cfr-color';
         updateColor.type = 'color';
 
         const btnUpdateCar = document.createElement('button');//todo listener
         btnUpdateCar.className = 'garage__btn-update-car';
         btnUpdateCar.textContent = 'update';
+        btnUpdateCar.addEventListener('click', () => {
+            const updateCar = document.querySelector('.garage__update-car-name') as HTMLInputElement;
+            const updateColor = document.querySelector('.garage__update-cfr-color') as HTMLInputElement;
+            this.garageController?.updateCar(updateCar.value, updateColor.value);
+        });
 
         updateCarsWrapper.append(updateCar);
         updateCarsWrapper.append(updateColor);
@@ -106,7 +114,6 @@ export class GarageView {
         const btnGenerateCars = document.createElement('button');//todo listener
         btnGenerateCars.className = 'garage__btn-generate-cars';
         btnGenerateCars.textContent = 'generate cars';
-        //btnGenerateCars.addEventListener('click', )
 
         controlCarsWrapper.append(btnRace);
         controlCarsWrapper.append(btnReset);
@@ -167,7 +174,7 @@ export class GarageView {
 
         const raceCount = document.createElement('p');
         raceCount.className = 'garage__race-count';
-        raceCount.textContent =  ` (${totalCars.toString()})`;
+        raceCount.textContent = ` (${totalCars.toString()})`;
 
         raceTitleWrapper.append(raceTitle);
         raceTitleWrapper.append(raceCount);
@@ -202,9 +209,10 @@ export class GarageView {
         btnRemove.textContent = 'remove';
         btnRemove.addEventListener('click', () => this.garageController?.deleteCar(car.id));
 
-        const btnSelect = document.createElement('button');//todo listener
+        const btnSelect = document.createElement('button');
         btnSelect.className = 'garage__btn-select';
         btnSelect.textContent = 'select';
+        btnSelect.addEventListener('click', () => this.garageController?.saveCarIdForUpdate(car.id));
 
         const carName = document.createElement('div');
         carName.className = 'garage__care-name';
@@ -249,7 +257,7 @@ export class GarageView {
     }
 
 
-    public onAddDeleteCar(cars: Car[]) {
+    public onUpdateGarage(cars: Car[]) {
         document.querySelector('.garage__wrapper-car-block')?.remove();
 
         let wrapper = this.createCarBlockWrapper(cars);
