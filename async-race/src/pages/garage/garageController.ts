@@ -11,10 +11,14 @@ export class GarageController {
     }
 
     public drawPage(): void {
-        this.garageService.fetchCars(cars => this.garageView.renderGarage(cars));
+        this.garageService.fetchCars(cars=> this.garageView.renderGarage(cars));
     }
 
     public addCar(name: string, color: string) {
+        this.garageService.addCar(name, color, cars => this.garageView.onAddDeleteCar(cars));
+    }
 
+    public deleteCar(id: number) {
+        this.garageService.deleteCar(id, cars => this.garageView.onAddDeleteCar(cars));
     }
 }
