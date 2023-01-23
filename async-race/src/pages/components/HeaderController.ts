@@ -18,12 +18,14 @@ export class HeaderController {
     }
 
     public drawWinnersPage(): void {
+        this.winnersController.removePage();
         this.garageController.removePage();
         this.winnersController.drawPage();
     }
 
     public drawGaragePage(): void {
         this.winnersController.removePage();
+        this.garageController.removePage();
         this.garageController.drawPage();
     }
 }
