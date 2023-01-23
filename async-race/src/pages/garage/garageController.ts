@@ -1,6 +1,5 @@
 import { GarageView } from './garageView';
 import { GarageService } from './garageService';
-import { Car } from '../../model/car';
 
 export class GarageController {
     private garageView: GarageView;
@@ -12,15 +11,15 @@ export class GarageController {
     }
 
     public drawPage(): void {
-        this.garageService.fetchCars(cars => this.garageView.renderGarage(cars));
+        this.garageService.fetchCars((cars) => this.garageView.renderGarage(cars));
     }
 
     public addCar(name: string, color: string) {
-        this.garageService.addCar(name, color, cars => this.garageView.onUpdateGarage(cars));
+        this.garageService.addCar(name, color, (cars) => this.garageView.onUpdateGarage(cars));
     }
 
     public deleteCar(id: number) {
-        this.garageService.deleteCar(id, cars => this.garageView.onUpdateGarage(cars));
+        this.garageService.deleteCar(id, (cars) => this.garageView.onUpdateGarage(cars));
     }
 
     public saveCarIdForUpdate(id: number) {
@@ -28,7 +27,10 @@ export class GarageController {
     }
 
     public updateCar(name: string, color: string) {
-        this.garageService.updateCar(name, color, cars => this.garageView.onUpdateGarage(cars));
+        this.garageService.updateCar(name, color, (cars) => this.garageView.onUpdateGarage(cars));
     }
 
+    public removePage(): void {
+        this.garageView?.deleteGaragePage();
+    }
 }

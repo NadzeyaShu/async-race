@@ -1,15 +1,24 @@
 import { WinnersView } from './winnersView';
+import { WinnersService } from './winnersService';
 
-
-export class GarageController {
+export class WinnersController {
     private winnersView: WinnersView;
+    private winnersService: WinnersService;
 
-    constructor(winnersView: WinnersView) {
+    constructor(winnersView: WinnersView, winnersService: WinnersService) {
         this.winnersView = winnersView;
+        this.winnersService = winnersService;
     }
 
     public drawPage(): void {
-        //todo call service for get cars
         this.winnersView.renderWinners();
+        this.winnersService.fetchWinnersCars(
+            (winner) => this.winnersView.renderWinnersElementsTable(winner),
+            (total) => this.winnersView.renderWinnersTitle(total)
+        );
+    }
+
+    public removePage(): void {
+        this.winnersView?.deleteWinnersPage();
     }
 }

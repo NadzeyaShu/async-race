@@ -3,8 +3,6 @@ import { GarageController } from './garageController';
 
 export class GarageView {
     garageController: GarageController | null;
-
-
     constructor(garageController: GarageController | null) {
         this.garageController = garageController;
     }
@@ -19,7 +17,6 @@ export class GarageView {
         container.className = 'garage__container';
 
         const carsControlBlock = this.createCarsControlBlock(cars);
-
 
         container.append(carsControlBlock);
         mainElement.append(container);
@@ -58,7 +55,7 @@ export class GarageView {
         const btnCreateCar = document.createElement('button');
         btnCreateCar.className = 'garage__btn-create-car';
         btnCreateCar.textContent = 'create';
-        btnCreateCar.addEventListener('click', (evt) => {
+        btnCreateCar.addEventListener('click', () => {
             const nameInput = document.querySelector('.garage__create-car-name') as HTMLInputElement;
             const colorInput = document.querySelector('.garage__create-car-color') as HTMLInputElement;
             this.garageController?.addCar(nameInput.value, colorInput.value);
@@ -83,7 +80,7 @@ export class GarageView {
         updateColor.className = 'garage__update-cfr-color';
         updateColor.type = 'color';
 
-        const btnUpdateCar = document.createElement('button');//todo listener
+        const btnUpdateCar = document.createElement('button');
         btnUpdateCar.className = 'garage__btn-update-car';
         btnUpdateCar.textContent = 'update';
         btnUpdateCar.addEventListener('click', () => {
@@ -103,15 +100,15 @@ export class GarageView {
         const controlCarsWrapper = document.createElement('div');
         controlCarsWrapper.className = 'garage__wrapper-control-cars';
 
-        const btnRace = document.createElement('button');//todo listener
+        const btnRace = document.createElement('button');
         btnRace.className = 'garage__btn-race';
         btnRace.textContent = 'race';
 
-        const btnReset = document.createElement('button');//todo listener
+        const btnReset = document.createElement('button');
         btnReset.className = 'garage__btn-reset';
         btnReset.textContent = 'reset';
 
-        const btnGenerateCars = document.createElement('button');//todo listener
+        const btnGenerateCars = document.createElement('button');
         btnGenerateCars.className = 'garage__btn-generate-cars';
         btnGenerateCars.textContent = 'generate cars';
 
@@ -141,7 +138,7 @@ export class GarageView {
         const carBlockWrapper = document.createElement('div');
         carBlockWrapper.className = 'garage__wrapper-car-block';
 
-        cars.slice(0, 7).forEach(car => {
+        cars.slice(0, 7).forEach((car) => {
             const carElement = this.createCarBlock(car);
             carBlockWrapper.append(carElement);
         });
@@ -244,7 +241,7 @@ export class GarageView {
     }
 
     public createVisualCarWrapper(car: Car): HTMLElement {
-        const visualCarWrapper = document.createElement('div');//todo hz
+        const visualCarWrapper = document.createElement('div');
         visualCarWrapper.className = 'garage__wrapper-visual-car';
 
         const visualCar = document.createElement('div');
@@ -256,15 +253,17 @@ export class GarageView {
         return visualCarWrapper;
     }
 
-
     public onUpdateGarage(cars: Car[]) {
         document.querySelector('.garage__wrapper-car-block')?.remove();
 
-        let wrapper = this.createCarBlockWrapper(cars);
-        let totalCarsElement = document.querySelector('.garage__race-count') as HTMLElement;
+        const wrapper = this.createCarBlockWrapper(cars);
+        const totalCarsElement = document.querySelector('.garage__race-count') as HTMLElement;
         totalCarsElement.textContent = `(${cars.length})`;
 
         document.querySelector('.garage__wrapper-race-page')?.after(wrapper);
     }
 
+    public deleteGaragePage(): void {
+        document.querySelector('.garage')?.remove();
+    }
 }

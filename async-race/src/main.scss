@@ -1,4 +1,6 @@
-
+@import './pages/components/header.scss';
+@import './pages/garage/garage.scss';
+@import './pages/winners/winners.scss';
 
 * {
   box-sizing: border-box;
@@ -20,6 +22,3 @@ html {
   max-width: 1260px;
   position: relative;
 }
-
-@import './pages/components/header.scss';
-@import './pages/garage/garage.scss';

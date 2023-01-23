@@ -1,5 +1,6 @@
-export class WinnersView {
+import { Winner } from '../../model/winner';
 
+export class WinnersView {
     public renderWinners(): void {
         const header = document.querySelector('.header') as HTMLElement;
 
@@ -9,23 +10,22 @@ export class WinnersView {
         const container = document.createElement('div');
         container.className = 'winners__container';
 
-        const winnerTitleWrapper = this.createWinnersTitle();
         const winnersCountPage = this.createWinnersCountPage();
-        const winnersTable = this.createWinnersTable();
         const changePageWrapper = this.createChangePageWrapper();
-
-        container.append(winnerTitleWrapper);
+        const winnersTable = this.createWinnersTable();
         container.append(winnersCountPage);
-        container.append(winnersTable);
         container.append(changePageWrapper);
+        container.append(winnersTable);
 
         mainElement.append(container);
         header.after(mainElement);
     }
 
-    public createWinnersTitle(): HTMLElement {
+    public renderWinnersTitle(total: number): void {
+        const winnersCountPage = document.querySelector('.winners__wrapper-count-page') as HTMLElement;
+
         const winnerTitleWrapper = document.createElement('div');
-        winnerTitleWrapper.className = 'garage__wrapper-winner-title';
+        winnerTitleWrapper.className = 'winners__wrapper-winner-title';
 
         const winnerTitle = document.createElement('h2');
         winnerTitle.className = 'winners__winner-title';
@@ -33,12 +33,12 @@ export class WinnersView {
 
         const winnerCount = document.createElement('p');
         winnerCount.className = 'winners__winner-count';
-        winnerCount.textContent = `(${4})`; //todo change
+        winnerCount.textContent = `(${total})`;
 
         winnerTitleWrapper.append(winnerTitle);
         winnerTitleWrapper.append(winnerCount);
 
-        return winnerTitleWrapper;
+        winnersCountPage.before(winnerTitleWrapper);
     }
 
     public createWinnersCountPage(): HTMLElement {
@@ -47,11 +47,11 @@ export class WinnersView {
 
         const pageTitle = document.createElement('h3');
         pageTitle.className = 'winners__page-title';
-        pageTitle.textContent = 'page #';
+        pageTitle.textContent = 'page';
 
         const page = document.createElement('p');
         page.className = 'winners__page';
-        page.textContent = `#${1})`; //todo change
+        page.textContent = `#${1}`;
 
         winnersCountPage.append(pageTitle);
         winnersCountPage.append(page);
@@ -64,10 +64,7 @@ export class WinnersView {
         winnersTable.className = 'winners__winners-table';
 
         const winnersHeadTable = this.createWinnersHeadTable();
-        const winnersTableElements = this.createWinnersElementsTable(); //todo items
-
         winnersTable.append(winnersHeadTable);
-        winnersTable.append(winnersTableElements);
 
         return winnersTable;
     }
@@ -105,29 +102,29 @@ export class WinnersView {
         return winnersHeadTable;
     }
 
-    public createWinnersElementsTable(): HTMLElement {
+    public renderWinnersElementsTable(winner: Winner): void {
         const winnersTable = document.createElement('tr');
         winnersTable.className = 'winners__table';
 
         const winnerCarNumber = document.createElement('td');
         winnerCarNumber.className = 'winners__car-number';
-        winnerCarNumber.textContent = ''; //todo
+        winnerCarNumber.textContent = winner.id.toString();
 
         const winnerCar = document.createElement('td');
         winnerCar.className = 'winners__car';
-        winnerCar.textContent = ''; //todo
+        winnerCar.style.backgroundColor = winner.color;
 
         const winnerCarName = document.createElement('td');
         winnerCarName.className = 'winners__car-name';
-        winnerCarName.textContent = ''; //todo
+        winnerCarName.textContent = winner.name;
 
         const winnerCarWins = document.createElement('td');
         winnerCarWins.className = 'winners__car-wins';
-        winnerCarWins.textContent = ''; //todo
+        winnerCarWins.textContent = winner.wins.toString();
 
         const winnerBestTime = document.createElement('td');
         winnerBestTime.className = 'winners__best-time';
-        winnerBestTime.textContent = ''; //todo
+        winnerBestTime.textContent = winner.time.toString();
 
         winnersTable.append(winnerCarNumber);
         winnersTable.append(winnerCar);
@@ -135,7 +132,7 @@ export class WinnersView {
         winnersTable.append(winnerCarWins);
         winnersTable.append(winnerBestTime);
 
-        return winnersTable;
+        document.querySelector('.winners__head-table')?.after(winnersTable);
     }
 
     public createChangePageWrapper(): HTMLElement {
@@ -154,5 +151,9 @@ export class WinnersView {
         changePageWrapper.append(nextBtn);
 
         return changePageWrapper;
+    }
+
+    public deleteWinnersPage(): void {
+        document.querySelector('.winners')?.remove();
     }
 }

@@ -1,4 +1,11 @@
+import { HeaderController } from './HeaderController';
+
 export class HeaderView {
+    headerController: HeaderController | null;
+
+    constructor(headerController: HeaderController | null) {
+        this.headerController = headerController;
+    }
 
     public createHeader(): void {
         const body = document.body;
@@ -14,10 +21,12 @@ export class HeaderView {
         const btnToGarage = document.createElement('button'); //todo listener
         btnToGarage.className = 'header__btn-to-garage';
         btnToGarage.textContent = 'to garage';
+        btnToGarage.addEventListener('click', () => this.headerController?.drawGaragePage());
 
         const btnToWinners = document.createElement('button'); //todo listener
         btnToWinners.className = 'header__btn-to-winners';
         btnToWinners.textContent = 'to winners';
+        btnToWinners.addEventListener('click', () => this.headerController?.drawWinnersPage());
 
         headerContainer.append(btnToGarage);
         headerContainer.append(btnToWinners);
@@ -25,5 +34,4 @@ export class HeaderView {
         header.append(container);
         body.prepend(header);
     }
-
 }
