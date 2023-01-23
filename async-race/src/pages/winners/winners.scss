@@ -1,0 +1,19 @@
+.winners {
+  &__container {
+    margin: 0 auto;
+    max-width: 1260px;
+    position: relative;
+  }
+
+  &__wrapper-winner-title,
+  &__wrapper-count-page {
+    display: flex;
+    align-items: center;
+  }
+
+  &__car {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
